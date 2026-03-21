@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 10 Market Opportunities 2026 | North</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#F8FAFC;color:#1E293B}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.header{text-align:center;margin-bottom:32px}
+.header h1{font-size:28px;font-weight:800;color:#1A1F3D}
+.header p{color:#64748B;font-size:14px;margin-top:8px}
+.tabs{display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap}
+.tab{padding:8px 20px;border-radius:20px;border:none;cursor:pointer;font-weight:600;font-size:13px;transition:all .2s}
+.tab-active{background:#1A1F3D;color:#fff}
+.tab-inactive{background:#E2E8F0;color:#475569}
+.tab-inactive:hover{background:#CBD5E1}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:#fff;border-radius:16px;padding:20px;cursor:pointer;border:2px solid #F1F5F9;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px}
+.badge-go{background:#FEF3C7;color:#92400E}
+.badge-pass{background:#FEE2E2;color:#991B1B}
+.score-bar-bg{width:80px;height:8px;background:#E5E7EB;border-radius:4px;overflow:hidden;display:inline-block;vertical-align:middle}
+.score-bar-fill{height:100%;border-radius:4px}
+.detail-panel{max-width:800px;margin:0 auto}
+.detail-card{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.detail-section{margin-bottom:16px}
+.detail-section h4{font-size:13px;font-weight:700;color:#64748B;margin-bottom:6px}
+.detail-section p{font-size:14px;line-height:1.6}
+.scores-panel{background:#F8FAFC;border-radius:12px;padding:20px;margin-top:20px}
+.review-panel{border-radius:12px;padding:20px;margin-top:16px}
+.rank-row{display:flex;align-items:center;gap:16px;background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:8px;border:1px solid #F1F5F9}
+.rank-row-top{border:2px solid #F5C542;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.rank-row-top3{border:2px solid #E2E8F0;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.rec-card{background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;box-shadow:0 4px 16px rgba(0,0,0,.05)}
+.rec-tag{color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;display:inline-block}
+.bottom-line{background:#1A1F3D;border-radius:16px;padding:24px;margin-top:24px;color:#fff;text-align:center}
+.bottom-line h3{font-size:18px;font-weight:800;color:#F5C542;margin-bottom:12px}
+.bottom-line p{font-size:15px;line-height:1.7;color:#CDD6F4}
+.back-btn{background:none;border:none;color:#4A90D9;cursor:pointer;font-size:14px;margin-bottom:16px;font-weight:600}
+.back-btn:hover{text-decoration:underline}
+@media(max-width:640px){.header h1{font-size:22px}.grid{grid-template-columns:1fr}.detail-card{padding:20px}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState}=React;
+
+const ideas=[
+{id:1,name:"ScamShield AI",type:"Blue Ocean",market:"Thai → ASEAN",emoji:"\u{1F6E1}\uFE0F",color:"#F96167",bgLight:"#FEF2F2",marketSize:"$244B",affected:"60M+ คนไทย",tagline:"Forward มาก่อน โอนเงินทีหลัง",problem:"คนไทยเสียหายจาก scam 115,000 ล้านบาท/ปี (เพิ่ม 45% YoY) Whoscall ตรวจได้แค่เบอร์โทร แต่ LINE (43% ของ scam) ยังไม่มีใครป้องกัน",solution:"LINE Bot ที่ forward ข้อความ/ลิงก์มาตรวจ scam ใน 3 วินาที + Family Dashboard แจ้งเตือนลูกหลาน + Community scam database",moat:"Network effect จาก crowdsourced scam DB, First-mover บน LINE ecosystem",revenue:"B2C Freemium 99บ/เดือน + B2B API ธนาคาร/Telco + B2G ภาครัฐ",mvp:"LINE Bot + Claude API + rule-based scam detection",risk:"CPSTC ภาครัฐใช้ AI block scam แล้ว + Whoscall 25M users อาจขยายมา + ธนาคารสร้างเอง",scores:{survivability:2,monetization:2,mvpEase:4,viral:3,founderFit:4},verdict:"PASS",review:"ตลาดถูก solve บางส่วนแล้วจาก CPSTC + Whoscall + bank native tools แต่ถ้า pivot เป็น B2B white-label สำหรับ tier-2/3 banks ยังน่าสนใจ",improvement:"Pivot เป็น white-label fraud detection API สำหรับธนาคารขนาดกลาง-เล็ก"},
+{id:2,name:"SellerOS AI",type:"Red Ocean",market:"Thai → SEA",emoji:"\u{1F3EA}",color:"#4A90D9",bgLight:"#EFF6FF",marketSize:"$5.2B → $8.5B",affected:"2M+ คนขายออนไลน์",tagline:"ขายของไม่ต้องไม่นอน",problem:"คนขายของออนไลน์ 2M+ คน จัดการ 4-5 แพลตฟอร์ม (Shopee 75%, Lazada 67%, TikTok 51%) ใช้เวลา 10-14 ชม./วัน tools ที่มี (Zetpy, Ginee) ไม่ใช่ AI-first",solution:"AI ตอบแชทลูกค้าทุกแพลตฟอร์ม + ปรับราคาอัตโนมัติ + สร้าง content จากรูป 1 รูป + auto e-Tax Invoice ตามกฎหมายใหม่",moat:"Multi-platform data lock-in (ยิ่งใช้นาน AI ยิ่งรู้จักธุรกิจ), Thai-specific integrations",revenue:"SaaS 499-2,999 บาท/เดือน + commission AI upsell + e-invoicing add-on",mvp:"Dashboard ดึง orders จาก Shopee + Lazada API + AI pricing suggestions",risk:"Shopee/Lazada อาจ build native AI tools + Platform API เปลี่ยนได้",scores:{survivability:3,monetization:3,mvpEase:4,viral:4,founderFit:5},verdict:"GO",review:"Founder fit ดีที่สุดใน 10 ไอเดีย + market ใหญ่ + recurring revenue ชัด ต้อง pivot เป็น distribution network",improvement:"Pivot เป็น SellerOS Collective + Focus เฉพาะ 1 category ก่อน (Fashion/Beauty)"},
+{id:3,name:"DebtFree AI",type:"Blue Ocean",market:"Thai → ASEAN",emoji:"\u{1F4B0}",color:"#34D399",bgLight:"#F0FDF4",marketSize:"$25.8B",affected:"20M+ คนไทยเป็นหนี้",tagline:"ปลดหนี้ได้ ไม่ต้องรวย",problem:"หนี้ครัวเรือนไทย 90.8% ต่อ GDP, 20M+ คนเป็นหนี้, ที่ปรึกษาการเงินคิด 5,000-20,000 บาท/ครั้ง",solution:"LINE Bot กรอกหนี้ → AI สร้างแผนปลดหนี้ + แนะนำสิทธิ์เจรจาหนี้ + budget tracker",moat:"Trust lock-in (ข้อมูลหนี้ส่วนตัวที่สุด), Thai financial ecosystem knowledge",revenue:"Freemium B2C 149บ/เดือน + B2B ธนาคาร white-label + Referral refinance commission",mvp:"LINE Bot กรอกหนี้ + AI แผนปลดหนี้ 2 แบบ + timeline ประหยัดดอกเบี้ย",risk:"Monetizing คนจน = ยาก + Regulatory risk",scores:{survivability:2,monetization:1,mvpEase:5,viral:1,founderFit:2},verdict:"PASS",review:"ปัญหาจริง แต่ target ที่จน + ธนาคารไม่อยากให้คนปลดหนี้เร็ว",improvement:"Pivot เป็น B2B2C ขายธนาคารเป็น debt wellness toolkit ลด NPL"},
+{id:4,name:"HireHonest AI",type:"Red Ocean",market:"Global",emoji:"\u{1F91D}",color:"#F5C542",bgLight:"#FFFBEB",marketSize:"$30B+",affected:"100M+ คนหางาน",tagline:"Every applicant deserves an answer",problem:"สมัคร 100 ใบ ได้ตอบ 3, ผ่าน 5-7 รอบแล้วถูก ghost, Time-to-hire เฉลี่ย 44 วัน",solution:"AI วิเคราะห์ตำแหน่งจาก team dynamics + match candidates + Zero-Ghost: ทุกคนได้ feedback 48 ชม.",moat:"Proprietary ghosting prediction model, Two-sided network",revenue:"SaaS $99-999/mo + per-hire fee $500-2,000 + Candidate premium $9.99/mo",mvp:"Web app: HR paste JD → AI match + rank candidates → auto-feedback",risk:"LinkedIn/Indeed ลงทุน billions + OpenAI เตรียมเปิด jobs platform",scores:{survivability:1,monetization:2,mvpEase:4,viral:2,founderFit:2},verdict:"PASS",review:"OpenAI กำลังเข้าตลาดนี้ + LinkedIn/Indeed มี budget มหาศาล",improvement:"ถ้าทำต้อง vertical เฉพาะ (Tech hiring ในไทย) + Flip marketplace"},
+{id:5,name:"BunchEats",type:"Red Ocean",market:"Thai → SEA",emoji:"\u{1F35C}",color:"#22D3EE",bgLight:"#ECFEFF",marketSize:"$340B",affected:"40M+ คนสั่ง delivery",tagline:"สั่งรวม ส่งถูก ร้านได้เยอะ",problem:"สั่ง delivery แพงกว่าซื้อเอง 30-50%, ร้านถูกหัก 30-35%, Model เดิมไม่ efficient",solution:"AI จัดกลุ่มคนย่านเดียวกัน สั่งร้านเดียว → ค่าส่ง 5-15 บาท + ร้านเสีย commission แค่ 10-15%",moat:"Hyperlocal network effect (ยิ่งคนในตึกใช้เยอะ ค่าส่งยิ่งถูก)",revenue:"Commission ร้าน 10-15% + Delivery fee share + Office subscription",mvp:"LINE Group Bot → สมาชิกบอกอยากกินอะไร → AI แนะนำร้าน + group order",risk:"Grab/LINE MAN ทำตามได้ทันที + Coordination friction สูง",scores:{survivability:1,monetization:2,mvpEase:5,viral:3,founderFit:2},verdict:"PASS",review:"User เองก็บอกว่า Grab ทำตามก็จบ — zero defensibility",improvement:"Pivot เป็น B2B consolidated last-mile delivery สำหรับร้านอาหาร"},
+{id:6,name:"AgentFlow",type:"Blue Ocean",market:"Global",emoji:"\u{1F916}",color:"#A855F7",bgLight:"#FAF5FF",marketSize:"$5B → $105B",affected:"40M+ SME + 1M+ devs",tagline:"Your AI. Your Rules. Your Revenue.",problem:"95% ของ SME ใช้ AI ไม่เป็น ต้องจ้าง developer 50K-500K บาท/ชิ้น, Dev ไม่มีช่องทางขาย agent",solution:"Marketplace ที่ Creator สร้าง/ขาย AI Agent + SME 1-click deploy ผ่าน LINE + Rating system",moat:"Two-sided marketplace network effect, Community templates, Integration ecosystem",revenue:"Commission 15-20% + Creator SaaS $29-99/mo + Enterprise API + White-label",mvp:"Web marketplace + 10 agent templates + 1-click deploy ผ่าน LINE Bot",risk:"ตลาดยังเร็วเกินไป (2026) + OpenAI/Google อาจ build เอง",scores:{survivability:3,monetization:2,mvpEase:4,viral:2,founderFit:4},verdict:"GO",review:"TAM มหาศาล ($105B by 2034) แต่ timing ยังเร็ว → start เป็น vertical marketplace",improvement:"Start เฉพาะ AI agents for Thai SME + สร้าง agents เองก่อน 5-10 ตัว"},
+{id:7,name:"SkillRise AI",type:"Red Ocean",market:"Thai → Global",emoji:"\u{1F4DA}",color:"#3B82F6",bgLight:"#EFF6FF",marketSize:"$1.76B → $4.89B",affected:"15M+ คนไทย at risk",tagline:"AI Tutor ภาษาไทย สำหรับคนที่ AI กำลังแย่งงาน",problem:"70% ของงานต้องการ skills ใหม่, ไทยมีแค่ 30K คนเขียนโค้ดได้ ต้องการ 100K+, Coursera ไม่มีภาษาไทย",solution:"AI adaptive learning ภาษาไทย + micro-credentials 2-4 สัปดาห์ + Claude API tutoring + JobsDB gap analysis",moat:"Proprietary adaptive learning + Thai university partnerships + Thai job market data",revenue:"B2C $5-15/mo + B2B Corporate $5K-20K/mo + Micro-credential fees + Job placement",mvp:"5-10 courses ภาษาไทย + Claude API Q&A bot + JobsDB skill gap matcher",risk:"Duolingo + Microsoft + SkillLane แข่ง + Content creation แพง + B2C churn 70-80%",scores:{survivability:2,monetization:3,mvpEase:4,viral:2,founderFit:2},verdict:"PASS",review:"ตลาดมีคู่แข่ง funded billions + ไม่มี moat ที่ defensible + Easy to build = easy to copy",improvement:"Pivot เป็น vertical เฉพาะ เช่น AI skills for Thai factory workers + Partner กับ Grab/banks"},
+{id:8,name:"PropertyMatch AI",type:"Blue Ocean",market:"Thai",emoji:"\u{1F3E0}",color:"#10B981",bgLight:"#F0FDF4",marketSize:"$1.2B PropTech",affected:"3M+ ผู้หาอสังหา/ปี",tagline:"หาบ้านในไม่กี่นาที ไม่ใช่หลายเดือน",problem:"หาที่อยู่ต้องดูหลายสิบเว็บ, Agent ใช้รูป/description เดิมๆ, ไม่มี intelligent matching",solution:"AI buyer-property matcher + Landlord LINE Bot ตอบคำถามผู้เช่า + Virtual tour + Market analysis",moat:"Proprietary matching algorithm + LINE landlord bot + Agent relationships",revenue:"Buyer premium $15-30/mo + Landlord tools $50-200/mo + Rental commission",mvp:"Web scraper DDproperty/Facebook + preference questionnaire + LINE Bot for landlords",risk:"DDproperty (PropertyGuru) ครองตลาด + Scraping อาจผิด ToS",scores:{survivability:2,monetization:2,mvpEase:4,viral:1,founderFit:2},verdict:"PASS",review:"DDproperty + Hipflat ครองตลาดแล้ว — LINE Bot เป็นแค่ feature ไม่ใช่ business",improvement:"เปลี่ยนเป็น white-label solution ขาย DDproperty เป็น backend matching tool"},
+{id:9,name:"GigGuard Insurance",type:"Blue Ocean",market:"Thai → Global",emoji:"\u{1F6F5}",color:"#F97316",bgLight:"#FFF7ED",marketSize:"$8.5B → $33B",affected:"5M+ gig workers ไทย",tagline:"ประกันต่อกะ สำหรับคนทำงาน gig",problem:"Gig workers 5M+ คนไม่มี insurance เลย, ประกันปกติแพงเกินไป (monthly commitment)",solution:"Per-shift insurance $2-5/กะ ผ่าน LINE Bot + Auto-deduct + AI risk assessment + Instant claims",moat:"Platform integrations + Claims database + Thai insurer partnerships",revenue:"25% margin on premiums + Employer bulk plans + Premium add-ons",mvp:"LINE Bot ซื้อประกันต่อกะ + PromptPay instant payout + Claims form",risk:"Grab + Sunday ทำแล้ว + ต้อง license จาก OIA (12-24 เดือน) + Unit economics ติดลบ",scores:{survivability:1,monetization:2,mvpEase:1,viral:2,founderFit:1},verdict:"PASS",review:"Grab + Sunday partnership ทำแล้ว + Insurance license ข้ามไม่ได้",improvement:"Partner กับ licensed insurer แล้วเป็น distribution layer + Pitch Grab white-label"},
+{id:10,name:"CreatorVault AI",type:"Red Ocean",market:"Thai → APAC",emoji:"\u{1F3A8}",color:"#EC4899",bgLight:"#FDF2F8",marketSize:"$41.6B → $390.7B",affected:"500K+ Thai creators",tagline:"Where Thai Creators Actually Keep Their Money",problem:"Thai creators รายได้ไม่แน่นอน ($0.01-0.10 ต่อ 1K views), Patreon/YouTube ถือ 10-30%",solution:"Thailand-first creator monetization + PromptPay/LINE integration + AI content recommendations + Lower fees 10%",moat:"Thai platform integrations (LINE, TikTok TH) + Creator community + Print-on-demand",revenue:"10% commission memberships + 5% tips + 20% merch + Premium analytics",mvp:"Dashboard aggregate TikTok/YouTube/IG + membership signup + PromptPay integration",risk:"Patreon + YouTube built-in ทำอยู่แล้ว + Trakteer at 0% fee ยังไม่ win",scores:{survivability:2,monetization:3,mvpEase:3,viral:3,founderFit:3},verdict:"GO",review:"ตลาดจริง ($390B by 2034) ต้องมี creators ก่อนสร้างเทค → เซ็น 50+ influencers ก่อน launch",improvement:"เซ็น 50+ Thai creators ก่อน build + Focus vertical (gaming/cosplay) + ใช้ 2C2P payment"}
+];
+
+const totalScore=(s)=>Object.values(s).reduce((a,b)=>a+b,0);
+const sorted=[...ideas].sort((a,b)=>totalScore(b.scores)-totalScore(a.scores));
+
+function ScoreBar({score,max=5,color}){
+  return React.createElement("div",{style:{display:"flex",alignItems:"center",gap:6}},
+    React.createElement("div",{className:"score-bar-bg"},
+      React.createElement("div",{className:"score-bar-fill",style:{width:(score/max*100)+"%",background:color}})
+    ),
+    React.createElement("span",{style:{fontSize:13,fontWeight:600,color}},score+"/"+max)
+  );
+}
+
+function Badge({verdict}){
+  return React.createElement("span",{className:verdict==="GO"?"badge badge-go":"badge badge-pass"},
+    verdict==="GO"?"\u{1F7E1} CONDITIONAL GO":"\u{1F534} PASS"
+  );
+}
+
+function App(){
+  const [selected,setSelected]=useState(null);
+  const [view,setView]=useState("overview");
+
+  const tabs=[
+    {key:"overview",label:"\u{1F4CB} All Ideas"},
+    {key:"rankings",label:"\u{1F3C6} Rankings"},
+    {key:"recommendations",label:"\u{1F3AF} Recommendations"}
+  ];
+
+  return React.createElement("div",{className:"container"},
+    React.createElement("div",{className:"header"},
+      React.createElement("h1",null,"TOP 10 MARKET OPPORTUNITIES 2026"),
+      React.createElement("p",null,"Research Agent + Review Agent Analysis | Prepared for North (Thanaphat)"),
+      React.createElement("div",{className:"tabs"},
+        tabs.map(t=>React.createElement("button",{key:t.key,className:"tab "+(view===t.key?"tab-active":"tab-inactive"),onClick:()=>{setView(t.key);setSelected(null)}},t.label))
+      )
+    ),
+
+    // Overview Grid
+    view==="overview"&&!selected&&React.createElement("div",{className:"grid"},
+      ideas.map(idea=>React.createElement("div",{key:idea.id,className:"card",style:{borderColor:idea.bgLight},onClick:()=>setSelected(idea.id)},
+        React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:12}},
+          React.createElement("div",null,
+            React.createElement("span",{style:{fontSize:28}},idea.emoji),
+            React.createElement("span",{style:{fontSize:12,color:"#94A3B8",marginLeft:8}},"#"+idea.id)
+          ),
+          React.createElement(Badge,{verdict:idea.verdict})
+        ),
+        React.createElement("h3",{style:{fontSize:18,fontWeight:700,marginBottom:4}},idea.name),
+        React.createElement("p",{style:{fontSize:12,color:idea.color,fontWeight:600,marginBottom:8}},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize),
+        React.createElement("p",{style:{fontSize:13,color:"#64748B",fontStyle:"italic",marginBottom:12}},'"'+idea.tagline+'"'),
+        React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center"}},
+          React.createElement("span",{style:{fontSize:12,color:"#94A3B8"}},"Total Score"),
+          React.createElement("span",{style:{fontSize:18,fontWeight:800,color:totalScore(idea.scores)>=17?"#16A34A":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444"}},totalScore(idea.scores)+"/25")
+        )
+      ))
+    ),
+
+    // Detail
+    view==="overview"&&selected&&(()=>{
+      const idea=ideas.find(i=>i.id===selected);
+      const scoreLabels=[
+        {key:"survivability",label:"Survivability (\u0E16\u0E49\u0E32\u0E22\u0E31\u0E01\u0E29\u0E4C\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E02\u0E49\u0E32\u0E21\u0E32)"},
+        {key:"monetization",label:"Monetization Clarity (\u0E43\u0E04\u0E23\u0E08\u0E48\u0E32\u0E22\u0E40\u0E07\u0E34\u0E19?)"},
+        {key:"mvpEase",label:"MVP Feasibility (\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E44\u0E14\u0E49\u0E43\u0E19 1 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C?)"},
+        {key:"viral",label:"Viral Potential (\u0E04\u0E19\u0E1A\u0E2D\u0E01\u0E15\u0E48\u0E2D?)"},
+        {key:"founderFit",label:"Founder Fit (North \u0E21\u0E35 edge?)"}
+      ];
+      const sections=[
+        {label:"\u{1F525} \u0E1B\u0E31\u0E0D\u0E2B\u0E32",text:idea.problem},
+        {label:"\u{1F4A1} Solution",text:idea.solution},
+        {label:"\u{1F6E1}\uFE0F Moat",text:idea.moat},
+        {label:"\u{1F4B0} Revenue Model",text:idea.revenue},
+        {label:"\u{1F680} MVP 1 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C",text:idea.mvp},
+        {label:"\u26A0\uFE0F \u0E04\u0E27\u0E32\u0E21\u0E40\u0E2A\u0E35\u0E48\u0E22\u0E07",text:idea.risk}
+      ];
+      return React.createElement("div",{className:"detail-panel"},
+        React.createElement("button",{className:"back-btn",onClick:()=>setSelected(null)},"\u2190 Back to all ideas"),
+        React.createElement("div",{className:"detail-card",style:{borderColor:idea.color+"20",border:"3px solid "+idea.color+"20"}},
+          React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20,flexWrap:"wrap",gap:12}},
+            React.createElement("div",null,
+              React.createElement("span",{style:{fontSize:40}},idea.emoji),
+              React.createElement("h2",{style:{fontSize:26,fontWeight:800,margin:"8px 0 0"}},idea.name),
+              React.createElement("p",{style:{color:idea.color,fontWeight:600,fontSize:14}},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize)
+            ),
+            React.createElement(Badge,{verdict:idea.verdict})
+          ),
+          React.createElement("p",{style:{fontSize:15,color:"#475569",fontStyle:"italic",borderLeft:"3px solid "+idea.color,paddingLeft:12,margin:"0 0 24px"}},'"'+idea.tagline+'"'),
+          sections.map(s=>React.createElement("div",{key:s.label,className:"detail-section"},
+            React.createElement("h4",null,s.label),
+            React.createElement("p",null,s.text)
+          )),
+          React.createElement("div",{className:"scores-panel"},
+            React.createElement("h4",{style:{fontSize:14,fontWeight:700,marginBottom:12}},"\u{1F4CA} Kill Test Scores"),
+            scoreLabels.map(sl=>React.createElement("div",{key:sl.key,style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}},
+              React.createElement("span",{style:{fontSize:13,color:"#475569"}},sl.label),
+              React.createElement(ScoreBar,{score:idea.scores[sl.key],color:idea.color})
+            )),
+            React.createElement("div",{style:{display:"flex",justifyContent:"flex-end",marginTop:8,borderTop:"1px solid #E2E8F0",paddingTop:8}},
+              React.createElement("span",{style:{fontSize:15,fontWeight:800,color:totalScore(idea.scores)>=17?"#16A34A":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444"}},"Total: "+totalScore(idea.scores)+"/25")
+            )
+          ),
+          React.createElement("div",{className:"review-panel",style:{background:idea.verdict==="GO"?"#FFFBEB":"#FEF2F2"}},
+            React.createElement("h4",{style:{fontSize:14,fontWeight:700,marginBottom:8}},"\u{1F50D} Review Agent's Verdict"),
+            React.createElement("p",{style:{fontSize:14,color:"#475569",marginBottom:12,lineHeight:1.6}},idea.review),
+            React.createElement("h4",{style:{fontSize:13,fontWeight:700,marginBottom:6}},"\u2705 Improvement"),
+            React.createElement("p",{style:{fontSize:14,color:"#475569",lineHeight:1.6}},idea.improvement)
+          )
+        )
+      );
+    })(),
+
+    // Rankings
+    view==="rankings"&&React.createElement("div",{style:{maxWidth:800,margin:"0 auto"}},
+      React.createElement("h2",{style:{fontSize:22,fontWeight:800,color:"#1A1F3D",marginBottom:20,textAlign:"center"}},"\u{1F3C6} Power Rankings"),
+      sorted.map((idea,i)=>React.createElement("div",{key:idea.id,className:"rank-row"+(i===0?" rank-row-top":i<3?" rank-row-top3":"")},
+        React.createElement("span",{style:{fontSize:22,fontWeight:900,width:40,textAlign:"center",color:i===0?"#F5C542":i===1?"#94A3B8":i===2?"#CD7F32":"#CBD5E1"}},i===0?"\u{1F947}":i===1?"\u{1F948}":i===2?"\u{1F949}":"#"+(i+1)),
+        React.createElement("span",{style:{fontSize:24}},idea.emoji),
+        React.createElement("div",{style:{flex:1}},
+          React.createElement("div",{style:{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}},
+            React.createElement("span",{style:{fontSize:16,fontWeight:700}},idea.name),
+            React.createElement(Badge,{verdict:idea.verdict})
+          ),
+          React.createElement("p",{style:{fontSize:12,color:"#64748B",marginTop:2}},idea.type+" \u2022 "+idea.marketSize)
+        ),
+        React.createElement("div",{style:{textAlign:"right"}},
+          React.createElement("span",{style:{fontSize:22,fontWeight:900,color:totalScore(idea.scores)>=17?"#16A34A":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444"}},totalScore(idea.scores)),
+          React.createElement("span",{style:{fontSize:12,color:"#94A3B8"}},"/25")
+        )
+      ))
+    ),
+
+    // Recommendations
+    view==="recommendations"&&React.createElement("div",{style:{maxWidth:800,margin:"0 auto"}},
+      React.createElement("h2",{style:{fontSize:22,fontWeight:800,color:"#1A1F3D",marginBottom:8,textAlign:"center"}},"\u{1F3AF} \u0E04\u0E33\u0E41\u0E19\u0E30\u0E19\u0E33\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A North"),
+      React.createElement("p",{style:{textAlign:"center",color:"#64748B",fontSize:14,marginBottom:24}},"\u0E08\u0E32\u0E01 10 ideas \u0E21\u0E35\u0E40\u0E1E\u0E35\u0E22\u0E07 3 \u0E17\u0E35\u0E48\u0E1C\u0E48\u0E32\u0E19 Review Agent"),
+      [{rank:"1st Priority",name:"SellerOS AI",emoji:"\u{1F3EA}",color:"#4A90D9",when:"\u0E40\u0E23\u0E34\u0E48\u0E21\u0E40\u0E25\u0E22 (Month 1-6)",why:"Founder fit \u0E14\u0E35\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14 + Thai-specific + recurring revenue + \u0E44\u0E21\u0E48\u0E41\u0E02\u0E48\u0E07 global giants",action:"Month 1-2: Validate \u0E01\u0E31\u0E1A 20+ sellers \u2192 Month 2-3: MVP LINE bot \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 Shopee+Lazada \u2192 Month 3-6: \u0E2B\u0E32 3 paying customers \u2192 Raise seed",pivot:"Pivot \u0E08\u0E32\u0E01 AI tool \u2192 SellerOS Collective (distribution network)"},
+      {rank:"2nd Priority",name:"CreatorVault AI",emoji:"\u{1F3A8}",color:"#EC4899",when:"\u0E17\u0E33\u0E04\u0E39\u0E48\u0E01\u0E31\u0E19 (Month 3-6)",why:"\u0E15\u0E25\u0E32\u0E14 $390B by 2034 + Thai creators \u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23 monetization tools",action:"Month 3-4: \u0E40\u0E0B\u0E47\u0E19 MOU 20-30 creators \u2192 Month 4-5: \u0E43\u0E0A\u0E49 2C2P + Shopify merch \u2192 Month 5-6: Launch",pivot:"Focus \u0E40\u0E09\u0E1E\u0E32\u0E30 1 vertical (gaming/cosplay) + creators market \u0E41\u0E17\u0E19\u0E04\u0E38\u0E13"},
+      {rank:"Long-term",name:"AgentFlow",emoji:"\u{1F916}",color:"#A855F7",when:"Research \u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19 (Month 9-12)",why:"TAM $105B by 2034 \u0E41\u0E15\u0E48\u0E1B\u0E35 2026 \u0E22\u0E31\u0E07\u0E40\u0E23\u0E47\u0E27\u0E40\u0E01\u0E34\u0E19\u0E44\u0E1B",action:"\u0E43\u0E0A\u0E49 10-20 \u0E0A\u0E21./\u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C research vertical AI agent use cases \u2192 \u0E04\u0E38\u0E22 50+ SME \u2192 \u0E40\u0E01\u0E47\u0E1A notebook",pivot:"General marketplace \u2192 Thailand SME AI Agent vertical"}
+      ].map((rec,i)=>React.createElement("div",{key:i,className:"rec-card",style:{border:"2px solid "+rec.color+"20"}},
+        React.createElement("div",{style:{display:"flex",alignItems:"center",gap:12,marginBottom:16}},
+          React.createElement("span",{className:"rec-tag",style:{background:rec.color}},rec.rank),
+          React.createElement("span",{style:{fontSize:28}},rec.emoji),
+          React.createElement("h3",{style:{fontSize:20,fontWeight:800}},rec.name)
+        ),
+        [{l:"\u23F0 \u0E40\u0E21\u0E37\u0E48\u0E2D\u0E44\u0E2B\u0E23\u0E48?",t:rec.when,bold:true},{l:"\u{1F4A1} \u0E17\u0E33\u0E44\u0E21?",t:rec.why},{l:"\u{1F4CB} Action Plan",t:rec.action},{l:"\u{1F504} Pivot",t:rec.pivot,colored:true}].map((s,j)=>
+          React.createElement("div",{key:j,style:{marginBottom:12,...(j===0?{background:"#F8FAFC",borderRadius:10,padding:12}:{})}},
+            React.createElement("p",{style:{fontSize:12,fontWeight:700,color:"#64748B",marginBottom:4}},s.l),
+            React.createElement("p",{style:{fontSize:14,lineHeight:1.6,...(s.bold?{fontWeight:600}:{}),...(s.colored?{color:rec.color,fontWeight:600}:{})}},s.t)
+          )
+        )
+      )),
+      React.createElement("div",{className:"bottom-line"},
+        React.createElement("h3",null,"\u26A1 Bottom Line"),
+        React.createElement("p",null,
+          "\u0E08\u0E32\u0E01 10 ideas \u0E21\u0E35\u0E40\u0E1E\u0E35\u0E22\u0E07 ",
+          React.createElement("strong",{style:{color:"#F5C542"}},"3 \u0E15\u0E31\u0E27"),
+          " \u0E17\u0E35\u0E48\u0E1C\u0E48\u0E32\u0E19: ",
+          React.createElement("strong",{style:{color:"#4A90D9"}},"SellerOS"),
+          " (\u0E17\u0E33\u0E40\u0E25\u0E22), ",
+          React.createElement("strong",{style:{color:"#EC4899"}},"CreatorVault"),
+          " (\u0E17\u0E33\u0E04\u0E39\u0E48\u0E01\u0E31\u0E19), ",
+          React.createElement("strong",{style:{color:"#A855F7"}},"AgentFlow"),
+          " (research \u0E01\u0E48\u0E2D\u0E19)"
+        )
+      )
+    )
+  );
+}
+
+ReactDOM.render(React.createElement(App),document.getElementById("root"));
+</script>
+</body>
+</html>
