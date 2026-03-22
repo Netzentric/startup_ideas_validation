@@ -305,6 +305,7 @@
 // ===== DATA =====
 const ideas = [
   { id:1, rank:1, name:"Waste Management & Circular Economy", score:8.8, bigPlayerRisk:4, tam:"$720M-1.8B", tamMid:1260, cagr:"15-20%", margins:"70%+", mvp:"5-6 เดือน", team:"3-4 คน",
+    desc:"แพลตฟอร์มจัดการขยะและเศรษฐกิจหมุนเวียนสำหรับธุรกิจขนาดเล็กถึงกลาง — ช่วยให้โรงงานและธุรกิจต่างๆ สามารถติดตามปริมาณขยะที่เกิดขึ้น จับคู่กับโรงงานรีไซเคิลที่เหมาะสม สร้างรายงานตามกฎหมายสิ่งแวดล้อมโดยอัตโนมัติ และซื้อขายวัสดุรีไซเคิลผ่านตลาดกลางออนไลน์ ช่วยให้ธุรกิจลดค่าใช้จ่ายในการจัดการขยะ ปฏิบัติตามกฎหมายได้อย่างถูกต้อง และสร้างรายได้เพิ่มจากวัสดุที่เคยถูกทิ้ง",
     dims:{market:8,problem:9,moat:9,risk:9,revenue:8,execution:8,thai:9},
     thaiComp:[{name:"ไม่มี dedicated platform",desc:"ตลาดเปิดว่างเกือบ 100%"},{name:"WONGPANIT, SCG, SUEZ Thailand",desc:"Waste collection แบบ traditional"},{name:"Saleng",desc:"C2C junk/recyclables app ไม่ใช่ B2B compliance"}],
     intlComp:[{name:"Rubicon (US, $500M+)",desc:"Enterprise fleet routing — แพงมาก, ไม่ serve SMEs"},{name:"Greyparrot (UK, $7.6M)",desc:"AI waste sorting — ไม่ใช่ compliance/tracking"},{name:"Recykal (India, $22M B)",desc:"B2B waste marketplace — India-focused, closest model"},{name:"Circular.co (US)",desc:"Supply chain sustainability — enterprise-focused"}],
@@ -312,6 +313,7 @@ const ideas = [
     why:["Network effects แข็งแกร่งที่สุด: generators + recyclers → value สูง → ดึงคนเข้ามา","Regulatory tailwind ทั่วโลก — รัฐบาลทุกที่บังคับ waste tracking","Data moat: waste flow data = proprietary asset","Revenue หลายชั้น: SaaS + marketplace + carbon credits + ESG reporting","Big Tech ไม่สนใจ (ตลาดเฉพาะทาง, ต้อง local presence)"]
   },
   { id:2, rank:2, name:"Construction PM & Payment", score:8.6, bigPlayerRisk:6, tam:"$720M-2.4B", tamMid:1560, cagr:"7-10%", margins:"60-70%", mvp:"6-7 เดือน", team:"4-5 คน",
+    desc:"แพลตฟอร์มบริหารจัดการโครงการก่อสร้างและระบบชำระเงินอัตโนมัติสำหรับผู้รับเหมาขนาดเล็กถึงกลาง — ช่วยให้ผู้รับเหมาหลักและผู้รับเหมาช่วงสามารถติดตามความคืบหน้างานก่อสร้างแบบเรียลไทม์ จัดการเอกสารสัญญาและใบแจ้งหนี้ ชำระเงินงวดผ่านระบบพักเงิน (Escrow) ที่ปลอดภัย ลดข้อพิพาทเรื่องการจ่ายเงินล่าช้า และวิเคราะห์ต้นทุนโครงการ ปัจจุบันผู้รับเหมาช่วงต้องรอเงินนาน 30-90 วัน และกว่า 70% ยังใช้สเปรดชีตจัดการโครงการอยู่",
     dims:{market:9,problem:9,moat:8,risk:7,revenue:8,execution:7,thai:9},
     thaiComp:[{name:"ไม่มี dedicated platform",desc:"Contractors ใช้ LINE groups + spreadsheets"},{name:"BUILK",desc:"Construction material marketplace — ไม่ใช่ PM"},{name:"Accounting firms",desc:"Manual project tracking เท่านั้น"}],
     intlComp:[{name:"Procore (US, $12B+ IPO)",desc:"Enterprise PM — $400-1,500/เดือน, ไม่ serve SMEs"},{name:"Fieldwire (acq. by Hilti)",desc:"Task management — ไม่มี payment features"},{name:"Togal.AI (US, $25M)",desc:"AI estimating — enterprise-focused"},{name:"Buildxact (AUS, $52M)",desc:"SME estimating — ไม่ครอบคลุม payment"}],
@@ -319,6 +321,7 @@ const ideas = [
     why:["Problem severity สูงมาก — subcontractors เจ็บจริง (เงินไม่มา, disputes)","Network effects ดี: contractors + subs → trust → payment escrow","ไทย construction boom (EEC, mega projects, tourism infrastructure)","Procore $1,500/เดือน vs. เรา $300-800 = 4-5x ถูกกว่า"]
   },
   { id:3, rank:3, name:"Compliance & Regulatory (SMEs)", score:8.5, bigPlayerRisk:5, tam:"$1.2B-4.5B", tamMid:2850, cagr:"15-20%", margins:"70-75%", mvp:"5-6 เดือน", team:"3-4 คน",
+    desc:"แพลตฟอร์มช่วยธุรกิจขนาดเล็กถึงกลางปฏิบัติตามกฎหมายและข้อบังคับต่างๆ ได้อย่างครบถ้วน — รวมทั้งกฎหมายภาษี (กรมสรรพากร), กฎหมายแรงงาน (ประกันสังคม, กองทุนสำรองเลี้ยงชีพ), กฎหมายคุ้มครองข้อมูลส่วนบุคคล (พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล หรือ PDPA), ใบอนุญาตประกอบธุรกิจเฉพาะทาง (อย., FDA, BOI) ระบบจะแจ้งเตือนกำหนดยื่นเอกสารล่วงหน้า สร้างรายงานอัตโนมัติ และตรวจสอบว่าธุรกิจปฏิบัติตามข้อกำหนดครบถ้วนหรือไม่ ปัจจุบัน ธุรกิจขนาดเล็กในไทยใช้เวลากว่า 100 ชั่วโมงต่อปีจัดการเอกสารเหล่านี้ด้วยมือ และหลายแห่งถูกปรับเพราะพลาดกำหนดยื่น",
     dims:{market:9,problem:8,moat:9,risk:8,revenue:8,execution:8,thai:10},
     thaiComp:[{name:"FlowAccount (Series B $4M+)",desc:"Accounting SaaS — มี basic tax compliance ไม่ครอบคลุม labor/PDPA"},{name:"PEAK",desc:"Cloud accounting — คล้าย FlowAccount, ไม่มี compliance"},{name:"ไม่มี dedicated compliance platform",desc:"สำหรับ SME ไทย"}],
     intlComp:[{name:"Vanta/Drata",desc:"Cybersecurity compliance (SOC2) — ไม่ใช่ general business, แพง $500+/เดือน"},{name:"Compliance.ai (US)",desc:"Regulatory change mgmt — enterprise-focused"},{name:"Zoho/Xero",desc:"Basic tax features — ไม่ครอบคลุม labor, PDPA, industry-specific"}],
@@ -326,6 +329,7 @@ const ideas = [
     why:["Thai advantage สูงสุด (10/10) — ต้องเข้าใจกฎหมายไทย + relationships กับหน่วยงานรัฐ","Regulatory content moat สร้างได้เร็ว","Compliance ไม่ optional — SMEs ต้องจ่ายเมื่อถูกบังคับ","Expand ไป Vietnam, Indonesia ง่าย (localize = barrier)"]
   },
   { id:4, rank:4, name:"Ag Supply Chain Visibility", score:8.5, bigPlayerRisk:5, tam:"$500M-2B", tamMid:1250, cagr:"18-22%", margins:"70%+", mvp:"6-7 เดือน", team:"4-5 คน",
+    desc:"แพลตฟอร์มติดตามสินค้าเกษตรตลอดสายการผลิตตั้งแต่ไร่นาจนถึงโรงงานแปรรูปและส่งออก — ช่วยให้เกษตรกรรู้ราคาตลาดจริง (ไม่ถูกพ่อค้าคนกลางกดราคา), ผู้ซื้อสามารถตรวจสอบแหล่งที่มาและคุณภาพสินค้าเกษตรได้ (ว่าผลิตที่ไหน ใช้สารเคมีอะไร เก็บเกี่ยวเมื่อไหร่), และสร้างใบรับรองความปลอดภัยทางอาหารที่ประเทศผู้นำเข้า (สหภาพยุโรป, สหรัฐอเมริกา) ต้องการ ปัจจุบันพ่อค้าคนกลางกินส่วนต่างถึง 30-50% ของราคาสินค้าเกษตร และเกษตรกรไม่มีทางรู้ว่าราคาตลาดจริงเป็นเท่าไหร่",
     dims:{market:9,problem:9,moat:9,risk:8,revenue:7,execution:7,thai:9},
     thaiComp:[{name:"Freshket ($14M Series B)",desc:"B2B produce marketplace — restaurant sourcing ไม่ใช่ supply chain visibility"},{name:"Farmto",desc:"Farmer→buyer matching — เล็กมาก, ไม่มี traceability"}],
     intlComp:[{name:"Indigo Agriculture (US, $1B+)",desc:"Ag marketplace + carbon — US-focused"},{name:"AgriDigital (AUS, $40M)",desc:"Grain supply chain — Australia/US focus"},{name:"Agriledger (UK)",desc:"Blockchain traceability — pilot stage"}],
@@ -333,6 +337,7 @@ const ideas = [
     why:["Network effects ดีที่สุดใน ag: farmers + buyers + processors ล้วนได้ประโยชน์","Food safety regulations เข้มขึ้น → traceability กลายเป็น mandatory","ไทย = major food exporter → demand จาก EU/US importers","Freshket prove market แต่ไม่ทำ visibility = โอกาสที่ clear"]
   },
   { id:5, rank:5, name:"Field Service Management (SE Asia)", score:8.4, bigPlayerRisk:3.5, tam:"$2.61B-6.41B", tamMid:4510, cagr:"19.68%", margins:"80-90%", mvp:"6 เดือน", team:"3 คน",
+    desc:"แอปพลิเคชันบริหารจัดการงานสำหรับร้านซ่อมบำรุงและช่างเทคนิคภาคสนาม (ช่างซ่อมแอร์, ช่างประปา, ช่างไฟฟ้า, ช่างซ่อมเครื่องใช้ไฟฟ้า, งานบำรุงรักษาอาคาร) — ช่วยเจ้าของกิจการจัดคิวงานและส่งช่างไปตามจุดต่างๆ อย่างมีประสิทธิภาพ ติดตามตำแหน่งช่างแบบเรียลไทม์ สร้างใบเสนอราคาและใบแจ้งหนี้ในหน้างาน รับชำระเงินผ่านพร้อมเพย์ทันที และเก็บประวัติลูกค้าทั้งหมดไว้ในที่เดียว ปัจจุบันช่างซ่อมส่วนใหญ่ในไทยยังใช้สมุดจดมือ โทรศัพท์นัดงาน และ 20-30% ของเวลาทำงานไม่ได้เรียกเก็บเงินเพราะลืมบันทึก",
     dims:{market:8,problem:9,moat:7,risk:9,revenue:9,execution:9,thai:8},
     thaiComp:[{name:"ไม่มี Thai FSM startup เลย",desc:"ตลาดเปิดว่าง 100%"},{name:"Fixzy",desc:"Home service marketplace — B2C ไม่ใช่ B2B SaaS"},{name:"Seekster",desc:"คล้าย Fixzy — B2C marketplace"}],
     intlComp:[{name:"ServiceTitan (US, $9.5B)",desc:"Market leader — US/Canada only, $250-500/tech"},{name:"Jobber (Canada, $183.5M)",desc:"SME-friendly $49-199/เดือน — ไม่มี SE Asia"},{name:"Housecall Pro (US, $175M)",desc:"Home services — US-centric"},{name:"Tavant (US)",desc:"AI-enabled FSM — enterprise-focused"}],
@@ -340,6 +345,7 @@ const ideas = [
     why:["Big-Player Risk ต่ำสุด (3.5/10) — ไม่มีใครมาแข่งเร็วๆ นี้","Proven model (Jobber $183.5M, ServiceTitan $9.5B) — แค่ localize","Margins สูงมาก (80-90%) — SaaS ล้วน","Time to revenue เร็ว — ช่างซ่อมพร้อมจ่ายทันที"]
   },
   { id:6, rank:6, name:"QC for Small Manufacturers", score:8.3, bigPlayerRisk:5, tam:"$180M-480M", tamMid:330, cagr:"12-15%", margins:"80%+", mvp:"5-6 เดือน", team:"3 คน",
+    desc:"แพลตฟอร์มควบคุมคุณภาพสินค้าสำหรับโรงงานผลิตขนาดเล็กถึงกลาง — ช่วยให้โรงงานสามารถตรวจสอบคุณภาพสินค้าทุกขั้นตอนการผลิตผ่านมือถือ (ถ่ายรูปสินค้าให้ระบบปัญญาประดิษฐ์ตรวจหาข้อบกพร่อง) บันทึกผลตรวจสอบเป็นระบบดิจิทัลแทนกระดาษ สร้างรายงานตามมาตรฐานสากล (เช่น ISO 9001) โดยอัตโนมัติ และวิเคราะห์รูปแบบข้อบกพร่องที่เกิดซ้ำเพื่อป้องกันปัญหาในอนาคต ปัจจุบันโรงงานขนาดเล็กกว่า 30% มีปัญหาสินค้าไม่ได้คุณภาพ ทำให้เสียสัญญาส่งออกและถูกตีกลับสินค้า",
     dims:{market:7,problem:9,moat:8,risk:8,revenue:8,execution:8,thai:9},
     thaiComp:[{name:"ไม่มี dedicated QC platform สำหรับ SME",desc:"โรงงานใช้กระดาษ/Excel"},{name:"QEONEX",desc:"Industrial IoT — monitoring ไม่ใช่ QC compliance"}],
     intlComp:[{name:"Qualityze (US)",desc:"Cloud QMS — enterprise $15K-50K+/ปี"},{name:"Greenlight Guru (US, $200M+)",desc:"QMS สำหรับ medical devices — niche"},{name:"Inspectorio (US, $30M)",desc:"Supply chain QC — serve brands (Nike) ไม่ใช่ factory self-service"}],
@@ -347,6 +353,7 @@ const ideas = [
     why:["ไทยเป็น manufacturing hub → ตลาดอยู่ตรงหน้า","Quality issues = เสียเงินจริง (rejected batches) → willingness to pay สูง","Data moat: defect patterns จากหลายร้อยโรงงาน = predictive intelligence","Export pressure (EU regulations) บังคับมี digital QC trail"]
   },
   { id:7, rank:7, name:"Fleet Telematics & AI Video", score:8.2, bigPlayerRisk:6, tam:"$1.08B-7.2B", tamMid:4140, cagr:"12.3%", margins:"70%+", mvp:"6-7 เดือน", team:"4-5 คน",
+    desc:"ระบบติดตามรถขนส่งและวิเคราะห์ความปลอดภัยของพนักงานขับรถด้วยกล้องวิดีโอและปัญญาประดิษฐ์ — สำหรับธุรกิจที่มีรถขนส่งหลายคัน (บริษัทขนส่ง, รถแท็กซี่, รถส่งของ, รถบัส) ระบบจะติดตามตำแหน่งรถแบบเรียลไทม์ วิเคราะห์พฤติกรรมการขับรถจากกล้องวิดีโอ (เช่น หลับใน, เล่นโทรศัพท์, ขับเร็วเกินกำหนด) แจ้งเตือนทันทีเมื่อมีเหตุอันตราย ลดค่าน้ำมันที่สูญเปล่า 15-20% ผ่านการวิเคราะห์เส้นทาง และช่วยลดค่าเบี้ยประกันภัยโดยแสดงข้อมูลความปลอดภัยให้บริษัทประกัน ปัจจุบันในเอเชียตะวันออกเฉียงใต้ยังไม่มีระบบวิเคราะห์วิดีโอด้วยปัญญาประดิษฐ์สำหรับรถขนส่งเลย มีแค่ระบบติดตามตำแหน่งพื้นฐาน",
     dims:{market:9,problem:8,moat:8,risk:7,revenue:8,execution:7,thai:8},
     thaiComp:[{name:"AIS Fleet",desc:"GPS tracking — basic, ไม่มี AI video analytics"},{name:"Nostra Logistics (NOSTRA MAP)",desc:"Basic GPS + routing, ไม่มี video"}],
     intlComp:[{name:"Samsara (US, $2B+ IPO)",desc:"Full fleet — $33-50/vehicle, enterprise-focused"},{name:"Motive (US, $2.85B)",desc:"AI dashcam — US-focused"},{name:"Geotab (Canada)",desc:"Enterprise fleet — ไม่ serve SMEs"}],
@@ -354,6 +361,7 @@ const ideas = [
     why:["TAM ใหญ่มาก ($1-7B) โตเร็ว (12.3% CAGR)","Video data moat: ยิ่งรถมาก → ML model ยิ่งแม่น","Insurance partnership = revenue multiplier","Delivery boom (Grab, Shopee, Lazada) สร้าง demand"]
   },
   { id:8, rank:8, name:"Climate Risk & Adaptation Financing", score:8.1, bigPlayerRisk:6.5, tam:"$50B-100B+", tamMid:75000, cagr:"25-30%", margins:"50-70%", mvp:"6-8 เดือน", team:"4 คน",
+    desc:"แพลตฟอร์มประเมินความเสี่ยงจากการเปลี่ยนแปลงสภาพภูมิอากาศและจัดหาเงินทุนเพื่อการปรับตัวสำหรับภาคเกษตรกรรม — ใช้ข้อมูลจากดาวเทียมและปัญญาประดิษฐ์วิเคราะห์ว่าพื้นที่เพาะปลูกแต่ละแห่งมีความเสี่ยงจากน้ำท่วม ภัยแล้ง หรือพายุมากน้อยแค่ไหน จากนั้นจับคู่เกษตรกรกับแหล่งเงินทุน (สินเชื่อเพื่อปรับตัว, ประกันภัยพืชผลแบบพาราเมตริกที่จ่ายเงินอัตโนมัติเมื่อเกิดภัย) และให้คำแนะนำวิธีปรับตัวเฉพาะพื้นที่ ปัจจุบันเงินทุนด้านสภาพภูมิอากาศสำหรับภาคเกษตรทั่วโลกมีเพียง 95 พันล้านดอลลาร์ แต่ต้องการถึง 1.1 ล้านล้านดอลลาร์ — เป็นช่องว่างมหาศาลกว่า 10 เท่า",
     dims:{market:9,problem:8,moat:8,risk:6,revenue:7,execution:7,thai:8},
     thaiComp:[{name:"ไม่มี",desc:"ตลาด climate risk + ag financing ว่างเปล่าในไทย"}],
     intlComp:[{name:"IBISA (Luxembourg, $3M A)",desc:"Parametric insurance — India-focused"},{name:"ClimateAi (US, $30M+)",desc:"AI climate risk — enterprise, US/EU"},{name:"Arbol (US)",desc:"Parametric weather insurance — commodity markets"},{name:"Aistech Space (Spain, €8.5M B)",desc:"Satellite imagery for insurance triggers"}],
@@ -361,6 +369,7 @@ const ideas = [
     why:["TAM ใหญ่ที่สุดในทุก ideas ($50-100B+)","Regulatory tailwind ทั่วโลก (Paris Agreement, ESG mandates)","First-mover advantage ชัดเจนใน SE Asia","Data moat สร้างได้ 2-3 ปี → defensible long-term"]
   },
   { id:9, rank:9, name:"Rural Farmer Fintech (SE Asia)", score:8.0, bigPlayerRisk:7.5, tam:"$200B+", tamMid:200000, cagr:"30-40%", margins:"30-50%", mvp:"6-8 เดือน", team:"4-5 คน",
+    desc:"แพลตฟอร์มบริการทางการเงินสำหรับเกษตรกรรายย่อยในเอเชียตะวันออกเฉียงใต้ — ช่วยให้ชาวนาและเกษตรกรที่มีที่ดินน้อยกว่า 2 เฮกตาร์ สามารถเข้าถึงสินเชื่อดอกเบี้ยต่ำผ่านมือถือ โดยระบบจะประเมินความน่าเชื่อถือจากข้อมูลทางเลือก (ภาพถ่ายดาวเทียมของแปลงเพาะปลูก ประวัติการใช้โทรศัพท์ ข้อมูลการซื้อขายผ่านมือถือ) แทนหลักทรัพย์ค้ำประกันแบบเดิม พร้อมประกันภัยพืชผลราคาประหยัด ปัจจุบันเกษตรกรกว่า 100 ล้านคนในภูมิภาคนี้เข้าถึงสินเชื่อในระบบได้ไม่ถึง 5% ต้องกู้นอกระบบดอกเบี้ย 30-100% ต่อปี",
     dims:{market:10,problem:10,moat:7,risk:5,revenue:6,execution:7,thai:8},
     thaiComp:[{name:"Ricult ($10M+ funding)",desc:"Advisory + weather risk — ไม่ใช่ lending"},{name:"ธ.ก.ส. (BAAC)",desc:"State ag bank — ช้า, bureaucratic, ไม่มี mobile-first"},{name:"KBank/SCB digital lending",desc:"ไม่ serve smallholder (ต้องมีหลักประกัน)"}],
     intlComp:[{name:"Crowde (Indonesia, $10.1M)",desc:"P2P ag lending — Indonesia-only"},{name:"Pula (Kenya)",desc:"Crop insurance — Africa-focused"},{name:"FarmFundr (US)",desc:"Ag crowdfunding — developed market only"}],
@@ -368,6 +377,7 @@ const ideas = [
     why:["Problem severity สูงที่สุด (10/10) — ชาวนาเจ็บจริงๆ","TAM ใหญ่ที่สุด ($200B+) แต่ execution ยาก","Competition กำลังเพิ่ม → ต้อง move fast + lock cooperatives","⚠️ Capital-intensive, margins ต่ำกว่า pure SaaS"]
   },
   { id:10, rank:10, name:"Embedded Merchant Lending (APAC)", score:8.0, bigPlayerRisk:7, tam:"$3.6B-18B", tamMid:10800, cagr:"20-25%", margins:"60-70%", mvp:"6-7 เดือน", team:"3-4 คน",
+    desc:"แพลตฟอร์มสินเชื่อฝังตัวสำหรับร้านค้าและธุรกิจขนาดเล็กในภูมิภาคเอเชียแปซิฟิก — ทำงานโดยเชื่อมต่อกับระบบรับชำระเงินที่ร้านค้าใช้อยู่แล้ว (เช่น เครื่องรูดบัตร, แอปรับเงิน) นำข้อมูลยอดขายจริงมาวิเคราะห์ความสามารถในการชำระหนี้ แล้วเสนอสินเชื่อให้ร้านค้าได้ภายในไม่กี่นาที โดยไม่ต้องใช้หลักทรัพย์ค้ำประกัน และหักชำระคืนอัตโนมัติจากยอดขายรายวัน คล้ายกับ Stripe Capital ในสหรัฐอเมริกา แต่สำหรับตลาดเอเชียตะวันออกเฉียงใต้ที่ยังไม่มีบริการแบบนี้ ปัจจุบันธุรกิจขนาดเล็กกว่า 50% ไม่สามารถเข้าถึงสินเชื่อในระบบธนาคารได้",
     dims:{market:10,problem:9,moat:9,risk:5,revenue:7,execution:7,thai:7},
     thaiComp:[{name:"2C2P ($150M+ funding)",desc:"Payment processor — อาจ add lending แต่ยังไม่ทำ"},{name:"Ascend Money (TrueMoney)",desc:"E-wallet — consumer lending ไม่ใช่ merchant"},{name:"KBank/SCB SME lending",desc:"Digital channels แต่ช้า, ต้อง collateral"}],
     intlComp:[{name:"Tala (US, $350M+)",desc:"Consumer micro-lending — ไม่ใช่ merchant"},{name:"Grab Financial",desc:"Expanding lending — broad focus"},{name:"Stripe Capital (US)",desc:"Merchant lending — US/EU only"}],
@@ -377,12 +387,12 @@ const ideas = [
 ];
 
 const eliminated = [
-  {name:"Vendor Mgmt (SME Mfg)",score:7.6,reason:"ดีแต่ TAM ไม่ใหญ่พอ, Zapro ($15/user) ทำอยู่"},
-  {name:"Data Monetization (Merchants)",score:7.3,reason:"PDPA/privacy risk สูง, trust barrier"},
-  {name:"F&B Inventory (SME)",score:7.2,reason:"Commoditized, Supy/MarketMan มีอยู่, TAM เล็ก"},
-  {name:"Creator Economy",score:7.0,reason:"Meta ทำเอง (Creator Fast Track มี.ค. 2026), platform risk"},
-  {name:"Last-Mile Delivery",score:6.8,reason:"Grab/GoTo/Shipday ครอง, market consolidating"},
-  {name:"Internal Talent Marketplace",score:6.5,reason:"TAM เล็ก ($180M), HR platforms จะ bundle"},
+  {name:"ระบบจัดการซัพพลายเออร์สำหรับโรงงานผลิตขนาดเล็ก",score:7.6,reason:"แพลตฟอร์มช่วยโรงงานขนาดเล็กจัดการซัพพลายเออร์ (ผู้ขายวัตถุดิบ) — ตั้งแต่เปรียบเทียบราคา ติดตามการส่งของ ตรวจสอบใบแจ้งหนี้ ตัดออกเพราะตลาดไม่ใหญ่พอ และมีคู่แข่งอย่าง Zapro ทำอยู่แล้ว"},
+  {name:"แพลตฟอร์มสร้างรายได้จากข้อมูลการซื้อขายของร้านค้า",score:7.3,reason:"ระบบรวบรวมข้อมูลพฤติกรรมลูกค้าจากร้านค้า แล้วขายให้แบรนด์สินค้า ตัดออกเพราะมีความเสี่ยงด้านกฎหมายคุ้มครองข้อมูลส่วนบุคคลสูง และลูกค้าไม่ไว้ใจ"},
+  {name:"ระบบจัดการสั่งซื้อและสต็อกสินค้าอาหารสำหรับผู้จัดจำหน่าย",score:7.2,reason:"แพลตฟอร์มช่วยผู้จัดจำหน่ายอาหารจัดการออเดอร์จากหลายช่องทาง ติดตามสต็อก และลดของเสีย ตัดออกเพราะตลาดเล็กและมีคู่แข่งหลายรายอยู่แล้ว (เช่น Supy, MarketMan)"},
+  {name:"แพลตฟอร์มสร้างรายได้ที่มั่นคงให้คนสร้างคอนเทนต์ออนไลน์",score:7.0,reason:"ระบบรวมรายได้จากหลายแพลตฟอร์ม (YouTube, TikTok, Instagram) ให้ครีเอเตอร์ พร้อมกองทุนรักษาเสถียรภาพรายได้ ตัดออกเพราะ Meta เปิดตัว Creator Fast Track เอง (มีนาคม 2026) ซึ่งจ่ายเงินค้ำประกันให้ครีเอเตอร์โดยตรง"},
+  {name:"ระบบจัดการการจัดส่งขั้นสุดท้ายสำหรับร้านค้าออนไลน์",score:6.8,reason:"แพลตฟอร์มรวมบริการขนส่งหลายเจ้า (Grab, Flash, Kerry) ในที่เดียว ช่วยเลือกราคาถูกสุดและติดตามพัสดุ ตัดออกเพราะ Grab และ GoTo ครองตลาดนี้แล้ว และกำลังรวมตัวกัน"},
+  {name:"ตลาดจับคู่ทักษะพนักงานภายในองค์กร",score:6.5,reason:"แพลตฟอร์มช่วยบริษัทจับคู่พนักงานที่มีทักษะเหมาะสมกับโปรเจกต์ภายใน ตัดออกเพราะตลาดเล็กมาก (180 ล้านดอลลาร์) และแพลตฟอร์มบริหารทรัพยากรบุคคลรายใหญ่จะเพิ่มฟีเจอร์นี้เข้ามาเอง"},
 ];
 
 const dimLabels = ['Market','Problem','Moat','Risk(inv)','Revenue','Execution','Thai Adv'];
@@ -409,7 +419,7 @@ function renderRankTable() {
     const status = idea.score>=8.5?['แนะนำอย่างยิ่ง','status-recommend']:idea.score>=8?['แนะนำ','status-recommend']:['ระวัง','status-caution'];
     html += `<tr style="cursor:pointer;" onclick="showIdeaDetail(${idea.id})">
       <td><span class="rank-num ${rankClass}">${medal}</span></td>
-      <td><span class="idea-name">${idea.name}</span></td>
+      <td><span class="idea-name">${idea.name}</span><br><span style="color:var(--text2);font-size:0.82rem;line-height:1.4;display:inline-block;margin-top:4px;max-width:600px;">${idea.desc.substring(0,120)}...</span></td>
       <td><span class="score-badge ${scoreClass}">${idea.score}</span></td>
       <td><span style="color:${riskColor};font-weight:600;">${idea.bigPlayerRisk}/10</span></td>
       <td><span class="status-badge ${status[1]}">${status[0]}</span></td>
@@ -430,7 +440,8 @@ function renderIdeaList() {
         <span style="font-weight:600;">#${idea.rank} ${idea.name}</span>
         <span class="score-badge ${scoreClass}" style="font-size:0.9rem;">${idea.score}</span>
       </div>
-      <div style="color:var(--text2);font-size:0.85rem;margin-top:8px;">TAM: ${idea.tam} | CAGR: ${idea.cagr} | Margins: ${idea.margins}</div>
+      <div style="color:var(--text2);font-size:0.84rem;margin-top:8px;line-height:1.5;">${idea.desc.substring(0,150)}...</div>
+      <div style="color:var(--text2);font-size:0.8rem;margin-top:8px;opacity:0.7;">TAM: ${idea.tam} | CAGR: ${idea.cagr} | Margins: ${idea.margins}</div>
     </div>`;
   });
   html += '</div></div>';
@@ -457,6 +468,10 @@ function showIdeaDetail(id) {
       <span class="score-badge ${scoreClass}" style="font-size:1.2rem;">${idea.score}/10</span>
     </div>
     <div class="card">
+      <div style="background:linear-gradient(135deg,rgba(56,189,248,0.06),rgba(45,212,191,0.06));border:1px solid rgba(56,189,248,0.15);border-radius:12px;padding:20px;margin-bottom:20px;">
+        <h3 style="color:var(--accent);margin:0 0 10px 0;font-size:1rem;">ไอเดียนี้คืออะไร?</h3>
+        <p style="color:var(--text);font-size:0.92rem;line-height:1.7;margin:0;">${idea.desc}</p>
+      </div>
       <div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px;">
         <div><span style="color:var(--text2);font-size:0.85rem;">TAM</span><br><strong>${idea.tam}</strong></div>
         <div><span style="color:var(--text2);font-size:0.85rem;">CAGR</span><br><strong>${idea.cagr}</strong></div>
@@ -513,9 +528,9 @@ function backToList() {
 // ===== ELIMINATED =====
 function renderEliminated() {
   const el = document.getElementById('eliminatedList');
-  let html = '<table class="fw-table"><tr><th>Idea</th><th>Score</th><th>เหตุผลที่ตัดออก</th></tr>';
+  let html = '<table class="fw-table"><tr><th>Idea</th><th>Score</th><th>คำอธิบายและเหตุผลที่ตัดออก</th></tr>';
   eliminated.forEach(e => {
-    html += `<tr><td>${e.name}</td><td><span class="score-badge score-low">${e.score}</span></td><td style="color:var(--text2)">${e.reason}</td></tr>`;
+    html += `<tr><td style="font-weight:600;min-width:200px;">${e.name}</td><td><span class="score-badge score-low">${e.score}</span></td><td style="color:var(--text2);line-height:1.6;">${e.reason}</td></tr>`;
   });
   html += '</table>';
   el.innerHTML = html;
