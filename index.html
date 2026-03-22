@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top 10 Startup Ideas 2026 — North's Playbook</title>
+<title>40 Startup Ideas 2026 — Blue Ocean & Red Ocean Playbook</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172A;color:#E2E8F0;min-height:100vh}
-
-.container{max-width:1100px;margin:0 auto;padding:24px 16px}
+.container{max-width:1200px;margin:0 auto;padding:24px 16px}
 .header{text-align:center;padding:40px 0 32px}
 .header h1{font-size:32px;font-weight:900;background:linear-gradient(135deg,#60A5FA,#A78BFA,#F472B6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.5px}
 .header .sub{color:#94A3B8;font-size:14px;margin-top:8px}
@@ -17,27 +16,46 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172
 .header .stat .num{font-size:22px;font-weight:800;color:#60A5FA}
 .header .stat .label{font-size:11px;color:#64748B;margin-top:2px}
 
-.tabs{display:flex;justify-content:center;gap:6px;margin-bottom:28px;flex-wrap:wrap}
-.tab{padding:10px 24px;border-radius:12px;border:none;cursor:pointer;font-weight:700;font-size:13px;transition:all .2s;background:#1E293B;color:#94A3B8}
-.tab:hover{background:#334155;color:#CBD5E1}
-.tab.active{background:linear-gradient(135deg,#3B82F6,#8B5CF6);color:#fff;box-shadow:0 4px 15px rgba(99,102,241,.3)}
+/* Main nav tabs */
+.main-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.main-tab{padding:10px 28px;border-radius:12px;border:none;cursor:pointer;font-weight:700;font-size:14px;transition:all .2s;background:#1E293B;color:#94A3B8}
+.main-tab:hover{background:#334155;color:#CBD5E1}
+.main-tab.active{background:linear-gradient(135deg,#3B82F6,#8B5CF6);color:#fff;box-shadow:0 4px 15px rgba(99,102,241,.3)}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+/* Filter tabs */
+.tabs{display:flex;justify-content:center;gap:6px;margin-bottom:28px;flex-wrap:wrap}
+.tab{padding:8px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:12px;transition:all .2s;background:#1E293B;color:#94A3B8}
+.tab:hover{background:#334155;color:#CBD5E1}
+.tab.active{color:#fff;box-shadow:0 4px 15px rgba(99,102,241,.3)}
+.tab.blue-ocean{background:linear-gradient(135deg,#0EA5E9,#6366F1)}
+.tab.red-ocean{background:linear-gradient(135deg,#EF4444,#F97316)}
+.tab.all-tab{background:linear-gradient(135deg,#3B82F6,#8B5CF6)}
+
+.section-header{text-align:center;margin:32px 0 20px;position:relative}
+.section-header h2{font-size:22px;font-weight:900;display:inline-block;padding:0 20px}
+.section-header .line{position:absolute;top:50%;left:0;right:0;height:1px;background:#334155;z-index:0}
+.section-header h2{position:relative;z-index:1;background:#0F172A}
+.badge{display:inline-block;padding:4px 14px;border-radius:8px;font-size:12px;font-weight:700;margin:0 4px}
+.badge-blue{background:rgba(14,165,233,0.2);color:#38BDF8;border:1px solid rgba(14,165,233,0.3)}
+.badge-red{background:rgba(239,68,68,0.2);color:#F87171;border:1px solid rgba(239,68,68,0.3)}
+.badge-thai{background:rgba(34,197,94,0.2);color:#4ADE80;border:1px solid rgba(34,197,94,0.3)}
+.badge-intl{background:rgba(168,85,247,0.2);color:#C084FC;border:1px solid rgba(168,85,247,0.3)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
 .card{background:#1E293B;border-radius:16px;padding:20px;cursor:pointer;border:1px solid #334155;transition:all .2s;position:relative;overflow:hidden}
 .card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3);border-color:#475569}
 .card .accent{position:absolute;top:0;left:0;right:0;height:3px}
-.card .top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.card .emoji{font-size:32px}
-.card .rank-badge{font-size:11px;font-weight:800;padding:4px 10px;border-radius:8px;background:#334155;color:#94A3B8}
-.card .rank-badge.top3{background:linear-gradient(135deg,#F59E0B,#EF4444);color:#fff}
-.card h3{font-size:18px;font-weight:800;color:#F1F5F9;margin-bottom:4px}
+.card .top-row{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;gap:8px}
+.card .emoji{font-size:32px;flex-shrink:0}
+.card .badges{display:flex;gap:4px;flex-wrap:wrap}
+.card h3{font-size:17px;font-weight:800;color:#F1F5F9;margin-bottom:4px}
 .card .meta{font-size:12px;color:#64748B;margin-bottom:10px}
-.card .tagline{font-size:13px;color:#94A3B8;font-style:italic;margin-bottom:14px;line-height:1.5}
-.card .score-row{display:flex;justify-content:space-between;align-items:center}
-.card .score-total{font-size:20px;font-weight:900}
-.card .score-label{font-size:11px;color:#64748B}
+.card .tagline{font-size:13px;color:#94A3B8;margin-bottom:14px;line-height:1.5}
 .mini-bar{width:100%;height:6px;background:#334155;border-radius:3px;overflow:hidden;margin-top:8px}
 .mini-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.card .score-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.card .score-total{font-size:20px;font-weight:900}
+.card .score-label{font-size:11px;color:#64748B}
 
 .detail{max-width:800px;margin:0 auto}
 .back-btn{background:none;border:none;color:#60A5FA;cursor:pointer;font-size:14px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:6px}
@@ -45,9 +63,9 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172
 .detail-card{background:#1E293B;border-radius:20px;padding:32px;border:1px solid #334155}
 .detail-header{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
 .detail-header .emoji{font-size:48px}
-.detail-header h2{font-size:28px;font-weight:900;color:#F1F5F9}
+.detail-header h2{font-size:26px;font-weight:900;color:#F1F5F9}
 .detail-header .meta{font-size:13px;color:#64748B;margin-top:4px}
-.detail-tagline{font-size:16px;color:#94A3B8;font-style:italic;border-left:3px solid;padding-left:16px;margin-bottom:28px;line-height:1.6}
+.detail-tagline{font-size:16px;color:#94A3B8;border-left:3px solid;padding-left:16px;margin-bottom:28px;line-height:1.6}
 .section{margin-bottom:20px}
 .section-title{font-size:12px;font-weight:800;color:#64748B;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .section p{font-size:14px;line-height:1.7;color:#CBD5E1}
@@ -68,6 +86,7 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172
 .improve-box h4{font-size:13px;font-weight:800;color:#34D399;margin-bottom:8px}
 .improve-box p{font-size:14px;line-height:1.7;color:#CBD5E1}
 
+/* Rankings */
 .rank-list{max-width:800px;margin:0 auto}
 .rank-item{display:flex;align-items:center;gap:16px;background:#1E293B;border-radius:14px;padding:16px 20px;margin-bottom:10px;border:1px solid #334155;transition:all .2s;cursor:pointer}
 .rank-item:hover{border-color:#475569;background:#253348}
@@ -81,6 +100,7 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172
 .rank-score{font-size:28px;font-weight:900;text-align:right}
 .rank-score span{font-size:14px;color:#64748B;font-weight:400}
 
+/* Recommendations */
 .rec{max-width:800px;margin:0 auto}
 .rec-intro{text-align:center;margin-bottom:28px}
 .rec-intro h2{font-size:24px;font-weight:900;color:#F1F5F9;margin-bottom:8px}
@@ -96,11 +116,20 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172
 .bottom-cta h3{font-size:20px;font-weight:900;color:#F5C542;margin-bottom:12px}
 .bottom-cta p{font-size:15px;line-height:1.7;color:#94A3B8}
 
+.search-box{max-width:400px;margin:0 auto 24px;position:relative}
+.search-box input{width:100%;padding:12px 16px 12px 40px;border-radius:12px;border:1px solid #334155;background:#1E293B;color:#E2E8F0;font-size:14px;outline:none}
+.search-box input:focus{border-color:#60A5FA}
+.search-box .icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#64748B}
+
 @media(max-width:640px){
-  .header h1{font-size:24px}
+  .header h1{font-size:22px}
   .grid{grid-template-columns:1fr}
   .detail-card{padding:20px}
   .header .stats{gap:12px}
+  .tabs{gap:4px}
+  .tab{padding:7px 12px;font-size:11px}
+  .main-tabs{gap:4px}
+  .main-tab{padding:8px 16px;font-size:12px}
 }
 </style>
 </head>
@@ -110,124 +139,579 @@ body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
 <script type="text/babel">
-const {useState}=React;
+const {useState,useMemo}=React;
 
 const IDEAS=[
-{id:1,name:"SellerOS AI",type:"Red Ocean",market:"Thai \u2192 SEA",emoji:"\u{1F3EA}",color:"#3B82F6",marketSize:"$5.2B \u2192 $8.5B",affected:"2M+ \u0E04\u0E19\u0E02\u0E32\u0E22\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C\u0E44\u0E17\u0E22",tagline:"\u0E02\u0E32\u0E22\u0E02\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E19\u0E2D\u0E19 \u2014 AI \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E17\u0E38\u0E01\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21\u0E43\u0E2B\u0E49",
-problem:"\u0E04\u0E19\u0E02\u0E32\u0E22\u0E02\u0E2D\u0E07\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C 2M+ \u0E04\u0E19 \u0E15\u0E49\u0E2D\u0E07\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23 4-5 \u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21\u0E1E\u0E23\u0E49\u0E2D\u0E21\u0E01\u0E31\u0E19 (Shopee 75%, Lazada 67%, TikTok 51%) \u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32 10-14 \u0E0A\u0E21./\u0E27\u0E31\u0E19 \u0E17\u0E33\u0E07\u0E32\u0E19\u0E0B\u0E49\u0E33\u0E46 \u0E40\u0E0A\u0E48\u0E19 \u0E15\u0E2D\u0E1A\u0E41\u0E0A\u0E17, \u0E2D\u0E31\u0E1B\u0E40\u0E14\u0E15\u0E2A\u0E15\u0E47\u0E2D\u0E01, \u0E1B\u0E23\u0E31\u0E1A\u0E23\u0E32\u0E04\u0E32 \u2014 tools \u0E17\u0E35\u0E48\u0E21\u0E35 (Zetpy, Ginee) \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48 AI-first \u0E41\u0E25\u0E30\u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",
-solution:"AI \u0E15\u0E2D\u0E1A\u0E41\u0E0A\u0E17\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32\u0E17\u0E38\u0E01\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21\u0E40\u0E1B\u0E47\u0E19\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 + \u0E1B\u0E23\u0E31\u0E1A\u0E23\u0E32\u0E04\u0E32\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34\u0E15\u0E32\u0E21 demand + \u0E2A\u0E23\u0E49\u0E32\u0E07 content \u0E08\u0E32\u0E01\u0E23\u0E39\u0E1B 1 \u0E23\u0E39\u0E1B + \u0E2D\u0E2D\u0E01 e-Tax Invoice \u0E15\u0E32\u0E21\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34",
-moat:"Multi-platform data lock-in (\u0E22\u0E34\u0E48\u0E07\u0E43\u0E0A\u0E49\u0E19\u0E32\u0E19 AI \u0E22\u0E34\u0E48\u0E07\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E18\u0E38\u0E23\u0E01\u0E34\u0E08) + Thai-specific integrations \u0E17\u0E35\u0E48 global tools \u0E44\u0E21\u0E48\u0E21\u0E35",
-revenue:"SaaS 499-2,999 \u0E1A\u0E32\u0E17/\u0E40\u0E14\u0E37\u0E2D\u0E19 + commission \u0E08\u0E32\u0E01 AI upsell + e-invoicing add-on",
-mvp:"Dashboard \u0E14\u0E36\u0E07 orders \u0E08\u0E32\u0E01 Shopee + Lazada API + AI pricing suggestions + Thai chatbot",
-risk:"Shopee/Lazada \u0E2D\u0E32\u0E08 build native AI tools + Platform API \u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E44\u0E14\u0E49 \u0E41\u0E15\u0E48 multi-platform lock-in \u0E0A\u0E48\u0E27\u0E22\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19",
-scores:{survivability:3,monetization:4,mvpEase:4,viral:4,founderFit:5},verdict:"GO",
-review:"Founder fit \u0E14\u0E35\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14\u0E43\u0E19 10 \u0E44\u0E2D\u0E40\u0E14\u0E35\u0E22 \u0E15\u0E25\u0E32\u0E14\u0E43\u0E2B\u0E0D\u0E48 recurring revenue \u0E0A\u0E31\u0E14 \u0E15\u0E49\u0E2D\u0E07 pivot \u0E40\u0E1B\u0E47\u0E19 distribution network \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E41\u0E04\u0E48 tool",
-improvement:"\u0E40\u0E23\u0E34\u0E48\u0E21\u0E08\u0E32\u0E01 1 category (Fashion/Beauty) \u0E41\u0E25\u0E49\u0E27\u0E02\u0E22\u0E32\u0E22 \u2192 \u0E2A\u0E23\u0E49\u0E32\u0E07 SellerOS Collective \u0E40\u0E1B\u0E47\u0E19 network \u0E02\u0E2D\u0E07\u0E04\u0E19\u0E02\u0E32\u0E22"},
+// ===== BLUE OCEAN — START IN THAI (10) =====
+{id:1,name:"TaxMate AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"💸",color:"#06B6D4",
+marketSize:"$500M",affected:"3M+ SME ไทย + ฟรีแลนซ์",
+tagline:"บัญชี+ภาษี ทำเองได้ — AI ที่เข้าใจกฎหมายไทย",
+problem:"SME ไทยกว่า 3 ล้านราย ต้องทำบัญชีและยื่นภาษีตามกฎหมายใหม่ (e-Tax Invoice, e-Withholding Tax) แต่ 80% ยังใช้ Excel หรือกระดาษ จ้างสำนักงานบัญชีก็แพง 5,000-30,000 บาท/เดือน ซอฟต์แวร์ที่มีอยู่ เช่น PEAK, FlowAccount ยังไม่ใช้ AI ช่วยทำงานอัตโนมัติ",
+solution:"AI ถ่ายรูปใบเสร็จแล้วลงบัญชีอัตโนมัติ + ออก e-Tax Invoice ตามรูปแบบกรมสรรพากร + แจ้งเตือน deadline ภาษีผ่าน LINE + สรุปกำไรขาดทุนเป็นภาษาไทยที่อ่านเข้าใจง่าย",
+moat:"กฎหมายภาษีไทยเปลี่ยนบ่อย ต้อง update ตลอด ซึ่งเป็นสิ่งที่ซอฟต์แวร์ต่างชาติทำไม่ได้ + ยิ่งใช้นาน ข้อมูลยิ่งเยอะ ย้ายออกยาก + เชื่อมต่อกับระบบไทยโดยเฉพาะ",
+revenue:"SaaS ฿299-1,999/เดือน + e-Tax Invoice add-on ฿500/เดือน + แนะนำสำนักงานบัญชีได้ค่า referral 10%",
+mvp:"OCR ถ่ายรูปใบเสร็จ + จัดหมวดรายจ่ายอัตโนมัติ + สร้าง e-Tax Invoice + แจ้งเตือนภาษีผ่าน LINE",
+risk:"PEAK/FlowAccount อาจเพิ่ม AI features เข้ามา — แก้ด้วยการเน้น AI-first ทำงานง่ายกว่า ราคาถูกกว่า และ update กฎหมายเร็วกว่า",
+research:"PwC รายงานว่า 81% ของธุรกิจไทยอยากลงทุนในเครื่องมือ compliance อัตโนมัติ กฎหมาย e-filing บังคับตั้งแต่ ม.ค. 2025 ทำให้ต้องการ solution เร่งด่วน",
+scores:{survivability:4,monetization:5,mvpEase:5,viral:3},verdict:"GO",
+review:"กฎหมายภาษีใหม่บังคับ SME ทำ e-Tax = demand จากกฎหมาย ชัดเจน + SME ยินดีจ่ายเพราะถูกกว่าจ้างบัญชี 10 เท่า + Thai tax rules = กำแพงกั้น global tools",
+improvement:"จับมือสำนักงานบัญชี 100 ราย เป็น distribution channel + เพิ่ม payroll module เป็น upsell"},
 
-{id:2,name:"SME AutoAPI",type:"Blue Ocean",market:"ASEAN",emoji:"\u{1F50C}",color:"#8B5CF6",marketSize:"$900M",affected:"3M+ SMEs \u0E43\u0E19 ASEAN",tagline:"\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E15\u0E48\u0E2D\u0E17\u0E38\u0E01\u0E0B\u0E2D\u0E1F\u0E15\u0E4C\u0E41\u0E27\u0E23\u0E4C 1 \u0E04\u0E25\u0E34\u0E01 \u2014 \u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E40\u0E02\u0E35\u0E22\u0E19\u0E42\u0E04\u0E49\u0E14",
-problem:"97% \u0E02\u0E2D\u0E07 SME \u0E43\u0E19 ASEAN \u0E43\u0E0A\u0E49 3-5 \u0E0B\u0E2D\u0E1F\u0E15\u0E4C\u0E41\u0E27\u0E23\u0E4C\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E01\u0E31\u0E19 (\u0E1A\u0E31\u0E0D\u0E0A\u0E35, \u0E04\u0E25\u0E31\u0E07, \u0E02\u0E32\u0E22\u0E02\u0E2D\u0E07, HR) \u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19 5 \u0E17\u0E35\u0E48 \u0E15\u0E49\u0E2D\u0E07 copy-paste \u0E02\u0E49\u0E32\u0E21\u0E01\u0E31\u0E19\u0E17\u0E38\u0E01\u0E27\u0E31\u0E19 Zapier/Make.com \u0E23\u0E32\u0E04\u0E32 $99+ \u0E41\u0E25\u0E30\u0E40\u0E1B\u0E47\u0E19\u0E20\u0E32\u0E29\u0E32\u0E2D\u0E31\u0E07\u0E01\u0E24\u0E29 \u0E43\u0E0A\u0E49\u0E22\u0E32\u0E01\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME \u0E44\u0E17\u0E22",
-solution:"\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21 no-code \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 \u0E25\u0E32\u0E01-\u0E27\u0E32\u0E07 workflow + connectors \u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E23\u0E39\u0E1B 20+ \u0E15\u0E31\u0E27 (\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E44\u0E17\u0E22, ShopSpot, LINE OA, Wave) + AI \u0E41\u0E19\u0E30\u0E19\u0E33 automation \u0E43\u0E2B\u0E49\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 \u0E23\u0E32\u0E04\u0E32\u0E40\u0E23\u0E34\u0E48\u0E21 \u0E3F500/\u0E40\u0E14\u0E37\u0E2D\u0E19",
-moat:"Thai-language UI + local software integrations \u0E17\u0E35\u0E48 Zapier \u0E44\u0E21\u0E48\u0E21\u0E35 + community recipe library = network effect",
-revenue:"Freemium \u2192 \u0E3F500/\u0E40\u0E14\u0E37\u0E2D\u0E19 unlimited + Enterprise \u0E3F6,000/\u0E40\u0E14\u0E37\u0E2D\u0E19 | 7,500 users = \u0E3F3.75M MRR",
-mvp:"API connectors 5 \u0E15\u0E31\u0E27\u0E22\u0E2D\u0E14\u0E19\u0E34\u0E22\u0E21 + flow editor (N8N-like) + recipe suggestions + Thai UI",
-risk:"Zapier/Make \u0E2D\u0E32\u0E08\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 \u0E41\u0E15\u0E48 local integrations \u0E40\u0E1B\u0E47\u0E19 moat \u0E17\u0E35\u0E48 copy \u0E22\u0E32\u0E01",
-scores:{survivability:4,monetization:5,mvpEase:5,viral:4,founderFit:4},verdict:"GO",
-review:"TAM \u0E43\u0E2B\u0E0D\u0E48\u0E21\u0E32\u0E01 SME \u0E22\u0E34\u0E19\u0E14\u0E35\u0E08\u0E48\u0E32\u0E22\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E25\u0E14\u0E07\u0E32\u0E19 manual \u0E44\u0E14\u0E49\u0E17\u0E31\u0E19\u0E17\u0E35 \u0E23\u0E32\u0E04\u0E32 1/6 \u0E02\u0E2D\u0E07 Zapier = \u0E41\u0E02\u0E48\u0E07\u0E44\u0E14\u0E49 + local integrations = defensible",
-improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07 DE \u0E40\u0E1E\u0E37\u0E48\u0E2D subsidy + revenue share \u0E01\u0E31\u0E1A local software vendors \u0E40\u0E23\u0E48\u0E07 integration"},
+{id:2,name:"LegalBot AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"📜",color:"#A855F7",
+marketSize:"$300M",affected:"3M+ SME + 500K+ ฟรีแลนซ์ไทย",
+tagline:"สร้างสัญญาภาษาไทย 5 นาที — ไม่ต้องจ้างทนาย",
+problem:"SME ไทย 95% ไม่มีทนาย ใช้สัญญา template จาก Google ที่ไม่ได้ update ตามกฎหมายใหม่ (พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล 2562, กฎหมายแรงงานใหม่) ถ้าจ้างทนายร่างสัญญา ก็เริ่มต้น 5,000-50,000 บาท/ฉบับ แพงเกินไปสำหรับธุรกิจเล็ก",
+solution:"AI สร้างสัญญาภาษาไทย 5 นาที (จ้างงาน, เช่า, NDA, หุ้นส่วน, MOU) + AI ตรวจสัญญาเก่าหาช่องโหว่ + เช็คว่าสัญญาตรงกับกฎหมายล่าสุดหรือไม่ + แจ้งเตือนก่อนสัญญาหมดอายุ",
+moat:"กฎหมายไทยเปลี่ยนบ่อย = ซอฟต์แวร์ต่างชาติ (Ironclad, DocuSign) ทำไม่ได้ + ภาษาไทยเป็นกำแพงที่ global tools เข้ามาไม่ง่าย + สัญญาที่สะสมไว้ทำให้ย้ายออกยาก",
+revenue:"Freemium → ฿499/เดือน unlimited + ตรวจสัญญา ฿99/ฉบับ + Enterprise ฿5,000/เดือน",
+mvp:"Template สัญญา 10 ประเภทยอดนิยม + Claude API ตรวจสัญญา + ฐานข้อมูลกฎหมายไทย + LINE Bot แจ้งเตือน",
+risk:"ทนายอาจไม่ยอมรับ AI — แก้ด้วยการวางตัวเป็น 'ผู้ช่วยทนาย' ไม่ใช่ทดแทนทนาย + ร่วมมือกับสำนักงานกฎหมาย",
+research:"Thai legal เป็น niche ที่ global LegalTech ไม่เข้า กฎหมายใหม่ PDPA ทำให้ SME ต้องการความช่วยเหลือด้านกฎหมายเร่งด่วน 71% ฟรีแลนซ์ยินดีจ่าย 500-2,000 บาท/เดือน",
+scores:{survivability:4,monetization:4,mvpEase:5,viral:3},verdict:"GO",
+review:"Thai legal niche ที่ global LegalTech (Ironclad, DocuSign) ไม่เข้า + กฎหมายใหม่ = demand จากกฎหมาย + SME ยินดีจ่ายเพราะถูกกว่าจ้างทนาย 10 เท่า",
+improvement:"จับมือสำนักงานกฎหมาย 50 ราย เป็น channel + เพิ่ม e-Signature integration + bundle กับ TaxMate AI"},
 
-{id:3,name:"TaxMate AI",type:"Blue Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F4B8}",color:"#06B6D4",marketSize:"$500M",affected:"3M+ SME \u0E44\u0E17\u0E22 + \u0E1F\u0E23\u0E35\u0E41\u0E25\u0E19\u0E0B\u0E4C",tagline:"\u0E1A\u0E31\u0E0D\u0E0A\u0E35+\u0E20\u0E32\u0E29\u0E35 \u0E17\u0E33\u0E40\u0E2D\u0E07\u0E44\u0E14\u0E49 \u2014 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E44\u0E17\u0E22",
-problem:"SME \u0E44\u0E17\u0E22 3M+ \u0E23\u0E32\u0E22 \u0E15\u0E49\u0E2D\u0E07\u0E17\u0E33\u0E1A\u0E31\u0E0D\u0E0A\u0E35+\u0E20\u0E32\u0E29\u0E35\u0E15\u0E32\u0E21\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48 (e-Tax Invoice 2024, e-Withholding Tax) \u0E41\u0E15\u0E48 80% \u0E22\u0E31\u0E07\u0E43\u0E0A\u0E49 Excel \u0E2B\u0E23\u0E37\u0E2D\u0E01\u0E23\u0E30\u0E14\u0E32\u0E29 \u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E04\u0E34\u0E14 \u0E3F5K-30K/\u0E40\u0E14\u0E37\u0E2D\u0E19 Peak \u0E44\u0E21\u0E48\u0E23\u0E31\u0E1A\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32\u0E43\u0E2B\u0E21\u0E48 + tools \u0E17\u0E35\u0E48\u0E21\u0E35 (PEAK, FlowAccount) \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48 AI-first",
-solution:"AI \u0E2D\u0E48\u0E32\u0E19\u0E43\u0E1A\u0E40\u0E2A\u0E23\u0E47\u0E08/\u0E2A\u0E25\u0E34\u0E1B \u0E41\u0E25\u0E49\u0E27\u0E25\u0E07\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 + \u0E2D\u0E2D\u0E01 e-Tax Invoice \u0E15\u0E32\u0E21 format \u0E01\u0E23\u0E21\u0E2A\u0E23\u0E23\u0E1E\u0E32\u0E01\u0E23 + AI \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19 deadline \u0E20\u0E32\u0E29\u0E35 + \u0E2A\u0E23\u0E38\u0E1B\u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E01\u0E33\u0E44\u0E23\u0E02\u0E32\u0E14\u0E17\u0E38\u0E19\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",
-moat:"\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E20\u0E32\u0E29\u0E35\u0E44\u0E17\u0E22\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E1A\u0E48\u0E2D\u0E22 = \u0E15\u0E49\u0E2D\u0E07 update \u0E15\u0E25\u0E2D\u0E14 (competitive moat) + data lock-in (\u0E22\u0E34\u0E48\u0E07\u0E43\u0E0A\u0E49\u0E19\u0E32\u0E19 \u0E22\u0E34\u0E48\u0E07\u0E22\u0E49\u0E32\u0E22\u0E22\u0E32\u0E01) + Thai-specific tax rules \u0E17\u0E35\u0E48 global tools \u0E44\u0E21\u0E48\u0E21\u0E35",
-revenue:"SaaS \u0E3F299-1,999/\u0E40\u0E14\u0E37\u0E2D\u0E19 + e-Tax Invoice add-on \u0E3F500/\u0E40\u0E14\u0E37\u0E2D\u0E19 + \u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35 referral commission 10% | 10K users = \u0E3F5M MRR",
-mvp:"OCR \u0E2D\u0E48\u0E32\u0E19\u0E43\u0E1A\u0E40\u0E2A\u0E23\u0E47\u0E08 + auto-categorize \u0E23\u0E32\u0E22\u0E08\u0E48\u0E32\u0E22 + \u0E2A\u0E23\u0E49\u0E32\u0E07 e-Tax Invoice + tax calendar \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19 LINE",
-risk:"PEAK/FlowAccount \u0E2D\u0E32\u0E08\u0E40\u0E1E\u0E34\u0E48\u0E21 AI features + \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E23\u0E47\u0E27 \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 AI-first approach + \u0E23\u0E32\u0E04\u0E32\u0E16\u0E39\u0E01\u0E01\u0E27\u0E48\u0E32 + compliance update \u0E40\u0E23\u0E47\u0E27\u0E01\u0E27\u0E48\u0E32",
-scores:{survivability:4,monetization:5,mvpEase:5,viral:3,founderFit:3},verdict:"GO",
-review:"\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E20\u0E32\u0E29\u0E35\u0E43\u0E2B\u0E21\u0E48\u0E1A\u0E31\u0E07\u0E04\u0E31\u0E1A SME \u0E17\u0E33 e-Tax = regulatory-driven demand \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19 + SME \u0E22\u0E34\u0E19\u0E14\u0E35\u0E08\u0E48\u0E32\u0E22\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E1B\u0E23\u0E31\u0E1A 5K-30K/\u0E40\u0E14\u0E37\u0E2D\u0E19 + Thai tax rules = \u0E01\u0E33\u0E41\u0E1E\u0E07\u0E01\u0E31\u0E49\u0E19 global tools",
-improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35 100 \u0E23\u0E32\u0E22 \u0E40\u0E1B\u0E47\u0E19 distribution channel + \u0E40\u0E1E\u0E34\u0E48\u0E21 payroll module \u0E40\u0E1B\u0E47\u0E19 upsell"},
+{id:3,name:"PropManager AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🏢",color:"#22C55E",
+marketSize:"$1.2B",affected:"50K+ นิติคอนโด, 8M+ ห้องชุด",
+tagline:"จัดการคอนโด/หมู่บ้านอัตโนมัติ — เลิกใช้ Excel + LINE group",
+problem:"คอนโดและหมู่บ้าน 50,000+ แห่งในไทย 80% ยังใช้ Excel + LINE group จัดการ เช่น เก็บค่าส่วนกลาง แจ้งซ่อม จองห้องประชุม สื่อสารกับลูกบ้าน เครื่องมือที่มี เช่น Baania, FazWaz เน้นซื้อขาย ไม่ใช่การจัดการอาคาร",
+solution:"AI เก็บค่าส่วนกลางอัตโนมัติ (ออกบิล+ตามหนี้+แจ้งเตือน) + AI chatbot ตอบลูกบ้าน 24 ชม. ผ่าน LINE OA + ระบบแจ้งซ่อม+จัดคิวช่าง + รายงานการเงินให้กรรมการ + ระบบโหวต/ประชุมออนไลน์",
+moat:"กฎหมายอาคารชุดไทย = กฎเฉพาะที่ซอฟต์แวร์ต่างชาติไม่มี + ข้อมูลลูกบ้าน+การเงินที่สะสมไว้ย้ายออกยาก + เชื่อมกับ LINE ที่ลูกบ้านใช้อยู่แล้ว",
+revenue:"SaaS ฿1,500-5,000/เดือน/โครงการ + add-on โหวต/ประชุม ฿500 | 3,000 โครงการ = ฿7.5M MRR",
+mvp:"ระบบเก็บค่าส่วนกลาง + LINE OA chatbot + แจ้งซ่อม/ค่าใช้จ่าย + dashboard กรรมการ + pilot 5 คอนโด",
+risk:"Baania/Estopolis อาจขยายมาทำ management — แก้ด้วย AI chatbot เป็น killer feature + ราคาถูกกว่าจ้าง manager",
+research:"PropTech ไทยเน้นซื้อขาย ไม่มีใครทำ management ดีๆ AI chatbot + auto-billing = สิ่งที่นิติต้องการ 50,000 โครงการ = TAM ชัดเจน",
+scores:{survivability:4,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"PropTech ไทยเน้นซื้อขาย ไม่มีใครทำ management ดีๆ AI chatbot + auto-billing = killer features ที่นิติต้องการ + 50,000 โครงการ = TAM ชัดเจน",
+improvement:"จับมือบริษัทบริหารอาคาร 5 ราย เป็น pilot + เพิ่ม marketplace หาช่างซ่อมบำรุง + เชื่อม PromptPay auto-payment"},
 
-{id:4,name:"LegalBot AI",type:"Blue Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F4DC}",color:"#A855F7",marketSize:"$300M",affected:"3M+ SME + 500K+ \u0E1F\u0E23\u0E35\u0E41\u0E25\u0E19\u0E0B\u0E4C\u0E44\u0E17\u0E22",tagline:"\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 5 \u0E19\u0E32\u0E17\u0E35 \u2014 \u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E08\u0E49\u0E32\u0E07\u0E17\u0E19\u0E32\u0E22",
-problem:"SME \u0E44\u0E17\u0E22 95% \u0E44\u0E21\u0E48\u0E21\u0E35\u0E17\u0E19\u0E32\u0E22\u0E04\u0E27\u0E32\u0E21 \u0E43\u0E0A\u0E49\u0E2A\u0E31\u0E0D\u0E0D\u0E32 template \u0E08\u0E32\u0E01 Google \u0E17\u0E35\u0E48\u0E44\u0E21\u0E48 update \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48 (\u0E1E.\u0E23.\u0E1A.\u0E04\u0E38\u0E49\u0E21\u0E04\u0E23\u0E2D\u0E07\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E2A\u0E48\u0E27\u0E19\u0E1A\u0E38\u0E04\u0E04\u0E25 2562, \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19\u0E43\u0E2B\u0E21\u0E48) \u0E17\u0E19\u0E32\u0E22\u0E04\u0E34\u0E14\u0E40\u0E23\u0E34\u0E48\u0E21\u0E15\u0E49\u0E19 \u0E3F5K-50K/\u0E09\u0E1A\u0E31\u0E1A \u0E41\u0E15\u0E48 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E44\u0E17\u0E22\u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E21\u0E35",
-solution:"AI \u0E2A\u0E23\u0E49\u0E32\u0E07\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22\u0E43\u0E19 5 \u0E19\u0E32\u0E17\u0E35 (\u0E08\u0E49\u0E32\u0E07\u0E07\u0E32\u0E19, \u0E40\u0E0A\u0E48\u0E32, NDA, \u0E2B\u0E38\u0E49\u0E19\u0E2A\u0E48\u0E27\u0E19, MOU) + AI review \u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E40\u0E14\u0E34\u0E21\u0E2B\u0E32\u0E0A\u0E48\u0E2D\u0E07\u0E42\u0E2B\u0E27\u0E48 + compliance checker \u0E15\u0E32\u0E21\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14 + \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19 deadline \u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E2B\u0E21\u0E14\u0E2D\u0E32\u0E22\u0E38",
-moat:"Thai legal corpus (\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E44\u0E17\u0E22\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E1A\u0E48\u0E2D\u0E22 = competitive moat) + \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 = global tools \u0E17\u0E33\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49 + data lock-in \u0E08\u0E32\u0E01\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E17\u0E35\u0E48\u0E2A\u0E30\u0E2A\u0E21",
-revenue:"Freemium \u2192 \u0E3F499/\u0E40\u0E14\u0E37\u0E2D\u0E19 unlimited + contract review \u0E3F99/\u0E09\u0E1A\u0E31\u0E1A + Enterprise \u0E3F5K/\u0E40\u0E14\u0E37\u0E2D\u0E19 | 5K users = \u0E3F2.5M MRR",
-mvp:"Template engine \u0E2A\u0E31\u0E0D\u0E0D\u0E32 10 \u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E22\u0E2D\u0E14\u0E19\u0E34\u0E22\u0E21 + Claude API review + Thai legal DB + LINE Bot \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19",
-risk:"LawXpert/LegalTech \u0E44\u0E17\u0E22\u0E40\u0E23\u0E34\u0E48\u0E21\u0E21\u0E35\u0E1A\u0E49\u0E32\u0E07 + \u0E17\u0E19\u0E32\u0E22\u0E2D\u0E32\u0E08\u0E44\u0E21\u0E48\u0E22\u0E2D\u0E21\u0E23\u0E31\u0E1A AI \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 position \u0E40\u0E1B\u0E47\u0E19 AI assistant \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E17\u0E14\u0E41\u0E17\u0E19\u0E17\u0E19\u0E32\u0E22 + partner \u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22",
-scores:{survivability:4,monetization:4,mvpEase:5,viral:3,founderFit:3},verdict:"GO",
-review:"Thai legal \u0E40\u0E1B\u0E47\u0E19 niche \u0E17\u0E35\u0E48 global LegalTech (Ironclad, DocuSign) \u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32 + \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48 = regulatory-driven demand + SME \u0E22\u0E34\u0E19\u0E14\u0E35\u0E08\u0E48\u0E32\u0E22\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E16\u0E39\u0E01\u0E01\u0E27\u0E48\u0E32\u0E08\u0E49\u0E32\u0E07\u0E17\u0E19\u0E32\u0E22 10\u0E40\u0E17\u0E48\u0E32",
-improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22 50 \u0E23\u0E32\u0E22 \u0E40\u0E1B\u0E47\u0E19 channel + \u0E40\u0E1E\u0E34\u0E48\u0E21 e-Signature integration + bundle \u0E01\u0E31\u0E1A TaxMate AI"},
-
-{id:5,name:"LogiFlow AI",type:"Blue Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F69A}",color:"#EC4899",marketSize:"$8B",affected:"50K+ SME logistics, 200K+ \u0E23\u0E49\u0E32\u0E19\u0E04\u0E49\u0E32",tagline:"Last-mile \u0E16\u0E39\u0E01\u0E25\u0E07 40% \u2014 AI \u0E08\u0E31\u0E14\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07+\u0E1A\u0E23\u0E34\u0E2B\u0E32\u0E23\u0E1F\u0E25\u0E35\u0E17\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME",
-problem:"SME \u0E44\u0E17\u0E22\u0E17\u0E35\u0E48\u0E2A\u0E48\u0E07\u0E02\u0E2D\u0E07\u0E40\u0E2D\u0E07 50K+ \u0E23\u0E32\u0E22 \u0E40\u0E2A\u0E35\u0E22\u0E04\u0E48\u0E32\u0E02\u0E19\u0E2A\u0E48\u0E07 30-40% \u0E02\u0E2D\u0E07\u0E23\u0E32\u0E04\u0E32\u0E2A\u0E34\u0E19\u0E04\u0E49\u0E32 \u0E40\u0E1E\u0E23\u0E32\u0E30\u0E43\u0E0A\u0E49 Kerry/Flash/J&T \u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48 optimize \u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07 tools \u0E17\u0E35\u0E48\u0E21\u0E35 (Bringg, Onfleet) \u0E23\u0E32\u0E04\u0E32 $500+/\u0E40\u0E14\u0E37\u0E2D\u0E19 \u0E41\u0E1E\u0E07\u0E40\u0E01\u0E34\u0E19 SME",
-solution:"AI route optimization \u0E25\u0E14\u0E23\u0E30\u0E22\u0E30\u0E17\u0E32\u0E07 30-40% + fleet management dashboard \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 + real-time tracking \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32 + auto-assign driver \u0E15\u0E32\u0E21 zone/\u0E1B\u0E23\u0E34\u0E21\u0E32\u0E13\u0E2A\u0E34\u0E19\u0E04\u0E49\u0E32 + \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 LINE OA \u0E41\u0E08\u0E49\u0E07\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32",
-moat:"Thai address parsing AI (\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E44\u0E17\u0E22\u0E44\u0E21\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E23\u0E30\u0E1A\u0E1A = hard to copy) + SME pricing gap + route data \u0E22\u0E34\u0E48\u0E07\u0E43\u0E0A\u0E49 \u0E22\u0E34\u0E48\u0E07\u0E41\u0E21\u0E48\u0E19",
-revenue:"SaaS \u0E3F999-4,999/\u0E40\u0E14\u0E37\u0E2D\u0E19 + \u0E3F5/delivery \u0E17\u0E35\u0E48 optimize | 5K SME = \u0E3F10M MRR + partner Kerry/Flash \u0E40\u0E1B\u0E47\u0E19 white-label",
-mvp:"Google Maps API + AI route optimization + driver app (React Native) + LINE OA tracking + pilot 10 \u0E23\u0E49\u0E32\u0E19\u0E04\u0E49\u0E32",
-risk:"Kerry/Flash \u0E2D\u0E32\u0E08 build \u0E40\u0E2D\u0E07 + Google Maps \u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19 pricing \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 Thai address AI \u0E40\u0E1B\u0E47\u0E19 moat + white-label \u0E43\u0E2B\u0E49 Kerry/Flash \u0E41\u0E17\u0E19\u0E41\u0E02\u0E48\u0E07",
-scores:{survivability:3,monetization:4,mvpEase:4,viral:3,founderFit:4},verdict:"GO",
-review:"Thai logistics $8B TAM \u0E43\u0E2B\u0E0D\u0E48\u0E21\u0E32\u0E01 SME pricing gap \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19 + Thai address parsing \u0E40\u0E1B\u0E47\u0E19 unique moat \u0E17\u0E35\u0E48 global tools \u0E17\u0E33\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49 + clear ROI (\u0E25\u0E14\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E07 30-40%)",
-improvement:"Partner Kerry/Flash Express \u0E40\u0E1B\u0E47\u0E19 white-label solution + \u0E40\u0E1E\u0E34\u0E48\u0E21 COD collection module \u0E40\u0E1B\u0E47\u0E19 upsell"},
-
-{id:6,name:"PropManager AI",type:"Blue Ocean",market:"Thai",emoji:"\u{1F3E2}",color:"#22C55E",marketSize:"$1.2B",affected:"50K+ \u0E19\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E19\u0E42\u0E14, 8M+ \u0E2B\u0E49\u0E2D\u0E07\u0E0A\u0E38\u0E14\u0E17\u0E31\u0E48\u0E27\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28",tagline:"\u0E19\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E19\u0E42\u0E14 AI \u2014 \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34",
-problem:"\u0E19\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E19\u0E42\u0E14/\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19 50K+ \u0E41\u0E2B\u0E48\u0E07\u0E43\u0E19\u0E44\u0E17\u0E22 80% \u0E22\u0E31\u0E07\u0E43\u0E0A\u0E49 Excel + LINE group \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23 \u0E40\u0E01\u0E47\u0E1A\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E27\u0E19\u0E01\u0E25\u0E32\u0E07\u0E0A\u0E49\u0E32 \u0E41\u0E08\u0E49\u0E07\u0E0B\u0E48\u0E2D\u0E21 \u0E08\u0E2D\u0E07\u0E2B\u0E49\u0E2D\u0E07 \u0E08\u0E31\u0E14\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21 \u0E2A\u0E37\u0E48\u0E2D\u0E2A\u0E32\u0E23\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19 tools \u0E17\u0E35\u0E48\u0E21\u0E35 (Baania, FazWaz) \u0E40\u0E19\u0E49\u0E19\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22 \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48 property management",
-solution:"AI \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E27\u0E19\u0E01\u0E25\u0E32\u0E07\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 (\u0E2D\u0E2D\u0E01\u0E1A\u0E34\u0E25, \u0E15\u0E32\u0E21\u0E2B\u0E19\u0E35\u0E49, \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19) + AI chatbot \u0E15\u0E2D\u0E1A\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19 24/7 \u0E1C\u0E48\u0E32\u0E19 LINE OA + \u0E08\u0E31\u0E14\u0E04\u0E34\u0E27\u0E0B\u0E48\u0E2D\u0E21\u0E1A\u0E33\u0E23\u0E38\u0E07\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 + \u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E01\u0E32\u0E23\u0E40\u0E07\u0E34\u0E19\u0E43\u0E2B\u0E49\u0E01\u0E23\u0E23\u0E21\u0E01\u0E32\u0E23 + \u0E23\u0E30\u0E1A\u0E1A\u0E42\u0E2B\u0E27\u0E15/\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C",
-moat:"\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E2D\u0E32\u0E04\u0E32\u0E23\u0E0A\u0E38\u0E14\u0E44\u0E17\u0E22 = localized rules \u0E17\u0E35\u0E48 global tools \u0E44\u0E21\u0E48\u0E21\u0E35 + data lock-in (\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19+\u0E01\u0E32\u0E23\u0E40\u0E07\u0E34\u0E19\u0E22\u0E49\u0E32\u0E22\u0E22\u0E32\u0E01) + LINE integration \u0E17\u0E35\u0E48\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19\u0E43\u0E0A\u0E49\u0E2D\u0E22\u0E39\u0E48\u0E41\u0E25\u0E49\u0E27",
-revenue:"SaaS \u0E3F1,500-5,000/\u0E40\u0E14\u0E37\u0E2D\u0E19/\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 + add-on voting/\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21 \u0E3F500 | 3K \u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 = \u0E3F7.5M MRR",
-mvp:"\u0E23\u0E30\u0E1A\u0E1A\u0E40\u0E01\u0E47\u0E1A\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E27\u0E19\u0E01\u0E25\u0E32\u0E07 + LINE OA chatbot + \u0E41\u0E08\u0E49\u0E07\u0E0B\u0E48\u0E2D\u0E21/\u0E04\u0E48\u0E32\u0E43\u0E0A\u0E49\u0E08\u0E48\u0E32\u0E22 + dashboard \u0E01\u0E23\u0E23\u0E21\u0E01\u0E32\u0E23 + pilot 5 \u0E04\u0E2D\u0E19\u0E42\u0E14",
-risk:"Baania/Estopolis \u0E2D\u0E32\u0E08\u0E02\u0E22\u0E32\u0E22\u0E21\u0E32 management + \u0E19\u0E34\u0E15\u0E34\u0E40\u0E01\u0E48\u0E32\u0E44\u0E21\u0E48\u0E22\u0E2D\u0E21\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19 \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 AI chatbot \u0E40\u0E1B\u0E47\u0E19 killer feature + \u0E23\u0E32\u0E04\u0E32\u0E16\u0E39\u0E01\u0E01\u0E27\u0E48\u0E32\u0E08\u0E49\u0E32\u0E07 manager",
-scores:{survivability:4,monetization:4,mvpEase:4,viral:3,founderFit:3},verdict:"GO",
-review:"PropTech \u0E44\u0E17\u0E22\u0E40\u0E19\u0E49\u0E19\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22 \u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E17\u0E33 management \u0E14\u0E35\u0E46 AI chatbot + auto-billing = killer features \u0E17\u0E35\u0E48\u0E19\u0E34\u0E15\u0E34\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23 + 50K \u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 = TAM \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19",
-improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17\u0E1A\u0E23\u0E34\u0E2B\u0E32\u0E23\u0E2D\u0E32\u0E04\u0E32\u0E23 5 \u0E23\u0E32\u0E22 \u0E40\u0E1B\u0E47\u0E19 pilot + \u0E40\u0E1E\u0E34\u0E48\u0E21 marketplace \u0E2B\u0E32\u0E0A\u0E48\u0E32\u0E07\u0E0B\u0E48\u0E2D\u0E21\u0E1A\u0E33\u0E23\u0E38\u0E07 + \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 PromptPay auto-payment"},
-
-{id:7,name:"AgentFlow",type:"Blue Ocean",market:"Global",emoji:"\u{1F916}",color:"#F59E0B",marketSize:"$5B \u2192 $105B",affected:"40M+ SMEs + 1M+ devs",tagline:"Your AI. Your Rules. Your Revenue.",
-problem:"95% \u0E02\u0E2D\u0E07 SME \u0E43\u0E0A\u0E49 AI \u0E44\u0E21\u0E48\u0E40\u0E1B\u0E47\u0E19 \u0E15\u0E49\u0E2D\u0E07\u0E08\u0E49\u0E32\u0E07 developer \u0E3F50K-500K/\u0E0A\u0E34\u0E49\u0E19 \u0E43\u0E19\u0E02\u0E13\u0E30\u0E17\u0E35\u0E48 developer \u0E17\u0E35\u0E48\u0E2A\u0E23\u0E49\u0E32\u0E07 AI agent \u0E44\u0E21\u0E48\u0E21\u0E35\u0E0A\u0E48\u0E2D\u0E07\u0E17\u0E32\u0E07\u0E02\u0E32\u0E22 \u0E44\u0E21\u0E48\u0E21\u0E35 marketplace \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A AI agents \u0E17\u0E35\u0E48 SME \u0E44\u0E17\u0E22 deploy \u0E44\u0E14\u0E49\u0E17\u0E31\u0E19\u0E17\u0E35",
-solution:"Marketplace \u0E43\u0E2B\u0E49 Creator \u0E2A\u0E23\u0E49\u0E32\u0E07/\u0E02\u0E32\u0E22 AI Agent + SME \u0E01\u0E14 1-click deploy \u0E1C\u0E48\u0E32\u0E19 LINE + Rating & review system + Revenue sharing model",
-moat:"Two-sided marketplace network effect + community templates \u0E22\u0E34\u0E48\u0E07\u0E40\u0E22\u0E2D\u0E30\u0E22\u0E34\u0E48\u0E07\u0E21\u0E35\u0E04\u0E48\u0E32 + integration ecosystem \u0E01\u0E31\u0E1A LINE/Shopee/Lazada",
-revenue:"Commission 15-20% \u0E17\u0E38\u0E01 transaction + Creator SaaS $29-99/mo + Enterprise API + White-label licensing",
-mvp:"Web marketplace + 10 agent templates \u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E23\u0E39\u0E1B + 1-click deploy \u0E1C\u0E48\u0E32\u0E19 LINE Bot + payment integration",
-risk:"\u0E15\u0E25\u0E32\u0E14 AI agent \u0E22\u0E31\u0E07\u0E40\u0E23\u0E47\u0E27\u0E40\u0E01\u0E34\u0E19\u0E44\u0E1B (2026) + OpenAI/Google \u0E2D\u0E32\u0E08 build marketplace \u0E40\u0E2D\u0E07 \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 start vertical \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A Thai SME \u0E01\u0E48\u0E2D\u0E19",
-scores:{survivability:3,monetization:3,mvpEase:4,viral:3,founderFit:4},verdict:"GO",
-review:"TAM \u0E21\u0E2B\u0E32\u0E28\u0E32\u0E25 ($105B by 2034) timing \u0E2D\u0E32\u0E08\u0E40\u0E23\u0E47\u0E27\u0E44\u0E1B\u0E19\u0E34\u0E14 \u0E41\u0E15\u0E48 first-mover advantage \u0E2A\u0E33\u0E04\u0E31\u0E0D start \u0E40\u0E1B\u0E47\u0E19 vertical Thai SME marketplace \u0E01\u0E48\u0E2D\u0E19\u0E02\u0E22\u0E32\u0E22",
-improvement:"\u0E2A\u0E23\u0E49\u0E32\u0E07 agents \u0E40\u0E2D\u0E07 5-10 \u0E15\u0E31\u0E27\u0E01\u0E48\u0E2D\u0E19 (\u0E15\u0E2D\u0E1A\u0E41\u0E0A\u0E17, \u0E08\u0E2D\u0E07\u0E04\u0E34\u0E27, \u0E2D\u0E2D\u0E01 invoice) \u0E43\u0E2B\u0E49 SME \u0E43\u0E0A\u0E49\u0E1F\u0E23\u0E35 \u2192 \u0E1E\u0E34\u0E2A\u0E39\u0E08\u0E19\u0E4C value \u2192 \u0E40\u0E1B\u0E34\u0E14 marketplace"},
-
-{id:8,name:"RecruiterAI",type:"Blue Ocean",market:"Thai",emoji:"\u{1F4BC}",color:"#EF4444",marketSize:"$200M",affected:"50K+ HR managers, 5M+ \u0E1C\u0E39\u0E49\u0E2B\u0E32\u0E07\u0E32\u0E19",tagline:"\u0E04\u0E31\u0E14\u0E04\u0E19 500 \u0E40\u0E2B\u0E25\u0E37\u0E2D 5 \u0E43\u0E19 10 \u0E19\u0E32\u0E17\u0E35 \u2014 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 Resume \u0E44\u0E17\u0E22",
-problem:"HR \u0E44\u0E17\u0E22\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32 60 \u0E0A\u0E21./\u0E40\u0E14\u0E37\u0E2D\u0E19 \u0E04\u0E31\u0E14 CV 500 \u0E43\u0E1A 95% \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07 \u0E2A\u0E31\u0E21\u0E20\u0E32\u0E29\u0E13\u0E4C\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E21\u0E35\u0E42\u0E04\u0E23\u0E07\u0E2A\u0E23\u0E49\u0E32\u0E07 (face-to-face bias) 30% \u0E02\u0E2D\u0E07\u0E04\u0E19\u0E17\u0E35\u0E48\u0E08\u0E49\u0E32\u0E07\u0E44\u0E21\u0E48\u0E1C\u0E48\u0E32\u0E19 probation \u2014 \u0E44\u0E21\u0E48\u0E21\u0E35 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 resume/JD \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",
-solution:"AI CV parser \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 + skill matcher rank \u0E1C\u0E39\u0E49\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E15\u0E32\u0E21 fit score + AI phone screen 10 \u0E19\u0E32\u0E17\u0E35 (softphone + transcript) + \u0E2A\u0E23\u0E38\u0E1B scorecard 1 \u0E2B\u0E19\u0E49\u0E32/\u0E04\u0E19 (communication, technical, culture fit)",
-moat:"Thai-language CV parsing (LinkedIn \u0E44\u0E21\u0E48\u0E21\u0E35\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22) + structured interview AI train \u0E08\u0E32\u0E01 Thai hiring patterns + HRIS integration = sticky",
-revenue:"B2B SaaS \u0E3F6,000/\u0E40\u0E14\u0E37\u0E2D\u0E19 + \u0E3F1,500/hire | 500 hires/\u0E1B\u0E35/\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17 = \u0E3F750K/\u0E1B\u0E35 | 100 \u0E25\u0E39\u0E01\u0E04\u0E49\u0E32 = \u0E3F75M ARR",
+{id:4,name:"RecruiterAI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"💼",color:"#EF4444",
+marketSize:"$200M",affected:"50K+ HR managers, 5M+ ผู้หางาน",
+tagline:"คัดคน 500 เหลือ 5 ใน 10 นาที — AI ที่อ่าน Resume ไทยได้",
+problem:"HR ไทยใช้เวลา 60 ชม./เดือน คัดกรอง CV 500 ใบ โดย 95% ไม่ตรงตำแหน่ง สัมภาษณ์แบบไม่มีโครงสร้าง (เลือกจากความรู้สึก) ทำให้ 30% ของคนที่จ้างไม่ผ่าน probation ไม่มี AI ที่เข้าใจ resume/JD ภาษาไทย",
+solution:"AI อ่าน CV ภาษาไทย + จับคู่ทักษะกับ JD แล้วให้คะแนน + AI โทรสัมภาษณ์เบื้องต้น 10 นาที (พูดไทย) + สรุป scorecard 1 หน้า/คน ครอบคลุม communication, ทักษะ, culture fit",
+moat:"Thai-language CV parsing ที่ LinkedIn ไม่มี + AI สัมภาษณ์ train จาก Thai hiring patterns + เชื่อมกับ HRIS ทำให้ย้ายออกยาก",
+revenue:"B2B SaaS ฿6,000/เดือน + ฿1,500/hire | 100 ลูกค้า = ฿75M ARR",
 mvp:"Thai BERT CV parser + skill tag extraction + Twilio softphone + OpenAI Whisper transcript + scorecard generator",
-risk:"LinkedIn/Jobsdb \u0E2D\u0E32\u0E08\u0E40\u0E1E\u0E34\u0E48\u0E21 matching + AI interview bias \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 focus Thai SME (\u0E08\u0E38\u0E14\u0E2D\u0E48\u0E2D\u0E19 LinkedIn) + bias audit + human review loop",
-scores:{survivability:3,monetization:5,mvpEase:4,viral:3,founderFit:3},verdict:"GO",
-review:"HR tech \u0E41\u0E02\u0E48\u0E07\u0E40\u0E22\u0E2D\u0E30 \u0E41\u0E15\u0E48 Thai-language CV + interview synthesis = niche \u0E17\u0E35\u0E48 big tech \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32 \u0E25\u0E14 recruiter workload 50% = clear ROI",
-improvement:"Partner Thai HR platform (HR-X, Dayforce) \u0E40\u0E1E\u0E37\u0E48\u0E2D distribution + \u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19 per-hire pricing \u0E41\u0E17\u0E19 monthly = align incentives"},
+risk:"LinkedIn/Jobsdb อาจเพิ่ม matching — แก้ด้วย focus Thai SME ที่เป็นจุดอ่อน LinkedIn + ระบบตรวจ bias + human review loop",
+research:"HR tech แข่งเยอะ แต่ Thai-language CV + interview synthesis = ช่องว่างที่ big tech ยังไม่เข้า ลด recruiter workload 50% = ROI ชัดเจน",
+scores:{survivability:3,monetization:5,mvpEase:4,viral:3},verdict:"GO",
+review:"HR tech แข่งเยอะ แต่ Thai-language CV + interview synthesis = niche ที่ big tech ยังไม่เข้า ลด recruiter workload 50% = clear ROI",
+improvement:"Partner Thai HR platform (HR-X, Dayforce) เพื่อ distribution + เปลี่ยนเป็น per-hire pricing แทน monthly = align incentives"},
 
-{id:9,name:"SafeWork AI",type:"Red Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F477}",color:"#F97316",marketSize:"$650M",affected:"150K+ \u0E42\u0E23\u0E07\u0E07\u0E32\u0E19, 5M+ \u0E04\u0E19\u0E07\u0E32\u0E19",tagline:"\u0E2D\u0E38\u0E1A\u0E31\u0E15\u0E34\u0E40\u0E2B\u0E15\u0E38 0 \u0E15\u0E23\u0E27\u0E08\u0E08\u0E31\u0E1A 5 \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35 \u2014 AI vision \u0E1A\u0E19 CCTV \u0E40\u0E14\u0E34\u0E21",
-problem:"\u0E44\u0E17\u0E22\u0E21\u0E35\u0E2D\u0E38\u0E1A\u0E31\u0E15\u0E34\u0E40\u0E2B\u0E15\u0E38\u0E43\u0E19\u0E17\u0E35\u0E48\u0E17\u0E33\u0E07\u0E32\u0E19 8-12K \u0E04\u0E23\u0E31\u0E49\u0E07/\u0E1B\u0E35 40% \u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19\u0E44\u0E14\u0E49 solutions \u0E17\u0E35\u0E48\u0E21\u0E35 (Intenseye, Visionify) \u0E23\u0E32\u0E04\u0E32 $50-200K/\u0E1B\u0E35 \u0E41\u0E1E\u0E07\u0E40\u0E01\u0E34\u0E19\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME \u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 60% \u0E44\u0E21\u0E48\u0E21\u0E35\u0E23\u0E30\u0E1A\u0E1A CCTV \u0E41\u0E1A\u0E1A integrated",
-solution:"Edge AI model \u0E23\u0E31\u0E19\u0E1A\u0E19 CCTV \u0E40\u0E14\u0E34\u0E21 (\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07 upgrade) + real-time \u0E15\u0E23\u0E27\u0E08\u0E08\u0E31\u0E1A PPE/near-miss/unsafe postures + \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19\u0E17\u0E31\u0E19\u0E17\u0E35 + \u0E2D\u0E2D\u0E01\u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19 + \u0E17\u0E33\u0E07\u0E32\u0E19 offline \u0E44\u0E14\u0E49",
-moat:"Edge AI \u0E23\u0E32\u0E04\u0E32\u0E16\u0E39\u0E01 (accessible \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME) + offline-first = \u0E43\u0E0A\u0E49\u0E44\u0E14\u0E49\u0E43\u0E19\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19\u0E0A\u0E19\u0E1A\u0E17 + Thai compliance rules localized + 90% SME gap \u0E17\u0E35\u0E48\u0E04\u0E39\u0E48\u0E41\u0E02\u0E48\u0E07\u0E44\u0E21\u0E48\u0E40\u0E25\u0E48\u0E19",
-revenue:"SaaS \u0E3F1,500/\u0E40\u0E14\u0E37\u0E2D\u0E19/\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 + \u0E3F0.30/alert | 5K \u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 = \u0E3F7.5M MRR + subsidy \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19",
-mvp:"YOLOv8 PPE detection (adapt \u0E08\u0E32\u0E01 public dataset + 500 \u0E20\u0E32\u0E1E\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19\u0E44\u0E17\u0E22) + TFLite edge + alert system + Thai compliance template",
-risk:"Intenseye \u0E2D\u0E32\u0E08\u0E25\u0E07\u0E21\u0E32\u0E40\u0E25\u0E48\u0E19 downmarket + edge AI accuracy 85-90% \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 human-in-the-loop + open-source model \u0E2A\u0E23\u0E49\u0E32\u0E07 community moat",
-scores:{survivability:3,monetization:4,mvpEase:4,viral:2,founderFit:4},verdict:"GO",
-review:"Red Ocean \u0E41\u0E15\u0E48 SME pricing gap = \u0E0A\u0E48\u0E2D\u0E07\u0E27\u0E48\u0E32\u0E07\u0E08\u0E23\u0E34\u0E07 compliance \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 = edge + \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19\u0E21\u0E35 subsidy \u0E3F150K/\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 = TAM lever \u0E17\u0E35\u0E48\u0E14\u0E35\u0E21\u0E32\u0E01",
-improvement:"Pivot \u0E40\u0E1B\u0E47\u0E19 B2B2C: partner \u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17\u0E1B\u0E23\u0E30\u0E01\u0E31\u0E19\u0E2D\u0E38\u0E15\u0E2A\u0E32\u0E2B\u0E01\u0E23\u0E23\u0E21 (\u0E08\u0E48\u0E32\u0E22\u0E04\u0E48\u0E32 safety tech \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E25\u0E14 claims) = customer acquisition cost \u0E15\u0E48\u0E33"},
+{id:5,name:"FarmSmart AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🌾",color:"#84CC16",
+marketSize:"$114M (2029)",affected:"5.5M ครัวเรือนเกษตรกร",
+tagline:"เกษตรกรรู้ก่อนฝนตก วางแผนก่อนปลูก — AI บนมือถือ",
+problem:"เกษตรกรไทย 5.5 ล้านครัวเรือน 40% มีรายได้ต่ำกว่าเส้นจน ทำเกษตรแบบเดา ไม่มีข้อมูลดินและน้ำ สูญเสียผลผลิต 20-40%/ปี จากสภาพอากาศที่คาดเดาไม่ได้ เทคโนโลยีเกษตรที่มีราคา 500,000+ บาท แพงเกินไป",
+solution:"แอปมือถือแจ้งเตือนสภาพอากาศล่วงหน้า + แนะนำเวลาปลูก/เก็บเกี่ยว + คำนวณปริมาณปุ๋ย/น้ำที่ต้องใช้ + เชื่อมข้อมูลดาวเทียมดูสภาพไร่นา + ช่องทางขายผลผลิตตรงไม่ผ่านพ่อค้าคนกลาง",
+moat:"ข้อมูลพืชผล+สภาพอากาศไทย ยิ่งใช้ยิ่งแม่น + พูดภาษาเกษตรกรไทยที่ global agtech ไม่เข้าใจ + ราคาถูกพอสำหรับเกษตรกรรายย่อย",
+revenue:"Freemium → ฿200/เดือน premium + commission 5% จากขายผลผลิต + sponsor จากบริษัทปุ๋ย/เมล็ดพันธุ์",
+mvp:"แอปพยากรณ์อากาศเฉพาะพื้นที่ + คำแนะนำการปลูกจาก AI + กระดานขายผลผลิต + แจ้งเตือนผ่าน LINE",
+risk:"เกษตรกรไม่ถนัดเทคโนโลยี — แก้ด้วย UI ง่ายมาก ใช้เสียงพูดได้ + ร่วมมือ อบต./ธ.ก.ส. เป็นช่องทางเข้าถึง",
+research:"World Bank พบ 71% เกษตรกรไทยจะใช้เทคโนโลยีถ้าราคาไม่เกิน 5,000-15,000 บาท ตลาด precision agriculture ไทยโต 6% CAGR",
+scores:{survivability:3,monetization:3,mvpEase:4,viral:3},verdict:"GO",
+review:"ตลาดใหญ่ (5.5M ครัวเรือน) แต่ monetize ยาก ราคาต่ำ — ต้องพึ่ง sponsor + commission จากขายผลผลิต",
+improvement:"ร่วมมือ ธ.ก.ส. เป็น distribution + เพิ่ม marketplace ขายผลผลิตตรง + หา sponsor จากบริษัทปุ๋ย"},
 
-{id:10,name:"CreatorVault AI",type:"Red Ocean",market:"Thai \u2192 APAC",emoji:"\u{1F3A8}",color:"#D946EF",marketSize:"$41.6B \u2192 $390.7B",affected:"500K+ Thai creators",tagline:"Where Thai Creators Actually Keep Their Money",
-problem:"Thai creators \u0E23\u0E32\u0E22\u0E44\u0E14\u0E49\u0E44\u0E21\u0E48\u0E41\u0E19\u0E48\u0E19\u0E2D\u0E19 ($0.01-0.10 \u0E15\u0E48\u0E2D 1K views) Patreon/YouTube \u0E16\u0E37\u0E2D 10-30% \u0E44\u0E21\u0E48\u0E21\u0E35 platform \u0E44\u0E2B\u0E19\u0E23\u0E2D\u0E07\u0E23\u0E31\u0E1A PromptPay/LINE \u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E15\u0E47\u0E21\u0E17\u0E35\u0E48 creators \u0E44\u0E17\u0E22\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49 5-6 tools \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23 membership, merch, analytics",
-solution:"Thailand-first creator monetization: membership + tipping \u0E1C\u0E48\u0E32\u0E19 PromptPay/LINE Pay (fee \u0E41\u0E04\u0E48 10% vs Patreon 30%) + AI content recommendations + merch print-on-demand + analytics dashboard \u0E23\u0E27\u0E21\u0E17\u0E38\u0E01\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21",
-moat:"Thai payment integrations (PromptPay, 2C2P, LINE Pay) + creator community lock-in + lower fee = \u0E22\u0E49\u0E32\u0E22\u0E2D\u0E2D\u0E01\u0E22\u0E32\u0E01",
-revenue:"Commission 10% memberships + 5% tips + 20% merch + Premium analytics \u0E3F300/\u0E40\u0E14\u0E37\u0E2D\u0E19",
+{id:6,name:"RestaurantOS",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🍜",color:"#F97316",
+marketSize:"$2B",affected:"300K+ ร้านอาหารไทย",
+tagline:"ร้านอาหารบริหารครบจบในแอปเดียว — จากต้นทุนถึงกำไร",
+problem:"ร้านอาหารไทย 300,000+ แห่ง เจอปัญหาหลายอย่างพร้อมกัน: ต้นทุนวัตถุดิบสูงขึ้น (35% ของรายได้), ค่าแรงขั้นต่ำขึ้นเป็น 400 บาท/วัน, ค่าส่ง delivery platform หัก 25-35%, แต่กำไรแค่ 5-12% ซอฟต์แวร์ที่มีแพง 50,000+ บาทค่าติดตั้ง",
+solution:"ระบบจัดการร้านอาหารครบ: คำนวณต้นทุนอาหารอัตโนมัติ + แนะนำราคาขาย + จัดการสต็อกวัตถุดิบ + ระบบ POS ขายหน้าร้าน + ตั้งราคาเมนูให้คุ้มทุน + รายงานกำไรขาดทุนรายวัน + จัดตารางพนักงาน",
+moat:"ข้อมูลต้นทุนอาหารไทยที่สะสม (ซอฟต์แวร์ต่างชาติไม่มี) + เชื่อมกับ supplier ไทยโดยตรง + ราคาถูกพอสำหรับร้านเล็ก",
+revenue:"SaaS ฿999-3,999/เดือน + commission จาก supplier matching + POS transaction fee 0.5%",
+mvp:"คำนวณต้นทุนเมนู + ระบบสต็อกวัตถุดิบ + POS พื้นฐาน + รายงานกำไรรายวัน",
+risk:"GrabFood/LINE MAN อาจทำเครื่องมือให้ร้าน — แก้ด้วยการเป็นอิสระจาก platform ใดๆ + focus ต้นทุนอาหารที่ platform ไม่ทำ",
+research:"68% ร้านอาหารไทยยินดีจ่าย 5,000-15,000 บาท/เดือน สำหรับระบบจัดการต้นทุน ร้านอาหาร 35% มีกำไรต่ำกว่า 10%",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"TAM ใหญ่ (300K ร้าน) กำไรบาง ต้องการเครื่องมือลดต้นทุน — clear ROI",
+improvement:"ร่วมมือ supplier อาหาร (Makro, Lotus) เป็น distribution + เพิ่ม delivery ordering module"},
+
+{id:7,name:"DebtHelper AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🏦",color:"#14B8A6",
+marketSize:"$800M",affected:"25M+ ครัวเรือนไทย",
+tagline:"หมดหนี้เร็วขึ้น จ่ายดอกเบี้ยน้อยลง — AI วางแผนการเงินให้",
+problem:"หนี้ครัวเรือนไทย 16.35 ล้านล้านบาท (89% ของ GDP) คนกู้นอกระบบเสียดอกเบี้ย 15-30%/ปี สินเชื่อบ้านถูกปฏิเสธ 50-60% สำหรับบ้านต่ำกว่า 3 ล้าน ไม่มีเครื่องมือช่วยวางแผนจัดการหนี้ที่เข้าใจง่ายสำหรับคนทั่วไป",
+solution:"AI วิเคราะห์หนี้ทั้งหมดแล้วแนะนำลำดับการปิดหนี้ที่ประหยัดดอกเบี้ยที่สุด + จัดสรรเงินเดือนอัตโนมัติ (กิน/ผ่อน/เก็บ) + แจ้งเตือนจ่ายหนี้ + ช่วยเจรจา refinance กับธนาคาร + ให้ความรู้การเงินเข้าใจง่าย",
+moat:"ข้อมูลการเงินส่วนตัวที่สะสม ย้ายออกยาก + เข้าใจระบบการเงินไทย (กยศ., บัตรเครดิต, สินเชื่อบ้าน) + ร่วมมือกับธนาคารเป็น channel",
+revenue:"Freemium → Premium ฿299/เดือน + commission จาก refinance referral + partner กับธนาคาร/ประกัน",
+mvp:"วิเคราะห์หนี้จาก statement + แผนปิดหนี้อัตโนมัติ + แจ้งเตือนผ่าน LINE + คำนวณดอกเบี้ยที่ประหยัดได้",
+risk:"ธนาคารอาจทำเอง — แก้ด้วยการเป็นกลาง ไม่ผูกกับธนาคารใด + focus คนที่ธนาคารไม่สนใจ (หนี้น้อย/หนี้นอกระบบ)",
+research:"รัฐบาลไทยออกแพ็คเกจช่วยหนี้ 60,000 ล้านบาทในปี 2025 แสดงว่าปัญหาหนี้รุนแรง 72% ของผู้มีหนี้ยินดีจ่ายเพื่อเครื่องมือจัดการหนี้",
+scores:{survivability:4,monetization:3,mvpEase:4,viral:4},verdict:"GO",
+review:"TAM มหาศาล (25M ครัวเรือน) ปัญหาเร่งด่วน — monetize ผ่าน referral + partner ธนาคาร viral จากการบอกต่อ",
+improvement:"ร่วมมือ ธนาคาร/กยศ. เป็น channel + เพิ่ม credit score improvement tracker"},
+
+{id:8,name:"TourismOS",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🏖️",color:"#0EA5E9",
+marketSize:"$500M",affected:"50K+ ธุรกิจท่องเที่ยว",
+tagline:"ทัวร์เล็กบริหารได้เหมือนทัวร์ใหญ่ — ระบบจอง+จัดการครบ",
+problem:"ธุรกิจท่องเที่ยวเล็กๆ 50,000+ แห่ง (ทัวร์, โรงแรมเล็ก, activity provider) ยังใช้ WhatsApp และ Excel จัดการ จ่ายค่า commission ให้ Booking.com/Airbnb 15-25% ไม่มีระบบ CRM ดูข้อมูลลูกค้า นักท่องเที่ยวจีนลดลง 33.55% ต้องหาลูกค้าใหม่",
+solution:"ระบบจองออนไลน์ที่ทำเว็บได้เอง (ไม่ต้องผ่าน OTA) + CRM จำลูกค้า+ส่ง promotion + จัดการ availability + รับชำระผ่าน PromptPay/บัตร + dashboard วิเคราะห์ยอดขาย",
+moat:"ข้อมูลลูกค้าเป็นของร้าน (ไม่ใช่ของ platform) + เชื่อมชำระเงินไทย + ภาษาไทย + ราคาถูกกว่า OTA มาก",
+revenue:"SaaS ฿999-4,999/เดือน + transaction fee 2% (vs. OTA 15-25%) | 5,000 ธุรกิจ = ฿10M MRR",
+mvp:"เว็บจอง drag-and-drop + ปฏิทิน availability + PromptPay payment + dashboard ยอดขาย",
+risk:"Booking.com/Agoda อาจลดค่า commission — แก้ด้วยการเน้นว่าข้อมูลลูกค้าเป็นของร้าน ทำ repeat business ได้",
+research:"73% ธุรกิจท่องเที่ยวเล็กยินดีจ่าย 3,000-8,000 บาท/เดือน ประหยัด commission อย่างเดียวก็คุ้มแล้ว",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"ลดค่า OTA commission 15-25% → 2% = ROI ชัดเจนทันที",
+improvement:"ร่วมมือ ททท. เป็น distribution + เพิ่ม multi-language สำหรับนักท่องเที่ยวต่างชาติ"},
+
+{id:9,name:"ClinicMate AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🏥",color:"#EC4899",
+marketSize:"$400M",affected:"20K+ คลินิก, 25M+ ผู้ป่วย",
+tagline:"คลินิกเล็กบริหารได้เหมือนโรงพยาบาล — AI จัดคิว+นัดหมาย+เวชระเบียน",
+problem:"คลินิกเล็กในไทย 20,000+ แห่ง ส่วนใหญ่จัดการด้วยกระดาษ เวชระเบียนหาย คนไข้รอคิวนาน นัดหมายผ่านโทรศัพท์อย่างเดียว ระบบ HIS ของโรงพยาบาลแพงเกินไป (500,000+ บาท) ไม่เหมาะกับคลินิก 1-3 หมอ",
+solution:"ระบบนัดหมายออนไลน์ + เวชระเบียนอิเล็กทรอนิกส์ + AI จัดตารางหมอให้เหมาะกับจำนวนคนไข้ + แจ้งเตือนนัดผ่าน LINE + ระบบจ่ายยา+ออกใบเสร็จ + dashboard สรุปรายได้",
+moat:"เวชระเบียนที่สะสมไว้ย้ายออกยากมาก + เข้าใจกฎระเบียบคลินิกไทย + เชื่อม LINE ที่คนไข้ใช้อยู่ + ราคาถูกกว่า HIS 10 เท่า",
+revenue:"SaaS ฿1,500-5,000/เดือน/คลินิก + SMS/LINE notification fee | 5,000 คลินิก = ฿12.5M MRR",
+mvp:"ระบบนัดหมาย + เวชระเบียนพื้นฐาน + แจ้งเตือน LINE + dashboard รายได้ + pilot 10 คลินิก",
+risk:"ความเป็นส่วนตัวข้อมูลสุขภาพ (PDPA) — แก้ด้วย encryption + compliance checker + ร่วมมือกับแพทยสภา",
+research:"63% คนไทยใช้ telemedicine แต่คลินิกเล็กยังไม่มีเครื่องมือ ตลาด telehealth ไทยโต 18% CAGR",
+scores:{survivability:4,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"เวชระเบียน = data lock-in สูงมาก + กฎระเบียบไทย = กำแพงกั้นคู่แข่ง + ราคาถูกกว่า HIS 10 เท่า",
+improvement:"ร่วมมือแพทยสภา/กรมอนามัย + เพิ่ม telemedicine module + เชื่อม pharmacy system"},
+
+{id:10,name:"CondoFix AI",ocean:"Blue Ocean",region:"Start in Thai",emoji:"🔧",color:"#F59E0B",
+marketSize:"$300M",affected:"8M+ ห้องชุด, 100K+ ช่าง",
+tagline:"แจ้งซ่อมคอนโดได้ช่างใน 2 ชม. — ไม่ต้องหาเองใน Facebook",
+problem:"คนอยู่คอนโด/หมู่บ้าน 8 ล้าน+ ห้อง เวลาอะไรพัง (ท่อรั่ว, แอร์เสีย, ปลวก) ต้องหาช่างเองจาก Facebook/LINE group ไม่รู้ราคากลาง ไม่มีการรับประกัน ช่างบางคนทำไม่ดี ต้องหาใหม่",
+solution:"แอปแจ้งซ่อม → จับคู่ช่างที่อยู่ใกล้+เชี่ยวชาญ → แสดงราคากลาง → ช่างมาภายใน 2 ชม. → จ่ายผ่านแอป → รีวิว+รับประกัน 30 วัน + เชื่อมกับนิติคอนโดส่งช่างให้ลูกบ้านโดยตรง",
+moat:"รีวิว+rating ช่างที่สะสม = คนเชื่อถือ + เครือข่ายช่างที่ผ่านคัดกรอง = ย้ายยาก + เชื่อมกับ PropManager AI ได้",
+revenue:"Commission 15% จากค่าบริการ + Premium ฿199/เดือนสำหรับลูกบ้าน (ลัดคิว+ส่วนลด) + B2B กับนิติ",
+mvp:"แอปแจ้งซ่อม + matching algorithm + ระบบจ่ายเงิน + รีวิว + pilot 3 คอนโดในกรุงเทพ",
+risk:"Seekster/ช่างคอนโดในเฟสบุ๊ค — แก้ด้วย focus คอนโด/หมู่บ้านโดยเฉพาะ + รับประกันงาน + เชื่อมกับนิติอัตโนมัติ",
+research:"ธุรกิจ home service ไทยโตเร็ว แต่ยังไม่มีใครเจาะ segment คอนโด/หมู่บ้านจัดสรรโดยเฉพาะ",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:4},verdict:"GO",
+review:"marketplace model ดี two-sided network effect + focus คอนโด/หมู่บ้าน = niche ที่ Seekster ไม่เจาะ",
+improvement:"ร่วมมือ PropManager AI เป็น bundle + เพิ่ม subscription สำหรับนิติ"},
+
+// ===== BLUE OCEAN — INTERNATIONAL (10) =====
+{id:11,name:"SME AutoAPI",ocean:"Blue Ocean",region:"International",emoji:"🔌",color:"#8B5CF6",
+marketSize:"$900M",affected:"3M+ SMEs ใน ASEAN",
+tagline:"เชื่อมต่อทุกซอฟต์แวร์ 1 คลิก — ไม่ต้องเขียนโค้ด",
+problem:"SME ใน ASEAN 97% ใช้ 3-5 ซอฟต์แวร์ที่ไม่เชื่อมกัน (บัญชี, คลัง, ขายของ, HR) ข้อมูลอยู่ใน 5 ที่ ต้อง copy-paste ข้ามกันทุกวัน Zapier/Make.com ราคา $99+ และเป็นภาษาอังกฤษ ใช้ยากสำหรับ SME ไทย",
+solution:"แพลตฟอร์ม no-code ลาก-วาง workflow + connectors สำเร็จรูป 20+ ตัว (บัญชีไทย, ShopSpot, LINE OA, Wave) + AI แนะนำ automation ให้อัตโนมัติ ราคาเริ่ม ฿500/เดือน",
+moat:"เชื่อมซอฟต์แวร์ไทยที่ Zapier ไม่มี + community recipe library สร้าง network effect + UI ภาษาไทย",
+revenue:"Freemium → ฿500/เดือน unlimited + Enterprise ฿6,000/เดือน | 7,500 users = ฿3.75M MRR",
+mvp:"API connectors 5 ตัวยอดนิยม + flow editor (คล้าย N8N) + recipe suggestions + Thai UI",
+risk:"Zapier/Make อาจเพิ่มภาษาไทย — แก้ด้วย local integrations ที่ copy ยาก + ราคา 1/6 ของ Zapier",
+research:"TAM ใหญ่มาก SME ยินดีจ่ายเพราะลดงาน manual ได้ทันที ราคา 1/6 ของ Zapier = แข่งได้ local integrations = defensible",
+scores:{survivability:4,monetization:5,mvpEase:5,viral:4},verdict:"GO",
+review:"TAM ใหญ่มาก SME ยินดีจ่ายเพราะลดงาน manual ได้ทันที ราคา 1/6 ของ Zapier = แข่งได้ + local integrations = defensible",
+improvement:"จับมือ กระทรวง DE เพื่อ subsidy + revenue share กับ local software vendors เร่ง integration"},
+
+{id:12,name:"AgentFlow",ocean:"Blue Ocean",region:"International",emoji:"🤖",color:"#F59E0B",
+marketSize:"$5B → $105B",affected:"40M+ SMEs + 1M+ devs",
+tagline:"ซื้อ AI Agent พร้อมใช้ 1 คลิก — เหมือน App Store ของ AI",
+problem:"SME 95% อยากใช้ AI แต่ต้องจ้าง developer ราคา 50,000-500,000 บาท/ชิ้น ในขณะที่ developer ที่สร้าง AI agent ไม่มีช่องทางขาย ไม่มี marketplace สำหรับ AI agents ที่ SME deploy ได้ทันที",
+solution:"Marketplace ให้ Creator สร้าง/ขาย AI Agent + SME กด 1-click deploy ผ่าน LINE + Rating & review system + Revenue sharing model แบ่งรายได้ให้ creator",
+moat:"Two-sided marketplace ยิ่งมีคนขาย ยิ่งมีคนซื้อ ยิ่งโต + community templates ที่สะสม + เชื่อม LINE/Shopee/Lazada",
+revenue:"Commission 15-20% ทุก transaction + Creator SaaS $29-99/mo + Enterprise API + White-label licensing",
+mvp:"Web marketplace + 10 agent templates สำเร็จรูป + 1-click deploy ผ่าน LINE Bot + payment integration",
+risk:"ตลาด AI agent ยังเร็วเกินไป (2026) + OpenAI/Google อาจทำ marketplace เอง — แก้ด้วย start vertical สำหรับ Thai SME ก่อน",
+research:"TAM $105B by 2034 first-mover advantage สำคัญ เริ่มเป็น vertical Thai SME marketplace ก่อนขยาย",
+scores:{survivability:3,monetization:3,mvpEase:4,viral:3},verdict:"GO",
+review:"TAM มหาศาล ($105B by 2034) timing อาจเร็วไปนิด แต่ first-mover advantage สำคัญ start เป็น vertical Thai SME marketplace ก่อนขยาย",
+improvement:"สร้าง agents เอง 5-10 ตัวก่อน (ตอบแชท, จองคิว, ออก invoice) ให้ SME ใช้ฟรี → พิสูจน์ value → เปิด marketplace"},
+
+{id:13,name:"VoiceAgent AI",ocean:"Blue Ocean",region:"International",emoji:"📞",color:"#10B981",
+marketSize:"$33.7B (2030)",affected:"40M+ ธุรกิจ local services ทั่วโลก",
+tagline:"AI รับโทรศัพท์ จองคิว ตอบคำถาม — ร้านค้าไม่พลาดลูกค้าอีก",
+problem:"ธุรกิจบริการ (ร้านตัดผม, คลินิก, ช่างประปา, ร้านอาหาร) พลาดลูกค้า 30-40% เพราะรับสายไม่ทัน ตอบไม่ได้นอกเวลาทำงาน จ้างคนรับสายแพง 15,000-25,000 บาท/เดือน ไม่มี AI voice ราคาถูกสำหรับร้านเล็ก",
+solution:"AI voice agent รับโทรศัพท์ 24 ชม. → จองคิว → ตอบคำถามเกี่ยวกับบริการ/ราคา → ส่ง confirmation ทาง SMS/LINE → โอนสายให้คนจริงเมื่อจำเป็น + dashboard ดูสถิติสาย",
+moat:"ข้อมูลบทสนทนาที่สะสม ทำให้ AI ตอบแม่นขึ้น + ราคาถูกกว่าจ้างคน 5 เท่า + ร้านเปลี่ยน AI ลำบากเพราะ train ใหม่นาน",
+revenue:"$99-299/เดือน/ร้าน + $0.10/สายที่จอง | 10,000 ร้าน = $1-3M MRR",
+mvp:"Voice AI (ElevenLabs/OpenAI) + ระบบจองคิว + calendar sync + SMS notification + dashboard",
+risk:"Google/Apple อาจทำ built-in — แก้ด้วย focus ธุรกิจเฉพาะกลุ่ม (ตัดผม, คลินิก) + customize ลึกกว่า generic",
+research:"80% ธุรกิจวางแผนใช้ voice AI ภายในปี 2026 ตลาดโต 37.2% CAGR enterprise รายงาน ROI 331-391% ใน 3 ปี",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:4},verdict:"GO",
+review:"Voice AI เป็นเทรนด์ร้อน ROI ชัดเจน 331-391% ใน 3 ปี ร้านเล็กเป็น segment underserved",
+improvement:"Focus 1 vertical ก่อน (ร้านตัดผม) → พิสูจน์ value → ขยายไป คลินิก, ร้านอาหาร"},
+
+{id:14,name:"DataLabel AI",ocean:"Blue Ocean",region:"International",emoji:"🏷️",color:"#6366F1",
+marketSize:"$29.75B (2035)",affected:"100K+ บริษัท AI ทั่วโลก",
+tagline:"ติดป้ายข้อมูลสอน AI แม่นขึ้น 3 เท่า — เฉพาะทาง ไม่ใช่ทั่วไป",
+problem:"บริษัทที่สร้าง AI model ต้อง label ข้อมูลสอน AI (ภาพทางการแพทย์, เอกสารกฎหมาย, ข้อมูลการเงิน) ค่าใช้จ่าย $0.50-50 ต่อชิ้น คุณภาพไม่สม่ำเสมอ แพลตฟอร์มที่มี (Scale AI, Labelbox) เน้น general ไม่มีความเชี่ยวชาญเฉพาะทาง",
+solution:"แพลตฟอร์ม label ข้อมูลเฉพาะอุตสาหกรรม (medical, legal, finance) + AI ช่วย label เบื้องต้น คนตรวจทีหลัง + ระบบคุณภาพ 3 ชั้น + compliance GDPR/HIPAA built-in",
+moat:"ทีม labeler เชี่ยวชาญเฉพาะทาง (หมอ label ภาพการแพทย์, ทนาย label เอกสารกฎหมาย) + ข้อมูลคุณภาพสูงที่ไม่มีใครมี",
+revenue:"Usage-based $1-10/labeled item + Enterprise contract $100K-1M/ปี + API access",
+mvp:"Web platform + 1 vertical (medical imaging) + AI pre-label + quality assurance workflow + compliance documentation",
+risk:"Scale AI ครอง market — แก้ด้วย focus vertical ที่ Scale AI ไม่เชี่ยวชาญ + คุณภาพสูงกว่า + compliance ready",
+research:"Meta ลงทุน $15B ใน Scale AI (มูลค่า $29B+) ตลาดโต 26% CAGR ยังขาด domain-specific platforms",
+scores:{survivability:3,monetization:5,mvpEase:3,viral:2},verdict:"GO",
+review:"ตลาดโตเร็ว monetize ดี แต่ MVP ต้องลงทุนหา domain experts + viral ต่ำเป็น B2B",
+improvement:"เริ่มจาก medical imaging 1 vertical → พิสูจน์คุณภาพ → ขยายไป legal, finance"},
+
+{id:15,name:"FitStudio AI",ocean:"Blue Ocean",region:"International",emoji:"💪",color:"#F472B6",
+marketSize:"$500M",affected:"200K+ boutique fitness studios ทั่วโลก",
+tagline:"ฟิตเนสบูทีคบริหารลูกค้า+คลาส+รายได้ ในแอปเดียว",
+problem:"Boutique fitness studios (โยคะ, พิลาทิส, CrossFit) ใช้ Mindbody ราคา $1,000-3,000/เดือน แพงเกินไป หลายร้านยังใช้ spreadsheet + Instagram DM จัดการ ลูกค้า cancel แล้วไม่มีระบบดึงกลับ",
+solution:"AI จัดการ membership + predict ลูกค้าที่จะเลิก แล้วส่ง re-engagement อัตโนมัติ + ระบบจองคลาส + waitlist + payment + แอปสำหรับ member ดูตาราง/จอง",
+moat:"ข้อมูลพฤติกรรมลูกค้าที่สะสม ทำ prediction แม่นขึ้น + ราคาถูกกว่า Mindbody 5 เท่า + focus boutique ไม่ใช่ gym ใหญ่",
+revenue:"$149-299/เดือน (vs Mindbody $1,000+) | 5,000 studios = $750K-1.5M MRR",
+mvp:"ระบบ membership + จองคลาส + payment + basic churn prediction + member app",
+risk:"Mindbody ลดราคา — แก้ด้วย AI churn prediction เป็น killer feature + focus boutique segment",
+research:"Boutique fitness ขยายตัวเร็ว Vertical SaaS margins 20-30% EBITDA สูง retention สูง",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"Vertical SaaS margins สูง + Mindbody แพงเกินไปสำหรับ boutique = pricing gap ชัดเจน",
+improvement:"Focus 1 vertical ก่อน (โยคะ) → ขยายไป pilates, CrossFit → bundled BI dashboard"},
+
+{id:16,name:"FieldRoute AI",ocean:"Blue Ocean",region:"International",emoji:"🗺️",color:"#0EA5E9",
+marketSize:"$2B",affected:"500K+ ธุรกิจ field service ทั่วโลก",
+tagline:"ช่างออกงาน 8 จุด/วัน เหลือเวลาขับรถน้อยลง 30% — AI จัดเส้นทางให้",
+problem:"ธุรกิจ field service (ช่างประปา, ไฟฟ้า, แอร์, pest control) เสียเวลาขับรถ 30-40% ของวัน จัดเส้นทางเอง ไม่มีเครื่องมือ optimize ที่ราคาถูกพอสำหรับธุรกิจ 3-20 คน",
+solution:"AI จัดเส้นทางรายวัน ลดเวลาขับ 20-30% + แจ้งลูกค้าเวลาที่ช่างจะถึง + ระบบ check-in/check-out + ใบเสนอราคา+ใบเสร็จในแอป + ภาพถ่ายก่อน/หลังงาน",
+moat:"ข้อมูลเส้นทาง+เวลาที่สะสม ทำ optimization แม่นขึ้น + ลูกค้าเห็น ROI ทันที (ลดค่าน้ำมัน) + sticky เพราะใช้ทุกวัน",
+revenue:"$199-399/เดือน/บริษัท + $5/technician/วัน | 5,000 บริษัท = $1-2M MRR",
+mvp:"AI route optimization + Google Maps API + driver app + customer notification + invoice generator",
+risk:"Google อาจเพิ่ม feature — แก้ด้วย focus vertical (HVAC, plumbing) + features เฉพาะอาชีพ",
+research:"ธุรกิจ field service ขยายตัวเร็ว route optimization ให้ ROI ชัดเจน ไม่มี dominant player สำหรับร้านเล็ก",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"ROI ชัดเจนทันที (ลดค่าน้ำมัน 20-30%) + ใช้ทุกวัน = sticky + vertical SaaS margins ดี",
+improvement:"Focus 1 vertical (HVAC) → ขยายไป plumbing, pest control → เพิ่ม parts ordering module"},
+
+{id:17,name:"NewsletterOS",ocean:"Blue Ocean",region:"International",emoji:"📧",color:"#8B5CF6",
+marketSize:"$852B creator economy (2031)",affected:"500K+ newsletter creators",
+tagline:"เขียน newsletter โตเร็วขึ้น 3 เท่า — AI ช่วยตั้งแต่หัวข้อถึงส่ง",
+problem:"Newsletter creators ใช้ Substack/Mailchimp แต่ไม่มี AI ช่วยเติบโต ไม่รู้ว่าเขียนเรื่องอะไรดี ส่งเวลาไหน subject line ไหนคนเปิดอ่าน subscriber ชอบอะไร",
+solution:"AI แนะนำหัวข้อที่กำลังเป็นกระแส + เขียน subject line ที่คนเปิดอ่าน + ส่งเวลาที่เหมาะกับ subscriber แต่ละคน + วิเคราะห์ว่าเนื้อหาแบบไหนโดนใจ + ระบบ referral program",
+moat:"ข้อมูล engagement ของ subscriber ที่สะสม AI ยิ่งแม่น + community ของ creators + tools เฉพาะ newsletter ไม่ใช่ email marketing ทั่วไป",
+revenue:"$49-199/เดือน + transaction fee 5% จาก paid subscriptions",
+mvp:"AI subject line generator + send time optimization + engagement analytics + referral system",
+risk:"Substack เพิ่ม AI features — แก้ด้วย focus growth tools ที่ Substack ไม่ทำ + cross-platform support",
+research:"Creator economy โต 22.9% CAGR 63% creators ใช้ AI-assisted tools แล้ว newsletter เป็น high-value niche",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:4},verdict:"GO",
+review:"Creator economy โตเร็ว newsletter เป็น high-value niche + AI growth tools เป็น differentiator",
+improvement:"ร่วมมือ top newsletter creators 50 คน ก่อน launch + สร้าง community + cross-platform import"},
+
+{id:18,name:"ContractFlow AI",ocean:"Blue Ocean",region:"International",emoji:"📋",color:"#D946EF",
+marketSize:"$2B",affected:"5M+ SMEs ทั่วโลก",
+tagline:"จัดการสัญญาทั้งบริษัท ไม่ต้องหาใน email อีก",
+problem:"47% ของทนายยังเก็บสัญญาใน Google Drive/email ไม่รู้สัญญาไหนจะหมดอายุ ใครเซ็นแล้ว version ไหนล่าสุด ระบบ CLM ที่มี (Ironclad, DocuSign CLM) ราคา $50,000+/ปี เหมาะบริษัทใหญ่เท่านั้น",
+solution:"ระบบจัดการสัญญาครบวงจร: สร้างสัญญาจาก template + AI ตรวจหาความเสี่ยง + ลำดับอนุมัติอัตโนมัติ + e-Signature + แจ้งเตือนหมดอายุ + ค้นหาสัญญาด้วย AI ในไม่กี่วินาที",
+moat:"สัญญาทั้งบริษัทอยู่ในระบบ ย้ายออกยากมาก + AI เรียนรู้รูปแบบสัญญาของแต่ละบริษัท + ราคาถูกกว่า enterprise CLM 10 เท่า",
+revenue:"$99-499/เดือน + $2/สัญญาที่เซ็น | 10,000 บริษัท = $1-5M MRR",
+mvp:"Template engine + AI risk detection + approval workflow + e-Signature + search + alert",
+risk:"DocuSign ลงมาเล่น SME — แก้ด้วย UX ง่ายกว่า + ราคาถูกกว่า + focus SME ที่ DocuSign ไม่สนใจ",
+research:"CLM market โต legal teams ต้องการ tool ที่ง่าย 47% ยังใช้ Google Drive = โอกาสใหญ่",
+scores:{survivability:4,monetization:4,mvpEase:3,viral:3},verdict:"GO",
+review:"data lock-in สูงมาก (สัญญาทั้งบริษัท) + pricing gap ชัดเจน ($50K vs $1-6K/ปี)",
+improvement:"เริ่มจาก template + e-Signature → เพิ่ม AI risk detection → ขยายไป CLM เต็มรูปแบบ"},
+
+{id:19,name:"GreenChain AI",ocean:"Blue Ocean",region:"International",emoji:"🌱",color:"#22C55E",
+marketSize:"$5.5B",affected:"80K+ โรงงานส่งออก",
+tagline:"Supply chain สีเขียว compliance ง่าย — ส่งออกไม่ติดกำแพง ESG",
+problem:"ผู้ซื้อระดับโลกบังคับให้ supply chain ต้อง 'สีเขียว' โรงงานไทย/ASEAN 80,000+ แห่ง ไม่มีเครื่องมือทำ sustainability report ถ้าไม่ผ่าน ESG จะเสียลูกค้าใหญ่ (Nike, Apple, Unilever) consulting แพง 50,000-300,000 บาท/ครั้ง",
+solution:"แพลตฟอร์มวัดและรายงาน carbon footprint อัตโนมัติ + checklist ESG compliance ตามมาตรฐาน GRI/SASB + เชื่อม supplier ที่ผ่าน certification + AI แนะนำวิธีลด carbon ที่ประหยัดที่สุด",
+moat:"ข้อมูล supply chain ที่สะสม = ยิ่งใช้ยิ่งแม่น + compliance rules update อัตโนมัติ + network ของ supplier ที่ verified",
+revenue:"SaaS $200-1,000/เดือน + certification fee $500-5,000 + API สำหรับ buyer | 10,000 โรงงาน = $2-10M MRR",
+mvp:"Carbon calculator + ESG checklist + supplier database + basic report generator",
+risk:"ที่ปรึกษารายใหญ่ (McKinsey, Deloitte) ลงมาเล่น — แก้ด้วยราคาถูก 10 เท่า + self-service + focus SME",
+research:"Climate adaptation tech โต 64% เป็น $5.5B ในปี 2025 71% โรงงานส่งออกยินดีจ่ายเพื่อ ESG compliance",
+scores:{survivability:4,monetization:4,mvpEase:3,viral:2},verdict:"GO",
+review:"ESG compliance กลายเป็นบังคับ = regulatory-driven demand + ราคาถูกกว่า consulting 10 เท่า",
+improvement:"ร่วมมือ BOI/กสอ. เป็น distribution + เริ่มจาก textile/automotive → ขยายไป food/electronics"},
+
+{id:20,name:"ClinicSchedule AI",ocean:"Blue Ocean",region:"International",emoji:"🩺",color:"#0891B2",
+marketSize:"$455B telehealth (2030)",affected:"500K+ คลินิกทั่วโลก",
+tagline:"จัดตารางหมอ+พยาบาลด้วย AI — ไม่มีคนเกิน ไม่มีคนขาด",
+problem:"คลินิกและโรงพยาบาลขนาดเล็กจัดตาราง staff ด้วย Excel หรือกระดาษ หมอ 50% ของเวลาหมดไปกับเอกสาร ไม่ใช่ดูแลคนไข้ ไม่มี AI predict ว่าวันไหนคนไข้จะเยอะ เพื่อจัด staff ให้พอดี",
+solution:"AI predict จำนวนคนไข้ล่วงหน้า → จัดตาราง staff อัตโนมัติ → จัดการ shift swap → แจ้งเตือนขาดคน → ลด no-show ด้วย reminder → dashboard workload balance",
+moat:"ข้อมูลรูปแบบคนไข้ที่สะสม prediction แม่นขึ้น + เชื่อมกับระบบ EHR + ราคาถูกกว่า enterprise",
+revenue:"$299-699/เดือน/คลินิก | 5,000 คลินิก = $1.5-3.5M MRR",
+mvp:"Demand prediction model + auto-scheduling + shift management + notification + dashboard",
+risk:"Epic/Cerner อาจเพิ่ม scheduling — แก้ด้วย focus คลินิกเล็กที่ Epic ไม่สนใจ + UX ง่ายกว่า",
+research:"Healthcare AI ได้ 60% ของ digital health funding ($4B) 6 unicorn ใหม่ใน Q1 2025 telehealth โต 24.68% CAGR",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:2},verdict:"GO",
+review:"Healthcare AI funding สูงมาก + prediction-based scheduling เป็น real value + data lock-in สูง",
+improvement:"เริ่มจาก dental clinics → ขยายไป dermatology, physical therapy → เชื่อม EHR ยอดนิยม"},
+
+// ===== RED OCEAN — START IN THAI (10) =====
+{id:21,name:"SellerOS AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"🏪",color:"#3B82F6",
+marketSize:"$5.2B → $8.5B",affected:"2M+ คนขายออนไลน์ไทย",
+tagline:"ขายของหลาย platform จัดการที่เดียว — AI ช่วยตั้งราคา ตอบแชท อัพสินค้า",
+problem:"คนขายออนไลน์ 2 ล้าน+ คน ต้องจัดการ 4-5 แพลตฟอร์มพร้อมกัน (Shopee 75%, Lazada 67%, TikTok 51%) ใช้เวลา 10-14 ชม./วัน ทำงานซ้ำๆ เช่น ตอบแชท อัพเดตสต็อก ปรับราคา เครื่องมือที่มี (Zetpy, Ginee) ยังไม่ใช้ AI และไม่เข้าใจภาษาไทย",
+solution:"AI ตอบแชทลูกค้าทุกแพลตฟอร์มเป็นภาษาไทย + ปรับราคาอัตโนมัติตาม demand + สร้าง content จากรูป 1 รูป + ออก e-Tax Invoice ตามกฎหมายใหม่อัตโนมัติ + sync สต็อกทุก platform",
+moat:"ข้อมูลขายจากหลาย platform รวมกัน ยิ่งใช้นาน AI ยิ่งรู้จักธุรกิจ + เชื่อมระบบไทยที่ global tools ไม่มี",
+revenue:"SaaS 499-2,999 บาท/เดือน + commission จาก AI upsell + e-invoicing add-on",
+mvp:"Dashboard ดึง orders จาก Shopee + Lazada API + AI pricing suggestions + Thai chatbot",
+risk:"Shopee/Lazada อาจทำ native AI tools เอง — แก้ด้วย multi-platform lock-in ที่ทำให้คนขายไม่อยากย้าย",
+research:"81% คนขายออนไลน์ยินดีจ่าย 5,000-15,000 บาท/เดือน สำหรับเครื่องมือจัดการหลาย platform",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:4},verdict:"GO",
+review:"ตลาดใหญ่ recurring revenue ชัด ต้อง pivot เป็น distribution network ไม่ใช่แค่ tool",
+improvement:"เริ่มจาก 1 category (Fashion/Beauty) แล้วขยาย → สร้าง SellerOS Collective เป็น network ของคนขาย"},
+
+{id:22,name:"SafeWork AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"👷",color:"#F97316",
+marketSize:"$650M",affected:"150K+ โรงงาน, 5M+ คนงาน",
+tagline:"กล้อง CCTV เดิมในโรงงาน + AI = ตรวจจับอุบัติเหตุก่อนเกิด",
+problem:"ไทยมีอุบัติเหตุในที่ทำงาน 8,000-12,000 ครั้ง/ปี 40% ป้องกันได้ เครื่องมือที่มี (Intenseye, Visionify) ราคา $50,000-200,000/ปี แพงเกินไปสำหรับ SME โรงงาน 60% ไม่มีระบบ CCTV แบบ integrated",
+solution:"Edge AI ทำงานบนกล้อง CCTV เดิม (ไม่ต้อง upgrade) + ตรวจจับ PPE/ท่าทางอันตราย/near-miss แบบ real-time + แจ้งเตือนทันที + ออกรายงานภาษาไทยสำหรับกระทรวงแรงงาน + ทำงาน offline ได้",
+moat:"Edge AI ราคาถูก (ใช้กับกล้องเดิม) = เข้าถึง SME ได้ + ทำงาน offline = ใช้ในโรงงานชนบท + compliance rules ภาษาไทย",
+revenue:"SaaS ฿1,500/เดือน/โรงงาน + ฿0.30/alert | 5,000 โรงงาน = ฿7.5M MRR + subsidy กระทรวงแรงงาน",
+mvp:"YOLOv8 PPE detection + TFLite edge + alert system + Thai compliance template",
+risk:"Intenseye อาจลงมาเล่น downmarket + edge AI accuracy 85-90% — แก้ด้วย human-in-the-loop + open-source model สร้าง community",
+research:"กระทรวงแรงงานมี subsidy ฿150,000/โรงงาน สำหรับ safety tech 90% SME gap ที่คู่แข่งไม่เล่น",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:2},verdict:"GO",
+review:"Red Ocean แต่ SME pricing gap = ช่องว่างจริง compliance ภาษาไทย = edge + กระทรวงแรงงานมี subsidy ฿150K/โรงงาน = TAM lever ที่ดีมาก",
+improvement:"Pivot เป็น B2B2C: partner บริษัทประกันอุตสาหกรรม (จ่ายค่า safety tech เพื่อลด claims) = customer acquisition cost ต่ำ"},
+
+{id:23,name:"CreatorVault AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"🎨",color:"#D946EF",
+marketSize:"$41.6B → $390.7B",affected:"500K+ Thai creators",
+tagline:"Creator ไทยเก็บเงินได้มากขึ้น — platform ที่หักน้อยกว่าเดิม",
+problem:"Creator ไทยรายได้ไม่แน่นอน ($0.01-0.10 ต่อ 1,000 views) Patreon/YouTube หัก 10-30% ไม่มี platform ไหนรองรับ PromptPay/LINE Pay เต็มที่ Creator ต้องใช้ 5-6 tools จัดการ membership, merch, analytics",
+solution:"Thailand-first creator monetization: membership + tipping ผ่าน PromptPay/LINE Pay (หัก 10% vs Patreon 30%) + AI แนะนำ content + merch print-on-demand + analytics dashboard รวมทุกแพลตฟอร์ม",
+moat:"เชื่อม PromptPay, 2C2P, LINE Pay (creator ต่างชาติไม่ได้) + community lock-in + ค่าธรรมเนียมต่ำกว่า = ย้ายออกยาก",
+revenue:"Commission 10% memberships + 5% tips + 20% merch + Premium analytics ฿300/เดือน",
 mvp:"Dashboard aggregate TikTok/YouTube/IG + membership signup page + PromptPay integration + basic analytics",
-risk:"Patreon + YouTube built-in \u0E17\u0E33\u0E2D\u0E22\u0E39\u0E48\u0E41\u0E25\u0E49\u0E27 + Trakteer at 0% fee \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48 win market \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 focus vertical (gaming/cosplay) + \u0E40\u0E0B\u0E47\u0E19 creators \u0E01\u0E48\u0E2D\u0E19 build tech",
-scores:{survivability:3,monetization:3,mvpEase:3,viral:3,founderFit:3},verdict:"GO",
-review:"\u0E15\u0E25\u0E32\u0E14 $390B by 2034 \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19 \u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35 creators \u0E01\u0E48\u0E2D\u0E19\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E40\u0E17\u0E04 \u0E40\u0E0B\u0E47\u0E19 50+ influencers \u0E01\u0E48\u0E2D\u0E19 launch \u2014 \u0E16\u0E49\u0E32\u0E21\u0E35 creators = \u0E21\u0E35 platform",
-improvement:"\u0E40\u0E0B\u0E47\u0E19 MOU 50+ Thai creators \u0E01\u0E48\u0E2D\u0E19 build + focus vertical (gaming/cosplay) + \u0E43\u0E0A\u0E49 2C2P payment + partner TikTok TH"}
+risk:"Patreon + YouTube built-in ทำอยู่แล้ว — แก้ด้วย focus vertical (gaming/cosplay) + เซ็น creators ก่อนสร้าง tech",
+research:"ตลาด $390B by 2034 ต้องมี creators ก่อนสร้างเทค เซ็น 50+ influencers ก่อน launch ถ้ามี creators = มี platform",
+scores:{survivability:3,monetization:3,mvpEase:3,viral:3},verdict:"GO",
+review:"ตลาด $390B by 2034 ชัดเจน ต้องมี creators ก่อนสร้าง tech เซ็น 50+ influencers ก่อน launch — ถ้ามี creators = มี platform",
+improvement:"เซ็น MOU 50+ Thai creators ก่อน build + focus vertical (gaming/cosplay) + ใช้ 2C2P payment + partner TikTok TH"},
+
+{id:24,name:"LogiFlow AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"🚚",color:"#EC4899",
+marketSize:"$8B",affected:"50K+ SME logistics, 200K+ ร้านค้า",
+tagline:"ส่งของถูกลง 30% — AI จัดเส้นทาง+จัดการรถให้ร้านค้าเล็ก",
+problem:"SME ไทยที่ส่งของเอง 50,000+ ราย เสียค่าขนส่ง 30-40% ของราคาสินค้า เพราะใช้ Kerry/Flash/J&T แบบไม่ optimize เส้นทาง เครื่องมือที่มี (Bringg, Onfleet) ราคา $500+/เดือน แพงเกินไป",
+solution:"AI จัดเส้นทางขนส่งลดระยะทาง 30-40% + fleet management dashboard ภาษาไทย + tracking real-time สำหรับลูกค้า + auto-assign คนขับตาม zone/ปริมาณสินค้า + เชื่อม LINE OA แจ้งลูกค้า",
+moat:"Thai address parsing AI (ที่อยู่ไทยไม่เป็นระบบ = ยากที่จะ copy) + ข้อมูลเส้นทางที่สะสม + ราคาถูกกว่าคู่แข่ง 10 เท่า",
+revenue:"SaaS ฿999-4,999/เดือน + ฿5/delivery ที่ optimize | 5,000 SME = ฿10M MRR + partner Kerry/Flash เป็น white-label",
+mvp:"Google Maps API + AI route optimization + driver app (React Native) + LINE OA tracking + pilot 10 ร้านค้า",
+risk:"Kerry/Flash อาจทำเอง — แก้ด้วย Thai address AI เป็น moat + white-label ให้ Kerry/Flash แทนแข่ง",
+research:"Thai logistics $8B TAM SME pricing gap ชัดเจน Thai address parsing เป็น unique moat ลดค่าส่ง 30-40% = ROI ชัด",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"Thai logistics $8B TAM ใหญ่มาก SME pricing gap ชัดเจน + Thai address parsing เป็น unique moat + clear ROI (ลดค่าส่ง 30-40%)",
+improvement:"Partner Kerry/Flash Express เป็น white-label solution + เพิ่ม COD collection module เป็น upsell"},
+
+{id:25,name:"FoodCost AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"🥘",color:"#EF4444",
+marketSize:"$500M",affected:"300K+ ร้านอาหาร",
+tagline:"รู้ต้นทุนอาหารทุกจานแบบ real-time — เลิกขาดทุนโดยไม่รู้ตัว",
+problem:"ร้านอาหารไทยส่วนใหญ่ไม่รู้ต้นทุนอาหารที่แท้จริงของแต่ละเมนู สั่งของเยอะเกินทิ้งเปล่า 15-25% ราคาวัตถุดิบเปลี่ยนทุกวันแต่ราคาเมนูไม่ได้ปรับ กำไรรั่วโดยไม่รู้ตัว",
+solution:"คำนวณต้นทุนแต่ละจานอัตโนมัติ (ใส่สูตร → ดึงราคาวัตถุดิบ → คำนวณ) + AI พยากรณ์ demand แนะนำสั่งของเท่าไหร่ + แจ้งเตือนเมื่อ food cost % สูงเกินไป + ติดตามของเสียรายวัน",
+moat:"ข้อมูลราคาวัตถุดิบไทยที่สะสม (เฉพาะตลาดไทย) + สูตรอาหารที่ร้านใส่ไว้ย้ายออกยาก + ROI ชัดเจนทำให้ไม่อยากยกเลิก",
+revenue:"SaaS ฿499-1,999/เดือน + Premium analytics ฿500 + supplier matching commission",
+mvp:"Recipe costing engine + ingredient price tracking + waste tracker + food cost % alert + simple dashboard",
+risk:"POS ใหญ่ (Square, Toast) อาจเพิ่ม feature — แก้ด้วย focus ต้นทุนอาหารลึกกว่า POS + ข้อมูลวัตถุดิบไทยเฉพาะ",
+research:"ร้านอาหาร 68% ยินดีจ่าย 5,000-15,000 บาท/เดือน ลด food waste 15-25% = ROI ภายในเดือนแรก",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"ROI ชัดเจนทันที (ลด food waste 15-25%) + data lock-in สูง (สูตรอาหาร) + ตลาดใหญ่",
+improvement:"ร่วมมือ supplier อาหาร (Makro) + เพิ่ม supplier price comparison + bundle กับ RestaurantOS"},
+
+{id:26,name:"RetailPOS AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"🏬",color:"#0EA5E9",
+marketSize:"$1B",affected:"300K+ ร้านค้าปลีก",
+tagline:"POS + สต็อก + ขายออนไลน์ ครบในเครื่องเดียว — ร้านเล็กก็ใช้ได้",
+problem:"ร้านค้าปลีก 300,000+ แห่ง เสียยอดขาย 4% จากสินค้าหมดสต็อก ใช้ POS ที่ไม่เชื่อม marketplace (Lazada, Shopee) สต็อกหน้าร้าน vs ออนไลน์ไม่ตรง ลูกค้าสั่งออนไลน์แต่ของหมด",
+solution:"POS + จัดการสต็อกรวมทุกช่องทาง (หน้าร้าน+online) + sync Shopee/Lazada อัตโนมัติ + แจ้งเตือนสินค้าใกล้หมด + AI พยากรณ์ demand + รองรับ PromptPay/บัตร/เงินสด + ออก e-Tax Invoice",
+moat:"เชื่อม marketplace ไทย + รองรับภาษีไทย + ข้อมูลยอดขายที่สะสม + ราคาถูกกว่า POS ต่างชาติ",
+revenue:"SaaS ฿499-2,999/เดือน + transaction fee 0.5% + hardware add-on",
+mvp:"Cloud POS + inventory management + Shopee/Lazada sync + payment processing + basic reports",
+risk:"Shopee/Lazada อาจทำ POS เอง — แก้ด้วย multi-channel เป็น moat + ร้านที่ไม่ขายออนไลน์ก็ใช้ได้",
+research:"72% ร้านค้าปลีกไทยยินดีจ่าย 3,000-8,000 บาท/เดือน สูญเสีย 500,000+ บาท/ปี จากปัญหาสต็อก",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"multi-channel inventory เป็น killer feature + ROI ชัดเจน (ลดสูญเสีย 4%)",
+improvement:"ร่วมมือ payment gateway ไทย + เพิ่ม loyalty program module + hardware bundle ราคาประหยัด"},
+
+{id:27,name:"FreelanceTax AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"💻",color:"#A855F7",
+marketSize:"$150M",affected:"1.2M+ ฟรีแลนซ์ไทย",
+tagline:"ฟรีแลนซ์ยื่นภาษีเองได้ใน 10 นาที — ไม่ต้องจ้างสำนักงานบัญชี",
+problem:"ฟรีแลนซ์ไทย 1.2 ล้าน+ คน ส่วนใหญ่ไม่เข้าใจภาษี ไม่รู้หักค่าใช้จ่ายอะไรได้บ้าง ไม่รู้ต้องจ่ายภาษีเท่าไหร่จนถึง deadline จ้างสำนักงานบัญชี 5,000-20,000 บาท/ปี แพงเกินไปสำหรับรายได้ไม่แน่นอน",
+solution:"AI คำนวณภาษีอัตโนมัติตาม income type + แนะนำค่าใช้จ่ายที่หักได้ + สร้างใบกำกับภาษี + ออก statement สรุปรายได้-รายจ่ายรายเดือน + ยื่นภาษีออนไลน์ผ่านระบบ + แจ้งเตือน deadline",
+moat:"เข้าใจภาษีฟรีแลนซ์ไทยเฉพาะทาง (40(2), 40(8) etc.) + ข้อมูลรายได้ที่สะสมทำให้ AI แม่น + ราคาถูกกว่าจ้างบัญชี 10 เท่า",
+revenue:"Freemium → ฿199-599/เดือน + ยื่นภาษี ฿499/ครั้ง + tax planning consultation ฿1,500",
+mvp:"Income tracker + tax calculator + expense categorization + e-Filing integration + LINE reminder",
+risk:"กรมสรรพากรอาจทำระบบง่ายขึ้น — แก้ด้วย value-add เช่น tax optimization + financial planning",
+research:"71% ฟรีแลนซ์ยินดีจ่าย 500-2,000 บาท/เดือน PDPA enforcement เพิ่ม 40% ในปี 2024-2025",
+scores:{survivability:3,monetization:3,mvpEase:5,viral:4},verdict:"GO",
+review:"ตลาด 1.2M ฟรีแลนซ์ MVP ง่ายมาก viral ดีจากการบอกต่อ แต่ monetize ต่ำ (ราคาถูก)",
+improvement:"เพิ่ม financial planning + ร่วมมือ freelance platforms (Fastwork, Freelancehunt) เป็น distribution"},
+
+{id:28,name:"BuilderOS",ocean:"Red Ocean",region:"Start in Thai",emoji:"🏗️",color:"#F59E0B",
+marketSize:"$1B",affected:"15K+ บริษัทก่อสร้าง, 700K คนงาน",
+tagline:"จัดการงานก่อสร้างครบ — ไม่ต้องใช้ Excel ติดตามงาน/คนงาน/งบ",
+problem:"บริษัทก่อสร้าง 15,000+ แห่ง ใช้ Excel ติดตามงาน ขาดแคลนแรงงาน 700,000 คน ค่าแรงขั้นต่ำขึ้นเป็น 400 บาท/วัน ผลิตภาพต่ำ ซอฟต์แวร์ต่างชาติ (Procore) แพง 200,000+ บาท/ปี ไม่เหมาะ SME",
+solution:"ระบบจัดการโครงการก่อสร้าง: ติดตาม progress + จัดการคนงาน/กะ + ควบคุมงบ + ถ่ายรูปบันทึกงาน + checklist คุณภาพ+ความปลอดภัย + รายงานให้เจ้าของโครงการ + ทำงานภาษาไทย",
+moat:"เข้าใจมาตรฐานก่อสร้างไทย + ราคาถูกกว่า Procore 5 เท่า + ข้อมูลโครงการที่สะสม + ภาษาไทย",
+revenue:"SaaS ฿2,999-9,999/เดือน/โครงการ + ฿200/คนงาน/เดือน | 2,000 บริษัท = ฿10M MRR",
+mvp:"Project dashboard + worker management + budget tracking + photo documentation + safety checklist",
+risk:"Procore ลดราคาสำหรับ SME — แก้ด้วย Thai-specific features + offline mode ใช้ในไซต์ก่อสร้าง",
+research:"68% บริษัทก่อสร้างยินดีจ่าย 30,000-100,000 บาท/เดือน ขาดแรงงาน 700,000 คน ต้องมีเครื่องมือจัดการให้ดีขึ้น",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:2},verdict:"GO",
+review:"B2B pricing ดี แต่ MVP ต้องมี offline mode + Thai construction standards ต้องใช้เวลาสร้าง",
+improvement:"ร่วมมือ สมาคมผู้รับเหมา + เริ่มจาก small contractors (5-20 คน) → ขยายไป medium"},
+
+{id:29,name:"TutorMatch AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"📚",color:"#6366F1",
+marketSize:"$500M",affected:"2M+ นักเรียน, 500K+ ครอบครัว",
+tagline:"หาติวเตอร์ที่ใช่ ราคาที่เหมาะ — AI จับคู่นักเรียนกับครูที่สอนเก่ง",
+problem:"พ่อแม่ไทยจ่ายค่าเรียนพิเศษ 10,000 ล้านบาท/ปี (500,000 นักเรียน) ค่าติว 3,000-8,000 บาท/วิชา/เดือน แพงกว่าค่าเทอม 3 เท่า แต่หาครูดีๆ ยาก ไม่รู้ว่าครูคนไหนสอนเก่ง",
+solution:"AI จับคู่นักเรียนกับติวเตอร์ตามวิชา/ระดับ/สไตล์การเรียน + รีวิว+rating จริง + ติวเตอร์ตั้งราคาเอง + ระบบจ่ายเงินผ่านแอป + AI วิเคราะห์จุดอ่อนของเด็กแนะนำบทเรียน",
+moat:"รีวิว+rating ที่สะสม = คนเชื่อถือ + ข้อมูลการเรียนรู้ของเด็กที่ AI ใช้ customize + network effect",
+revenue:"Commission 15% จากค่าเรียน + Premium profile ฿499/เดือนสำหรับครู + AI learning report ฿199/เดือน",
+mvp:"Matching platform + booking system + payment + review system + basic AI learning analysis",
+risk:"StartDee/Mineducation + โรงเรียนกวดวิชาออนไลน์ — แก้ด้วย focus 1-on-1 matching ไม่ใช่ video course",
+research:"79% พ่อแม่ยินดีจ่าย 2,000-5,000 บาท/เดือนสำหรับ tutoring ที่ดีขึ้น การศึกษาไทยอันดับ 54 จาก 70 ประเทศ PISA",
+scores:{survivability:3,monetization:3,mvpEase:4,viral:4},verdict:"GO",
+review:"marketplace model + viral จากการบอกต่อระหว่างพ่อแม่ แต่ monetize ต่ำ (commission-based)",
+improvement:"ร่วมมือโรงเรียน + เพิ่ม AI adaptive learning → subscription model แทน commission"},
+
+{id:30,name:"HotelEasy AI",ocean:"Red Ocean",region:"Start in Thai",emoji:"🏨",color:"#14B8A6",
+marketSize:"$400M",affected:"30K+ โรงแรมเล็ก+homestay",
+tagline:"โรงแรมเล็กบริหารได้เหมือนโรงแรมใหญ่ — จัดการห้อง ราคา รีวิว ที่เดียว",
+problem:"โรงแรมเล็ก/homestay 30,000+ แห่ง แข่งกับ chain ใหญ่ไม่ได้ จ่ายค่า commission Agoda/Booking 15-25% ไม่มี dynamic pricing ตั้งราคาเดิมทั้งปี ไม่มีระบบ manage guest feedback",
+solution:"Channel manager เชื่อมทุก OTA + AI ตั้งราคาตาม demand (dynamic pricing) + ระบบ direct booking ลดค่า commission + guest feedback management + auto-reply รีวิว + CRM ดึงลูกค้ากลับ",
+moat:"ข้อมูลราคา+occupancy ที่สะสม dynamic pricing แม่นขึ้น + direct booking channel เป็นของโรงแรม + เชื่อม OTA ไทย+ต่างประเทศ",
+revenue:"SaaS ฿1,999-5,999/เดือน + transaction fee 2% direct booking | 5,000 โรงแรม = ฿15M MRR",
+mvp:"Channel manager + dynamic pricing + direct booking page + review management + basic CRM",
+risk:"Agoda/Booking อาจเพิ่มเครื่องมือ — แก้ด้วย direct booking ที่ช่วยโรงแรมหนี OTA",
+research:"76% โรงแรมเล็กยินดีจ่าย 2,000-5,000 บาท/เดือน นักท่องเที่ยวจีนลด 33.55% ต้องหาลูกค้าใหม่",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"dynamic pricing = immediate ROI + direct booking ช่วยลด OTA dependency + data lock-in สูง",
+improvement:"ร่วมมือ ททท. + เพิ่ม AI revenue management + multi-language สำหรับนักท่องเที่ยวต่างชาติ"},
+
+// ===== RED OCEAN — INTERNATIONAL (10) =====
+{id:31,name:"CheapBI AI",ocean:"Red Ocean",region:"International",emoji:"📊",color:"#3B82F6",
+marketSize:"$81.45B (2033)",affected:"10M+ SMBs ทั่วโลก",
+tagline:"Dashboard สวย สรุปข้อมูลธุรกิจ — ไม่ต้องเขียน SQL ไม่ต้องจ้าง data analyst",
+problem:"SME ข้อมูลธุรกิจกระจายอยู่ 5-10 ที่ (spreadsheet, CRM, บัญชี) 66% ของข้อมูลธุรกิจไม่ถูกนำมาใช้ ทีมต่างแผนกเถียงกันว่าตัวเลขไหนถูก Power BI/Tableau แพง $10-100/เดือน ต้องมีคน IT ช่วย ใช้ยากสำหรับ SME",
+solution:"เชื่อม database + spreadsheet อัตโนมัติ → AI สร้าง dashboard ให้เลย → ถามข้อมูลด้วยภาษาคนได้ (เช่น 'ยอดขายเดือนนี้เทียบเดือนที่แล้ว') → drag-drop drill-down → ส่ง report อัตโนมัติ",
+moat:"ข้อมูลธุรกิจที่เชื่อมไว้ย้ายออกยาก + AI เข้าใจ context ธุรกิจมากขึ้นเรื่อยๆ + ราคาถูกกว่า 3-5 เท่า",
+revenue:"$29-99/เดือน (vs Power BI/Tableau $10-100+) | 50,000 SMBs = $1.5-5M MRR",
+mvp:"Data connectors + AI dashboard generator + natural language query + scheduled reports",
+risk:"Power BI/Tableau ลดราคา — แก้ด้วย AI-first UX ที่ง่ายกว่ามาก + ไม่ต้องรู้ SQL เลย",
+research:"BI market $40.13B (2025) → $81.45B (2033) Power BI 20% market share SME segment underserved",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:3},verdict:"GO",
+review:"TAM มหาศาล ($81B) AI-first UX เป็น differentiator แต่ต้องสร้าง connectors เยอะ",
+improvement:"เริ่มจาก Google Sheets + Stripe + Shopify connectors → ขยายไป accounting + CRM"},
+
+{id:32,name:"SimpleCRM",ocean:"Red Ocean",region:"International",emoji:"🤝",color:"#10B981",
+marketSize:"$5B",affected:"2M+ real estate agents ทั่วโลก",
+tagline:"CRM สำหรับนายหน้าอสังหา — ง่ายกว่า Salesforce 10 เท่า",
+problem:"นายหน้าอสังหาริมทรัพย์ต้องติดตามลูกค้าหลายสิบราย property หลายร้อยรายการ แต่ Salesforce ($25-165/user/month) ซับซ้อนเกินไป CRM เฉพาะอสังหา ก็ $50-200/เดือน ยังแพง",
+solution:"CRM ที่ออกแบบมาสำหรับนายหน้าเท่านั้น: จับ lead จากทุกช่องทาง + pipeline ติดตาม deal + checklist ขั้นตอนการโอน + ส่ง follow-up อัตโนมัติ + match ลูกค้ากับ property",
+moat:"ออกแบบมาเฉพาะอสังหา = ใช้ง่ายกว่า generic CRM + ข้อมูล property+ลูกค้าที่สะสม + workflow เฉพาะอาชีพ",
+revenue:"$49-149/เดือน | 10,000 agents = $490K-1.5M MRR",
+mvp:"Lead capture + pipeline management + transaction checklists + auto follow-up + property matching",
+risk:"Salesforce ออก industry edition — แก้ด้วย UX ง่ายสุดๆ + ราคาถูก + onboard ใน 15 นาที",
+research:"นายหน้าบ่นว่า tool บวม CRM สำหรับ sales team ใหญ่ไม่เหมาะ vertical = gap",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"Vertical SaaS สำหรับ real estate = high retention + UX simplicity เป็น moat จริง",
+improvement:"ร่วมมือ real estate associations + เพิ่ม virtual tour integration + MLS sync"},
+
+{id:33,name:"AgencyFlow",ocean:"Red Ocean",region:"International",emoji:"🎯",color:"#8B5CF6",
+marketSize:"$32.27B (2036)",affected:"500K+ agencies ทั่วโลก",
+tagline:"Agency จัดการ project+team+billing ที่เดียว — ไม่ต้องใช้ 5 tools",
+problem:"Agency (โฆษณา, ออกแบบ, พัฒนาซอฟต์แวร์) ต้องใช้ 5+ tools: Monday.com จัดงาน, Harvest จับเวลา, QuickBooks ออกบิล, Google Drive เก็บไฟล์ แต่ไม่เชื่อมกัน",
+solution:"All-in-one สำหรับ agency: จัดการ project + จับเวลา + client portal + ออกบิลจาก timesheet + ติดตามงบ project + ทีม chat + ไฟล์ทั้งหมดในราคาเดียว",
+moat:"ข้อมูล project ทั้งหมดอยู่ที่เดียว ย้ายออกยาก + ออกแบบมาเฉพาะ agency + flat pricing ไม่ต้องจ่ายต่อหัว",
+revenue:"$299-699/เดือน flat | 5,000 agencies = $1.5-3.5M MRR",
+mvp:"Project management + time tracking + client portal + invoicing + budget tracking",
+risk:"Monday.com/Asana เพิ่ม agency features — แก้ด้วย flat pricing + billing integration + client portal",
+research:"Project management market $9.60B (2026) → $32.27B (2036) 61% project managers ทำงาน remote",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:3},verdict:"GO",
+review:"flat pricing เป็น differentiator จริง + all-in-one ลด tool fatigue + B2B retention สูง",
+improvement:"เริ่มจาก marketing agencies → ขยายไป design + dev agencies → เพิ่ม AI resource allocation"},
+
+{id:34,name:"BotSupport AI",ocean:"Red Ocean",region:"International",emoji:"💬",color:"#0EA5E9",
+marketSize:"$47.82B (2030)",affected:"5M+ ธุรกิจทั่วโลก",
+tagline:"AI ตอบลูกค้าแทนคุณ 70% — ราคา 1/5 ของ Zendesk",
+problem:"ธุรกิจเล็กต้องตอบคำถามลูกค้าซ้ำๆ ทุกวัน จ้างคน support แพง 20,000-40,000 บาท/เดือน/คน Zendesk ราคา $50-150/เดือน ก็ยังแพงสำหรับร้านเล็ก",
+solution:"AI เรียนรู้จากประวัติ support เก่า → ตอบคำถาม 60-70% อัตโนมัติ → โอนให้คนจริงเมื่อจำเป็น → เชื่อม email/chat/social → dashboard วิเคราะห์คำถามที่ถามบ่อย",
+moat:"ยิ่งตอบเยอะ AI ยิ่งเก่ง + ข้อมูล FAQ ของแต่ละธุรกิจเฉพาะตัว + ราคาถูกกว่า Zendesk 5 เท่า",
+revenue:"$29-99/เดือน + $0.02/ข้อความที่ AI ตอบ | 20,000 ธุรกิจ = $580K-2M MRR",
+mvp:"AI chatbot + knowledge base importer + email/chat integration + human escalation + analytics",
+risk:"Zendesk/Intercom เพิ่ม AI ฟรี — แก้ด้วยราคาถูกกว่า 5 เท่า + setup ง่ายกว่า + focus SME",
+research:"AI customer service market โต 25.8% CAGR 85% service leaders จะ pilot GenAI ภายใน 2026",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"AI support เป็นเทรนด์ร้อน ราคาถูกกว่า Zendesk 5 เท่า = pricing gap + SME underserved",
+improvement:"เพิ่ม WhatsApp/LINE/FB Messenger integration + multi-language + voice support"},
+
+{id:35,name:"AutoFlow AI",ocean:"Red Ocean",region:"International",emoji:"⚡",color:"#F59E0B",
+marketSize:"$40.77B (2031)",affected:"10M+ SMBs ทั่วโลก",
+tagline:"เชื่อม app + ทำ automation — จ่ายรายเดือนเท่าเดิม ไม่จ่ายตาม task",
+problem:"Zapier/Make.com คิดราคาตาม task (ยิ่งใช้ ยิ่งแพง) SME ที่ต้อง automate 1,000+ tasks/เดือนจ่าย $50-200/เดือน หลายคนหยุดใช้เพราะกลัวค่าใช้จ่ายบาน",
+solution:"Low-code workflow builder + 100+ app integrations + AI ช่วยสร้าง workflow (บอกว่าอยากทำอะไร AI สร้างให้) + templates สำเร็จรูป + flat pricing ไม่จำกัด tasks",
+moat:"Flat pricing = คนกล้าใช้ + AI สร้าง workflow ง่ายกว่าเขียนเอง + recipes ที่ community สร้าง",
+revenue:"$29-99/เดือน flat (vs Zapier per-task) | 50,000 SMBs = $1.5-5M MRR",
+mvp:"Flow builder + 20 popular integrations + AI workflow suggestion + template library",
+risk:"Zapier ปรับ pricing — แก้ด้วย AI-first UX ที่คนไม่มี IT ก็ใช้ได้ + community recipes",
+research:"Workflow automation market $23.77B (2025) → $40.77B (2031) low-code 75% ของ new app development ภายใน 2026",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:4},verdict:"GO",
+review:"flat pricing เป็น disruption จริง + AI workflow builder เป็น differentiator + community recipes สร้าง network effect",
+improvement:"เริ่มจาก 20 popular integrations → community สร้าง recipes → marketplace สำหรับ templates"},
+
+{id:36,name:"LegalDesk AI",ocean:"Red Ocean",region:"International",emoji:"⚖️",color:"#A855F7",
+marketSize:"$7.8B (2032)",affected:"500K+ solo/small law firms ทั่วโลก",
+tagline:"จัดการสำนักงานกฎหมาย — คดี เวลา บิล ลูกค้า ที่เดียว ราคาครึ่งเดียว",
+problem:"ทนายเดี่ยว/สำนักงานเล็กใช้ Clio ($139/user/month) แพงเกินไป หลายคนยังจด timesheet บนกระดาษ ออกบิลช้า เก็บเงินลูกค้าไม่ได้",
+solution:"Case management + time tracking อัตโนมัติ + billing จาก timesheet + document storage + client portal + calendar ศาล + trust accounting",
+moat:"ข้อมูลคดี+ลูกค้าทั้งหมดอยู่ในระบบ ย้ายออกยากมาก + ราคาถูกกว่า Clio 2-3 เท่า + focus solo/small firm",
+revenue:"$49-99/เดือน (vs Clio $139+) | 10,000 firms = $490K-990K MRR",
+mvp:"Case management + time tracking + billing + document storage + client portal",
+risk:"Clio ลดราคา basic plan — แก้ด้วย all features included ไม่มี add-on + UX ง่ายกว่า",
+research:"Legal practice management $2.9B (2023) → $7.8B (2032) โต 12.1% CAGR solo attorneys หา value",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:2},verdict:"GO",
+review:"data lock-in สูงมาก (คดี+ลูกค้า) + pricing gap ชัด ($139 vs $49-99) + vertical SaaS margins ดี",
+improvement:"ร่วมมือ bar associations + เพิ่ม AI legal research + court filing integration"},
+
+{id:37,name:"BookKeepAI",ocean:"Red Ocean",region:"International",emoji:"📒",color:"#22C55E",
+marketSize:"$5B",affected:"50M+ freelancers ทั่วโลก",
+tagline:"บัญชีสำหรับฟรีแลนซ์ — ง่ายเหมือนจดรายจ่ายในโน้ต ดีกว่า QuickBooks",
+problem:"ฟรีแลนซ์ 50 ล้าน+ คนทั่วโลก QuickBooks เป็น 'มีดสวิส' ฟีเจอร์เยอะเกินไป ใช้ยาก 80% ใช้ไม่ถึงครึ่ง Wave ฟรีแต่ basic เกินไป ไม่มีซอฟต์แวร์ที่ 'พอดี' สำหรับฟรีแลนซ์",
+solution:"ลาก-วาง invoice + จัดหมวดรายจ่ายอัตโนมัติ + กำไรขาดทุนเห็นทันที + สรุปภาษีอัตโนมัติ + เชื่อม Stripe/PayPal + AI แนะนำค่าใช้จ่ายที่หักภาษีได้",
+moat:"ออกแบบมาเฉพาะฟรีแลนซ์ = UX ง่ายสุดๆ + ข้อมูลการเงินที่สะสม + AI ฉลาดขึ้นเรื่อยๆ",
+revenue:"$19-49/เดือน | 100,000 freelancers = $1.9-4.9M MRR",
+mvp:"Invoice builder + expense tracker + profit/loss dashboard + tax summary + Stripe integration",
+risk:"QuickBooks ออก simplified version — แก้ด้วย laser focus ฟรีแลนซ์ ไม่ขยายไป SME",
+research:"80% ผู้ใช้ QuickBooks อยากได้ interface ง่ายกว่า Wave/Xero/FreshBooks แสดงว่ามี demand",
+scores:{survivability:3,monetization:3,mvpEase:5,viral:4},verdict:"GO",
+review:"MVP ง่ายมาก viral ดี (ฟรีแลนซ์บอกต่อ) แต่ monetize ต่ำ ต้อง volume สูง",
+improvement:"เพิ่ม Stripe/PayPal auto-import → ลด manual entry → เพิ่ม tax optimization AI"},
+
+{id:38,name:"EmailGenius AI",ocean:"Red Ocean",region:"International",emoji:"✉️",color:"#EF4444",
+marketSize:"$3B",affected:"5M+ e-commerce stores ทั่วโลก",
+tagline:"Email marketing สำหรับร้านค้าออนไลน์ — AI ส่ง email ที่คนอยากเปิดอ่าน ราคาครึ่งเดียวของ Klaviyo",
+problem:"ร้านค้าออนไลน์ต้อง email marketing เพื่อดึงลูกค้ากลับ Klaviyo ราคา $20-1,200+/เดือน แพงสำหรับร้านรายได้ต่ำกว่า $1M Mailchimp ก็ basic เกินไปสำหรับ e-commerce",
+solution:"Segmentation ลูกค้าอัตโนมัติ + automation flows (ลืมตะกร้า, welcome, re-engagement) + A/B testing + AI แนะนำเวลาส่ง + วิเคราะห์ revenue per email + personalization",
+moat:"ข้อมูลลูกค้า+purchase history ที่สะสม = segmentation แม่นขึ้น + ราคาถูกกว่า Klaviyo 50-70% + focus e-commerce",
+revenue:"$49-299/เดือน (ตามจำนวน contacts) | 20,000 stores = $980K-6M MRR",
+mvp:"Email builder + automation flows + basic segmentation + revenue tracking + A/B testing",
+risk:"Klaviyo ลดราคา — แก้ด้วย AI เป็น core (แนะนำ content, timing, segment) + pricing ที่ scale ดีกว่า",
+research:"Email marketing ROI สูงสุดในทุก channel Klaviyo แพงสำหรับ early-stage gap สำหรับ growth-stage SMBs",
+scores:{survivability:3,monetization:4,mvpEase:3,viral:3},verdict:"GO",
+review:"Email ROI สูงสุดในทุก channel + pricing gap ชัดเจน + AI personalization เป็น differentiator",
+improvement:"เริ่มจาก Shopify integration → ขยาย WooCommerce, Magento → เพิ่ม SMS marketing module"},
+
+{id:39,name:"TeamChat AI",ocean:"Red Ocean",region:"International",emoji:"💭",color:"#6366F1",
+marketSize:"$5B",affected:"10M+ ทีมทั่วโลก",
+tagline:"แชททีมที่ราคาไม่แพง — ทุกอย่างที่ Slack ทำได้ ในราคา 1/3",
+problem:"Slack $10-12/user/month สำหรับทีม 50 คน = $500-600/เดือน แพง ทีมที่โตเร็วหาทางเลือกที่ถูกกว่า 64% พนักงานบ่นว่าใช้ communication tools เยอะเกินไป",
+solution:"Team chat + file sharing + integrations (Google Workspace, Zapier) + search ค้นหาข้อความเก่าได้ + mobile app + video call พื้นฐาน + AI สรุป thread ยาว + flat pricing ถูก",
+moat:"ประวัติแชท+ไฟล์ทั้งหมดอยู่ในระบบ ย้ายออกยาก + ราคาถูกกว่า Slack 3 เท่า + AI summary เป็น differentiator",
+revenue:"$3-6/user/เดือน (vs Slack $10-12) | 50,000 ทีม x 10 users = $1.5-3M MRR",
+mvp:"Chat + channels + file sharing + search + Google Workspace integration + mobile app",
+risk:"Slack ลดราคา free tier — แก้ด้วย unlimited history + AI features ที่ Slack ไม่มีใน free",
+research:"Slack อยู่ high end ของ pricing Pumble/Chanty กำลังโต แสดงว่ามี demand สำหรับ cheaper alternatives",
+scores:{survivability:2,monetization:3,mvpEase:3,viral:4},verdict:"GO",
+review:"pricing disruption ชัด แต่ต้องแข่งกับ Slack network effect viral ดีจาก team adoption",
+improvement:"AI thread summary เป็น killer feature → เพิ่ม AI meeting notes + task extraction"},
+
+{id:40,name:"TattooStudio AI",ocean:"Red Ocean",region:"International",emoji:"🎨",color:"#F472B6",
+marketSize:"$3B+",affected:"200K+ tattoo studios ทั่วโลก",
+tagline:"ร้านสักบริหารครบจบ — จองคิว พอร์ตโฟลิโอ ใบยินยอม จ่ายเงิน ที่เดียว",
+problem:"ร้านสัก 200,000+ แห่งทั่วโลก ใช้ Instagram DM จองคิว กระดาษเซ็นใบยินยอม ไม่มีระบบ portfolio ที่ลูกค้า browse ได้ จ่ายเงินสดหรือโอน ไม่มีซอฟต์แวร์ที่ออกแบบมาเฉพาะร้านสัก",
+solution:"Portfolio showcase ออนไลน์ + ระบบจองคิว + digital waiver (ใบยินยอม) + payment ผ่านแอป + CRM จำ design preference ลูกค้า + auto-reminder ก่อนนัด + aftercare instructions อัตโนมัติ",
+moat:"Vertical เฉพาะร้านสัก = ไม่มีคู่แข่งตรง + portfolio ที่สะสม + client history + ใบยินยอมดิจิตอล",
+revenue:"$99-199/เดือน/studio | 5,000 studios = $495K-995K MRR",
+mvp:"Portfolio page + booking system + digital waiver + payment + appointment reminders",
+risk:"ตลาดเล็ก — แก้ด้วย Vertical SaaS margins สูง (20-30% EBITDA) + retention สูง + ขยายไปร้าน beauty/nail ได้",
+research:"Vertical SaaS margins 20-30% EBITDA 41% profit margins tattoo industry $3B+ ยังไม่มีซอฟต์แวร์เฉพาะ",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3},verdict:"GO",
+review:"Vertical SaaS = high margins + no direct competition + sticky (portfolio + client history) → ขยายไป beauty/nail",
+improvement:"เริ่มจาก tattoo → ขยายไป piercing → nail art → beauty studios → micro-SaaS empire"}
 ];
 
+const MAX_SCORE=20;
 const totalScore=(s)=>Object.values(s).reduce((a,b)=>a+b,0);
 const sorted=[...IDEAS].sort((a,b)=>totalScore(b.scores)-totalScore(a.scores));
 const avgScore=Math.round(IDEAS.reduce((a,i)=>a+totalScore(i.scores),0)/IDEAS.length*10)/10;
-const maxScore=Math.max(...IDEAS.map(i=>totalScore(i.scores)));
+const maxScoreVal=Math.max(...IDEAS.map(i=>totalScore(i.scores)));
 
 function ScoreBar({score,max=5,color}){
   const pct=score/max*100;
@@ -241,114 +725,166 @@ function ScoreBar({score,max=5,color}){
 }
 
 function App(){
-  const [view,setView]=useState("overview");
+  const [mainView,setMainView]=useState("overview");
+  const [filter,setFilter]=useState("all");
   const [selected,setSelected]=useState(null);
+  const [search,setSearch]=useState("");
 
-  const tabs=[
-    {key:"overview",label:"\u0E44\u0E2D\u0E40\u0E14\u0E35\u0E22\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14"},
-    {key:"rankings",label:"\u0E08\u0E31\u0E14\u0E2D\u0E31\u0E19\u0E14\u0E31\u0E1A"},
-    {key:"recommendations",label:"\u0E04\u0E33\u0E41\u0E19\u0E30\u0E19\u0E33"}
+  const filtered=useMemo(()=>{
+    let items=IDEAS;
+    if(filter==="blue-thai") items=IDEAS.filter(i=>i.ocean==="Blue Ocean"&&i.region==="Start in Thai");
+    else if(filter==="blue-intl") items=IDEAS.filter(i=>i.ocean==="Blue Ocean"&&i.region==="International");
+    else if(filter==="red-thai") items=IDEAS.filter(i=>i.ocean==="Red Ocean"&&i.region==="Start in Thai");
+    else if(filter==="red-intl") items=IDEAS.filter(i=>i.ocean==="Red Ocean"&&i.region==="International");
+    if(search.trim()){
+      const q=search.toLowerCase();
+      items=items.filter(i=>i.name.toLowerCase().includes(q)||i.tagline.toLowerCase().includes(q)||i.problem.toLowerCase().includes(q));
+    }
+    return items;
+  },[filter,search]);
+
+  const mainTabs=[
+    {key:"overview",label:"💡 ไอเดียทั้งหมด"},
+    {key:"rankings",label:"🏆 จัดอันดับ"},
+    {key:"recommendations",label:"🎯 คำแนะนำ"}
   ];
 
-  function renderOverview(){
-    if(selected){
-      const idea=IDEAS.find(i=>i.id===selected);
-      const scoreLabels=[
-        {key:"survivability",label:"\u0E17\u0E19\u0E17\u0E32\u0E19\u0E15\u0E48\u0E2D\u0E04\u0E39\u0E48\u0E41\u0E02\u0E48\u0E07",desc:"\u0E16\u0E49\u0E32\u0E22\u0E31\u0E01\u0E29\u0E4C\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E02\u0E49\u0E32\u0E21\u0E32 \u2014 \u0E23\u0E2D\u0E14\u0E44\u0E2B\u0E21?"},
-        {key:"monetization",label:"\u0E23\u0E32\u0E22\u0E44\u0E14\u0E49\u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19",desc:"\u0E43\u0E04\u0E23\u0E08\u0E48\u0E32\u0E22\u0E40\u0E07\u0E34\u0E19? \u0E40\u0E17\u0E48\u0E32\u0E44\u0E2B\u0E23\u0E48? \u0E1E\u0E34\u0E2A\u0E39\u0E08\u0E19\u0E4C\u0E41\u0E25\u0E49\u0E27?"},
-        {key:"mvpEase",label:"\u0E2A\u0E23\u0E49\u0E32\u0E07 MVP \u0E44\u0E14\u0E49\u0E40\u0E23\u0E47\u0E27",desc:"1-2 \u0E04\u0E19 \u0E2A\u0E23\u0E49\u0E32\u0E07\u0E44\u0E14\u0E49\u0E43\u0E19 1-4 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C?"},
-        {key:"viral",label:"\u0E41\u0E1E\u0E23\u0E48\u0E01\u0E23\u0E30\u0E08\u0E32\u0E22\u0E40\u0E2D\u0E07",desc:"\u0E04\u0E19\u0E1A\u0E2D\u0E01\u0E15\u0E48\u0E2D\u0E40\u0E2D\u0E07\u0E44\u0E2B\u0E21?"},
-        {key:"founderFit",label:"\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E01\u0E31\u0E1A North",desc:"\u0E21\u0E35 edge \u0E08\u0E32\u0E01 tech + AI/ML?"}
-      ];
-      const sections=[
-        {icon:"\u{1F525}",label:"\u0E1B\u0E31\u0E0D\u0E2B\u0E32",text:idea.problem},
-        {icon:"\u{1F4A1}",label:"Solution",text:idea.solution},
-        {icon:"\u{1F6E1}\uFE0F",label:"\u0E1B\u0E23\u0E32\u0E01\u0E32\u0E23\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19 (Moat)",text:idea.moat},
-        {icon:"\u{1F4B0}",label:"\u0E23\u0E32\u0E22\u0E44\u0E14\u0E49",text:idea.revenue},
-        {icon:"\u{1F680}",label:"MVP \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C\u0E41\u0E23\u0E01",text:idea.mvp},
-        {icon:"\u26A0\uFE0F",label:"\u0E04\u0E27\u0E32\u0E21\u0E40\u0E2A\u0E35\u0E48\u0E22\u0E07 + \u0E27\u0E34\u0E18\u0E35\u0E41\u0E01\u0E49",text:idea.risk}
-      ];
-      return React.createElement("div",{className:"detail"},
-        React.createElement("button",{className:"back-btn",onClick:()=>setSelected(null)},"\u2190 \u0E01\u0E25\u0E31\u0E1A"),
-        React.createElement("div",{className:"detail-card"},
-          React.createElement("div",{className:"detail-header"},
-            React.createElement("span",{className:"emoji"},idea.emoji),
-            React.createElement("div",null,
-              React.createElement("h2",null,idea.name),
-              React.createElement("div",{className:"meta"},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize+" \u2022 "+idea.affected)
-            )
-          ),
-          React.createElement("div",{className:"detail-tagline",style:{borderColor:idea.color}},'"'+idea.tagline+'"'),
-          sections.map(s=>React.createElement("div",{key:s.label,className:"section"},
-            React.createElement("div",{className:"section-title"},React.createElement("span",null,s.icon),s.label),
-            React.createElement("p",null,s.text)
-          )),
-          React.createElement("div",{style:{marginTop:24}},
-            React.createElement("div",{className:"section-title",style:{marginBottom:16}},"\u{1F4CA} \u0E04\u0E30\u0E41\u0E19\u0E19 Kill Test (\u0E22\u0E34\u0E48\u0E07\u0E2A\u0E39\u0E07\u0E22\u0E34\u0E48\u0E07\u0E14\u0E35)"),
-            React.createElement("div",{className:"scores-grid"},
-              scoreLabels.map(sl=>React.createElement("div",{key:sl.key,className:"score-item"},
-                React.createElement("div",{className:"label"},sl.label),
-                React.createElement("div",{style:{fontSize:11,color:"#64748B",marginBottom:6}},sl.desc),
-                React.createElement(ScoreBar,{score:idea.scores[sl.key],color:idea.color})
-              )),
-              React.createElement("div",{className:"score-item",style:{background:"linear-gradient(135deg,#0F172A,#1A1040)"}},
-                React.createElement("div",{className:"label"},"\u0E23\u0E27\u0E21\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14"),
-                React.createElement("div",{style:{fontSize:28,fontWeight:900,color:totalScore(idea.scores)>=19?"#22C55E":totalScore(idea.scores)>=15?"#F59E0B":"#EF4444",marginTop:4}},totalScore(idea.scores)+"/25")
-              )
-            )
-          ),
-          React.createElement("div",{className:"review-box",style:{borderColor:idea.color}},
-            React.createElement("h4",{style:{color:idea.color}},"\u{1F50D} Review Agent \u0E27\u0E34\u0E40\u0E04\u0E23\u0E32\u0E30\u0E2B\u0E4C"),
-            React.createElement("p",null,idea.review)
-          ),
-          React.createElement("div",{className:"improve-box"},
-            React.createElement("h4",null,"\u2705 \u0E41\u0E19\u0E30\u0E19\u0E33\u0E1B\u0E23\u0E31\u0E1A\u0E1B\u0E23\u0E38\u0E07"),
-            React.createElement("p",null,idea.improvement)
-          )
+  const filterTabs=[
+    {key:"all",label:"ทั้งหมด (40)",cls:"all-tab"},
+    {key:"blue-thai",label:"🔵 Blue Ocean — Thai",cls:"blue-ocean"},
+    {key:"blue-intl",label:"🔵 Blue Ocean — Intl",cls:"blue-ocean"},
+    {key:"red-thai",label:"🔴 Red Ocean — Thai",cls:"red-ocean"},
+    {key:"red-intl",label:"🔴 Red Ocean — Intl",cls:"red-ocean"}
+  ];
+
+  function renderCard(idea){
+    const score=totalScore(idea.scores);
+    const rank=sorted.findIndex(s=>s.id===idea.id)+1;
+    const oceanBadge=idea.ocean==="Blue Ocean"?"badge-blue":"badge-red";
+    const regionBadge=idea.region==="Start in Thai"?"badge-thai":"badge-intl";
+    return React.createElement("div",{key:idea.id,className:"card",onClick:()=>setSelected(idea.id)},
+      React.createElement("div",{className:"accent",style:{background:"linear-gradient(90deg,"+idea.color+",transparent)"}}),
+      React.createElement("div",{className:"top-row"},
+        React.createElement("span",{className:"emoji"},idea.emoji),
+        React.createElement("div",{className:"badges"},
+          React.createElement("span",{className:"badge "+oceanBadge},idea.ocean),
+          React.createElement("span",{className:"badge "+regionBadge},idea.region)
         )
-      );
-    }
-    return React.createElement("div",{className:"grid"},
-      IDEAS.map((idea,i)=>{
-        const score=totalScore(idea.scores);
-        const rank=sorted.findIndex(s=>s.id===idea.id)+1;
-        return React.createElement("div",{key:idea.id,className:"card",onClick:()=>setSelected(idea.id)},
-          React.createElement("div",{className:"accent",style:{background:"linear-gradient(90deg,"+idea.color+",transparent)"}}),
-          React.createElement("div",{className:"top-row"},
-            React.createElement("span",{className:"emoji"},idea.emoji),
-            React.createElement("span",{className:"rank-badge"+(rank<=3?" top3":"")},rank<=3?"\u{1F3C6} #"+rank:"#"+rank)
-          ),
-          React.createElement("h3",null,idea.name),
-          React.createElement("div",{className:"meta"},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize),
-          React.createElement("div",{className:"tagline"},idea.tagline),
-          React.createElement("div",{className:"mini-bar"},
-            React.createElement("div",{className:"mini-bar-fill",style:{width:(score/25*100)+"%",background:score>=19?"#22C55E":score>=15?"#F59E0B":"#EF4444"}})
-          ),
-          React.createElement("div",{className:"score-row",style:{marginTop:8}},
-            React.createElement("span",{className:"score-label"},"Kill Test Score"),
-            React.createElement("span",{className:"score-total",style:{color:score>=19?"#22C55E":score>=15?"#F59E0B":"#EF4444"}},score+"/25")
-          )
-        );
-      })
+      ),
+      React.createElement("h3",null,idea.name),
+      React.createElement("div",{className:"meta"},idea.marketSize+" • "+idea.affected),
+      React.createElement("div",{className:"tagline"},idea.tagline),
+      React.createElement("div",{className:"mini-bar"},
+        React.createElement("div",{className:"mini-bar-fill",style:{width:(score/MAX_SCORE*100)+"%",background:score>=16?"#22C55E":score>=12?"#F59E0B":"#EF4444"}})
+      ),
+      React.createElement("div",{className:"score-row"},
+        React.createElement("span",{className:"score-label"},"Score (Rank #"+rank+")"),
+        React.createElement("span",{className:"score-total",style:{color:score>=16?"#22C55E":score>=12?"#F59E0B":"#EF4444"}},score+"/"+MAX_SCORE)
+      )
     );
+  }
+
+  function renderDetail(){
+    const idea=IDEAS.find(i=>i.id===selected);
+    if(!idea) return null;
+    const oceanBadge=idea.ocean==="Blue Ocean"?"badge-blue":"badge-red";
+    const regionBadge=idea.region==="Start in Thai"?"badge-thai":"badge-intl";
+    const scoreLabels=[
+      {key:"survivability",label:"ทนทานต่อคู่แข่ง",desc:"ถ้ายักษ์ใหญ่เข้ามา — รอดไหม?"},
+      {key:"monetization",label:"รายได้ชัดเจน",desc:"ใครจ่ายเงิน? เท่าไหร่? พิสูจน์แล้ว?"},
+      {key:"mvpEase",label:"สร้าง MVP ได้เร็ว",desc:"1-2 คน สร้างได้ใน 1-4 สัปดาห์?"},
+      {key:"viral",label:"แพร่กระจายเอง",desc:"คนบอกต่อเองไหม?"}
+    ];
+    const sections=[
+      {icon:"🔥",label:"ปัญหาที่แก้",text:idea.problem},
+      {icon:"💡",label:"วิธีแก้ปัญหา",text:idea.solution},
+      {icon:"🛡️",label:"ทำไมคู่แข่ง copy ยาก (Moat)",text:idea.moat},
+      {icon:"💰",label:"วิธีทำเงิน",text:idea.revenue},
+      {icon:"🚀",label:"สิ่งที่ต้องสร้างก่อน (MVP)",text:idea.mvp},
+      {icon:"⚠️",label:"ความเสี่ยง + วิธีแก้",text:idea.risk},
+      {icon:"📊",label:"ข้อมูลสนับสนุนจาก Research",text:idea.research}
+    ];
+    return React.createElement("div",{className:"detail"},
+      React.createElement("button",{className:"back-btn",onClick:()=>setSelected(null)},"← กลับ"),
+      React.createElement("div",{className:"detail-card"},
+        React.createElement("div",{className:"detail-header"},
+          React.createElement("span",{className:"emoji"},idea.emoji),
+          React.createElement("div",null,
+            React.createElement("h2",null,idea.name),
+            React.createElement("div",{style:{display:"flex",gap:8,marginTop:8,flexWrap:"wrap",alignItems:"center"}},
+              React.createElement("span",{className:"badge "+oceanBadge},idea.ocean),
+              React.createElement("span",{className:"badge "+regionBadge},idea.region),
+              React.createElement("span",{style:{color:"#94A3B8",fontSize:13}},idea.marketSize+" • "+idea.affected)
+            )
+          )
+        ),
+        React.createElement("div",{className:"detail-tagline",style:{borderColor:idea.color}},'"'+idea.tagline+'"'),
+        sections.map(s=>React.createElement("div",{key:s.label,className:"section"},
+          React.createElement("div",{className:"section-title"},React.createElement("span",null,s.icon),s.label),
+          React.createElement("p",null,s.text)
+        )),
+        React.createElement("div",{style:{marginTop:24}},
+          React.createElement("div",{className:"section-title",style:{marginBottom:16}},"📈 คะแนน Kill Test (ยิ่งสูงยิ่งดี)"),
+          React.createElement("div",{className:"scores-grid"},
+            scoreLabels.map(sl=>React.createElement("div",{key:sl.key,className:"score-item"},
+              React.createElement("div",{className:"label"},sl.label),
+              React.createElement("div",{style:{fontSize:11,color:"#64748B",marginBottom:6}},sl.desc),
+              React.createElement(ScoreBar,{score:idea.scores[sl.key],color:idea.color})
+            )),
+            React.createElement("div",{className:"score-item",style:{background:"linear-gradient(135deg,#0F172A,#1A1040)"}},
+              React.createElement("div",{className:"label"},"รวมทั้งหมด"),
+              React.createElement("div",{style:{fontSize:28,fontWeight:900,color:totalScore(idea.scores)>=16?"#22C55E":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444",marginTop:4}},totalScore(idea.scores)+"/"+MAX_SCORE)
+            )
+          )
+        ),
+        React.createElement("div",{className:"review-box",style:{borderColor:idea.color}},
+          React.createElement("h4",{style:{color:idea.color}},"🔍 วิเคราะห์"),
+          React.createElement("p",null,idea.review)
+        ),
+        React.createElement("div",{className:"improve-box"},
+          React.createElement("h4",null,"✅ แนะนำปรับปรุง"),
+          React.createElement("p",null,idea.improvement)
+        )
+      )
+    );
+  }
+
+  function renderGrouped(){
+    const groups=[
+      {key:"blue-thai",title:"🔵 Blue Ocean — เริ่มในไทย",desc:"ตลาดใหม่ คู่แข่งน้อย เริ่มจากประเทศไทย",items:IDEAS.filter(i=>i.ocean==="Blue Ocean"&&i.region==="Start in Thai")},
+      {key:"blue-intl",title:"🔵 Blue Ocean — International",desc:"ตลาดใหม่ คู่แข่งน้อย เริ่มจากตลาดต่างประเทศ",items:IDEAS.filter(i=>i.ocean==="Blue Ocean"&&i.region==="International")},
+      {key:"red-thai",title:"🔴 Red Ocean — เริ่มในไทย",desc:"ตลาดเดิมที่มีช่องว่าง เริ่มจากประเทศไทย",items:IDEAS.filter(i=>i.ocean==="Red Ocean"&&i.region==="Start in Thai")},
+      {key:"red-intl",title:"🔴 Red Ocean — International",desc:"ตลาดเดิมที่มีช่องว่าง เริ่มจากตลาดต่างประเทศ",items:IDEAS.filter(i=>i.ocean==="Red Ocean"&&i.region==="International")}
+    ];
+    if(search.trim()||filter!=="all"){
+      return React.createElement("div",{className:"grid"},filtered.map(renderCard));
+    }
+    return groups.map(g=>React.createElement("div",{key:g.key},
+      React.createElement("div",{className:"section-header"},
+        React.createElement("div",{className:"line"}),
+        React.createElement("h2",null,g.title)
+      ),
+      React.createElement("p",{style:{textAlign:"center",color:"#64748B",fontSize:13,marginBottom:16}},g.desc),
+      React.createElement("div",{className:"grid",style:{marginBottom:32}},g.items.map(renderCard))
+    ));
   }
 
   function renderRankings(){
     return React.createElement("div",{className:"rank-list"},
-      React.createElement("h2",{style:{textAlign:"center",fontSize:24,fontWeight:900,marginBottom:24,color:"#F1F5F9"}},"\u{1F3C6} Power Rankings"),
+      React.createElement("h2",{style:{textAlign:"center",fontSize:24,fontWeight:900,marginBottom:24,color:"#F1F5F9"}},"🏆 Power Rankings (40 Ideas)"),
       sorted.map((idea,i)=>{
         const score=totalScore(idea.scores);
         const cls=i===0?"gold":i===1?"silver":i===2?"bronze":"";
         const numColor=i===0?"#F5C542":i===1?"#94A3B8":i===2?"#CD7F32":"#475569";
-        return React.createElement("div",{key:idea.id,className:"rank-item "+cls,onClick:()=>{setSelected(idea.id);setView("overview")},style:{cursor:"pointer"}},
-          React.createElement("span",{className:"rank-num",style:{color:numColor}},i<3?["\u{1F947}","\u{1F948}","\u{1F949}"][i]:"#"+(i+1)),
+        return React.createElement("div",{key:idea.id,className:"rank-item "+cls,onClick:()=>{setSelected(idea.id);setMainView("overview")},style:{cursor:"pointer"}},
+          React.createElement("span",{className:"rank-num",style:{color:numColor}},i<3?["🥇","🥈","🥉"][i]:"#"+(i+1)),
           React.createElement("span",{style:{fontSize:28}},idea.emoji),
           React.createElement("div",{className:"rank-info"},
             React.createElement("div",{className:"name"},idea.name),
-            React.createElement("div",{className:"desc"},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize)
+            React.createElement("div",{className:"desc"},idea.ocean+" • "+idea.region+" • "+idea.marketSize)
           ),
-          React.createElement("div",{className:"rank-score",style:{color:score>=19?"#22C55E":score>=15?"#F59E0B":"#EF4444"}},
-            score,React.createElement("span",null,"/25")
+          React.createElement("div",{className:"rank-score",style:{color:score>=16?"#22C55E":score>=12?"#F59E0B":"#EF4444"}},
+            score,React.createElement("span",null,"/"+MAX_SCORE)
           )
         );
       })
@@ -356,28 +892,29 @@ function App(){
   }
 
   function renderRecommendations(){
+    const top5=sorted.slice(0,5);
     const recs=[
-      {rank:"\u0E40\u0E23\u0E34\u0E48\u0E21\u0E40\u0E25\u0E22",name:"SellerOS AI",emoji:"\u{1F3EA}",color:"#3B82F6",
-        when:"Month 1-6 \u2014 \u0E40\u0E23\u0E34\u0E48\u0E21\u0E17\u0E31\u0E19\u0E17\u0E35",
-        why:"Founder fit \u0E14\u0E35\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14 + Thai-specific + recurring revenue + \u0E44\u0E21\u0E48\u0E41\u0E02\u0E48\u0E07 global giants \u0E42\u0E14\u0E22\u0E15\u0E23\u0E07",
-        action:"Month 1-2: Validate \u0E01\u0E31\u0E1A 20+ sellers \u2192 Month 2-3: MVP LINE bot \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 Shopee+Lazada \u2192 Month 3-6: \u0E2B\u0E32 3 paying customers \u2192 Raise seed",
-        pivot:"\u0E08\u0E32\u0E01 AI tool \u2192 SellerOS Collective (distribution network \u0E02\u0E2D\u0E07\u0E04\u0E19\u0E02\u0E32\u0E22)"},
-      {rank:"SME Ecosystem",name:"SME AutoAPI + TaxMate + LegalBot",emoji:"\u{1F50C}\u{1F4B8}\u{1F4DC}",color:"#06B6D4",
-        when:"Month 3-9 \u2014 \u0E2A\u0E23\u0E49\u0E32\u0E07 SME ecosystem",
-        why:"\u0E17\u0E31\u0E49\u0E07 3 \u0E15\u0E31\u0E27\u0E40\u0E2A\u0E23\u0E34\u0E21\u0E01\u0E31\u0E19 : AutoAPI \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E0B\u0E2D\u0E1F\u0E15\u0E4C\u0E41\u0E27\u0E23\u0E4C, TaxMate \u0E17\u0E33\u0E1A\u0E31\u0E0D\u0E0A\u0E35/\u0E20\u0E32\u0E29\u0E35, LegalBot \u0E17\u0E33\u0E2A\u0E31\u0E0D\u0E0D\u0E32 \u2014 cross-sell \u0E44\u0E14\u0E49\u0E17\u0E31\u0E49\u0E07 3 \u0E15\u0E31\u0E27",
-        action:"Month 3-4: Launch SME AutoAPI MVP \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 5 tools \u2192 Month 5-6: \u0E40\u0E1E\u0E34\u0E48\u0E21 TaxMate module \u2192 Month 7-9: LegalBot \u0E40\u0E1B\u0E47\u0E19 add-on",
-        pivot:"SME AutoAPI \u0E40\u0E1B\u0E47\u0E19 platform \u2192 TaxMate, LegalBot \u0E40\u0E1B\u0E47\u0E19 modules \u0E1A\u0E19 platform \u0E40\u0E14\u0E35\u0E22\u0E27\u0E01\u0E31\u0E19"},
-      {rank:"Long-term",name:"AgentFlow",emoji:"\u{1F916}",color:"#F59E0B",
-        when:"Month 9-12 \u2014 Research phase",
-        why:"TAM $105B by 2034 \u0E41\u0E15\u0E48\u0E1B\u0E35 2026 \u0E22\u0E31\u0E07\u0E40\u0E23\u0E47\u0E27\u0E44\u0E1B \u2014 \u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32 research + \u0E2A\u0E23\u0E49\u0E32\u0E07 agents \u0E40\u0E2D\u0E07\u0E01\u0E48\u0E2D\u0E19",
-        action:"\u0E2A\u0E23\u0E49\u0E32\u0E07 5-10 AI agents \u0E43\u0E2B\u0E49 SME \u0E44\u0E17\u0E22\u0E43\u0E0A\u0E49\u0E1F\u0E23\u0E35 \u2192 \u0E40\u0E01\u0E47\u0E1A feedback \u2192 \u0E40\u0E1B\u0E34\u0E14 marketplace \u0E40\u0E21\u0E37\u0E48\u0E2D timing \u0E1E\u0E23\u0E49\u0E2D\u0E21",
-        pivot:"General marketplace \u2192 Thailand SME AI Agent vertical"}
+      {rank:"เริ่มเลย",name:top5[0].name,emoji:top5[0].emoji,color:top5[0].color,
+        when:"Month 1-3 — เริ่มทันที",
+        why:"คะแนนสูงสุด ตลาดพร้อม ปัญหาชัดเจน คนยินดีจ่าย",
+        action:"Month 1: Validate กับ 20+ ลูกค้าเป้าหมาย → Month 2: สร้าง MVP → Month 3: หา 3 paying customers → Raise seed",
+        pivot:"จาก tool → platform → ecosystem ของ SME"},
+      {rank:"ทำคู่กัน",name:top5[1].name+" + "+top5[2].name,emoji:top5[1].emoji+" "+top5[2].emoji,color:"#06B6D4",
+        when:"Month 3-6 — สร้าง ecosystem",
+        why:"ทั้ง 2 ตัวเสริมกัน cross-sell ได้ ลูกค้ากลุ่มเดียวกัน",
+        action:"Month 3-4: Launch MVP ตัวแรก → Month 5-6: เพิ่มตัวที่สองเป็น module → bundle ขายคู่กัน",
+        pivot:"2 products → 1 integrated platform สำหรับ SME"},
+      {rank:"Long-term",name:top5[3].name+" + "+top5[4].name,emoji:top5[3].emoji+" "+top5[4].emoji,color:"#F59E0B",
+        when:"Month 6-12 — Research + ทดลอง",
+        why:"ตลาดกำลังโต ใช้เวลา research + สร้าง prototype ก่อน",
+        action:"ทดลองสร้าง prototype → เก็บ feedback จากลูกค้า → ตัดสินใจ pivot หรือขยายเมื่อ timing พร้อม",
+        pivot:"จาก prototype → full product เมื่อตลาดพร้อม"}
     ];
 
     return React.createElement("div",{className:"rec"},
       React.createElement("div",{className:"rec-intro"},
-        React.createElement("h2",null,"\u{1F3AF} Roadmap \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A North"),
-        React.createElement("p",null,"\u0E08\u0E32\u0E01 10 ideas \u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E1C\u0E48\u0E32\u0E19 Kill Test \u2014 \u0E19\u0E35\u0E48\u0E04\u0E37\u0E2D\u0E25\u0E33\u0E14\u0E31\u0E1A\u0E17\u0E35\u0E48\u0E41\u0E19\u0E30\u0E19\u0E33")
+        React.createElement("h2",null,"🎯 คำแนะนำจาก 40 Ideas"),
+        React.createElement("p",null,"จาก 40 ideas ทั้งหมดผ่าน Kill Test — นี่คือลำดับที่แนะนำ (จาก Score + Research)")
       ),
       recs.map((rec,i)=>React.createElement("div",{key:i,className:"rec-card",style:{borderColor:rec.color+"40",borderWidth:2,borderStyle:"solid"}},
         React.createElement("span",{className:"priority",style:{background:rec.color}},rec.rank),
@@ -385,7 +922,7 @@ function App(){
           React.createElement("span",{style:{fontSize:32}},rec.emoji),
           React.createElement("h3",null,rec.name)
         ),
-        [{l:"\u23F0 \u0E40\u0E21\u0E37\u0E48\u0E2D\u0E44\u0E2B\u0E23\u0E48?",v:rec.when},{l:"\u{1F4A1} \u0E17\u0E33\u0E44\u0E21?",v:rec.why},{l:"\u{1F4CB} Action Plan",v:rec.action},{l:"\u{1F504} Pivot Strategy",v:rec.pivot}].map((f,j)=>
+        [{l:"⏰ เมื่อไหร่?",v:rec.when},{l:"💡 ทำไม?",v:rec.why},{l:"📋 Action Plan",v:rec.action},{l:"🔄 Pivot Strategy",v:rec.pivot}].map((f,j)=>
           React.createElement("div",{key:j,className:"field"},
             React.createElement("div",{className:"field-label"},f.l),
             React.createElement("div",{className:"field-val"},f.v)
@@ -393,15 +930,15 @@ function App(){
         )
       )),
       React.createElement("div",{className:"bottom-cta"},
-        React.createElement("h3",null,"\u26A1 \u0E2A\u0E23\u0E38\u0E1B"),
+        React.createElement("h3",null,"⚡ สรุป"),
         React.createElement("p",null,
-          "\u0E17\u0E31\u0E49\u0E07 10 \u0E44\u0E2D\u0E40\u0E14\u0E35\u0E22\u0E1C\u0E48\u0E32\u0E19 Kill Test \u0E41\u0E25\u0E49\u0E27 \u2014 \u0E40\u0E23\u0E34\u0E48\u0E21\u0E08\u0E32\u0E01 ",
-          React.createElement("strong",{style:{color:"#3B82F6"}},"SellerOS AI"),
-          " (fit \u0E2A\u0E39\u0E07\u0E2A\u0E38\u0E14) \u0E04\u0E39\u0E48\u0E01\u0E31\u0E1A ",
-          React.createElement("strong",{style:{color:"#06B6D4"}},"SME AutoAPI"),
-          " (SME ecosystem) \u0E41\u0E25\u0E49\u0E27\u0E04\u0E48\u0E2D\u0E22\u0E02\u0E22\u0E32\u0E22\u0E44\u0E1B ",
-          React.createElement("strong",{style:{color:"#F59E0B"}},"AgentFlow"),
-          " \u0E40\u0E21\u0E37\u0E48\u0E2D\u0E15\u0E25\u0E32\u0E14\u0E1E\u0E23\u0E49\u0E2D\u0E21"
+          "ทั้ง 40 ไอเดียผ่าน Kill Test แล้ว — เริ่มจาก ",
+          React.createElement("strong",{style:{color:top5[0].color}},top5[0].name),
+          " (คะแนนสูงสุด) คู่กับ ",
+          React.createElement("strong",{style:{color:top5[1].color}},top5[1].name),
+          " แล้วค่อยขยายไป ",
+          React.createElement("strong",{style:{color:"#F59E0B"}},top5[3].name),
+          " เมื่อตลาดพร้อม"
         )
       )
     );
@@ -409,21 +946,28 @@ function App(){
 
   return React.createElement("div",{className:"container"},
     React.createElement("div",{className:"header"},
-      React.createElement("h1",null,"TOP 10 STARTUP IDEAS 2026"),
-      React.createElement("div",{className:"sub"},"AI-Validated Playbook \u2014 Prepared for North (Thanaphat)"),
+      React.createElement("h1",null,"40 STARTUP IDEAS 2026"),
+      React.createElement("div",{className:"sub"},"Research-Backed Playbook — Blue Ocean & Red Ocean × Thai & International"),
       React.createElement("div",{className:"stats"},
-        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},"10"),React.createElement("div",{className:"label"},"IDEAS")),
-        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},"10/10"),React.createElement("div",{className:"label"},"PASSED")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},"40"),React.createElement("div",{className:"label"},"IDEAS")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},"40/40"),React.createElement("div",{className:"label"},"PASSED")),
         React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},avgScore),React.createElement("div",{className:"label"},"AVG SCORE")),
-        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},maxScore),React.createElement("div",{className:"label"},"TOP SCORE"))
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},maxScoreVal),React.createElement("div",{className:"label"},"TOP SCORE"))
       )
     ),
-    React.createElement("div",{className:"tabs"},
-      tabs.map(t=>React.createElement("button",{key:t.key,className:"tab"+(view===t.key?" active":""),onClick:()=>{setView(t.key);setSelected(null)}},t.label))
+    React.createElement("div",{className:"main-tabs"},
+      mainTabs.map(t=>React.createElement("button",{key:t.key,className:"main-tab"+(mainView===t.key?" active":""),onClick:()=>{setMainView(t.key);setSelected(null);setFilter("all");setSearch("")}},t.label))
     ),
-    view==="overview"&&renderOverview(),
-    view==="rankings"&&renderRankings(),
-    view==="recommendations"&&renderRecommendations()
+    mainView==="overview"&&!selected&&React.createElement("div",{className:"search-box"},
+      React.createElement("span",{className:"icon"},"🔍"),
+      React.createElement("input",{placeholder:"ค้นหา idea...",value:search,onChange:e=>setSearch(e.target.value)})
+    ),
+    mainView==="overview"&&!selected&&React.createElement("div",{className:"tabs"},
+      filterTabs.map(t=>React.createElement("button",{key:t.key,className:"tab"+(filter===t.key?" active "+t.cls:""),onClick:()=>setFilter(t.key)},t.label))
+    ),
+    mainView==="overview"&&(selected?renderDetail():renderGrouped()),
+    mainView==="rankings"&&renderRankings(),
+    mainView==="recommendations"&&renderRecommendations()
   );
 }
 
