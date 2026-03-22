@@ -3,234 +3,427 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top 10 Market Opportunities 2026 | North</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<title>Top 10 Startup Ideas 2026 — North's Playbook</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#F8FAFC;color:#1E293B}
-.container{max-width:1200px;margin:0 auto;padding:24px}
-.header{text-align:center;margin-bottom:32px}
-.header h1{font-size:28px;font-weight:800;color:#1A1F3D}
-.header p{color:#64748B;font-size:14px;margin-top:8px}
-.tabs{display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap}
-.tab{padding:8px 20px;border-radius:20px;border:none;cursor:pointer;font-weight:600;font-size:13px;transition:all .2s}
-.tab-active{background:#1A1F3D;color:#fff}
-.tab-inactive{background:#E2E8F0;color:#475569}
-.tab-inactive:hover{background:#CBD5E1}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-.card{background:#fff;border-radius:16px;padding:20px;cursor:pointer;border:2px solid #F1F5F9;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s}
-.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
-.badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px}
-.badge-go{background:#FEF3C7;color:#92400E}
-.badge-pass{background:#FEE2E2;color:#991B1B}
-.score-bar-bg{width:80px;height:8px;background:#E5E7EB;border-radius:4px;overflow:hidden;display:inline-block;vertical-align:middle}
-.score-bar-fill{height:100%;border-radius:4px}
-.detail-panel{max-width:800px;margin:0 auto}
-.detail-card{background:#fff;border-radius:20px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
-.detail-section{margin-bottom:16px}
-.detail-section h4{font-size:13px;font-weight:700;color:#64748B;margin-bottom:6px}
-.detail-section p{font-size:14px;line-height:1.6}
-.scores-panel{background:#F8FAFC;border-radius:12px;padding:20px;margin-top:20px}
-.review-panel{border-radius:12px;padding:20px;margin-top:16px}
-.rank-row{display:flex;align-items:center;gap:16px;background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:8px;border:1px solid #F1F5F9}
-.rank-row-top{border:2px solid #F5C542;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.rank-row-top3{border:2px solid #E2E8F0;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.rec-card{background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;box-shadow:0 4px 16px rgba(0,0,0,.05)}
-.rec-tag{color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;display:inline-block}
-.bottom-line{background:#1A1F3D;border-radius:16px;padding:24px;margin-top:24px;color:#fff;text-align:center}
-.bottom-line h3{font-size:18px;font-weight:800;color:#F5C542;margin-bottom:12px}
-.bottom-line p{font-size:15px;line-height:1.7;color:#CDD6F4}
-.back-btn{background:none;border:none;color:#4A90D9;cursor:pointer;font-size:14px;margin-bottom:16px;font-weight:600}
-.back-btn:hover{text-decoration:underline}
-@media(max-width:640px){.header h1{font-size:22px}.grid{grid-template-columns:1fr}.detail-card{padding:20px}}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0F172A;color:#E2E8F0;min-height:100vh}
+
+.container{max-width:1100px;margin:0 auto;padding:24px 16px}
+.header{text-align:center;padding:40px 0 32px}
+.header h1{font-size:32px;font-weight:900;background:linear-gradient(135deg,#60A5FA,#A78BFA,#F472B6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.5px}
+.header .sub{color:#94A3B8;font-size:14px;margin-top:8px}
+.header .stats{display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap}
+.header .stat{background:#1E293B;border-radius:12px;padding:10px 20px;text-align:center}
+.header .stat .num{font-size:22px;font-weight:800;color:#60A5FA}
+.header .stat .label{font-size:11px;color:#64748B;margin-top:2px}
+
+.tabs{display:flex;justify-content:center;gap:6px;margin-bottom:28px;flex-wrap:wrap}
+.tab{padding:10px 24px;border-radius:12px;border:none;cursor:pointer;font-weight:700;font-size:13px;transition:all .2s;background:#1E293B;color:#94A3B8}
+.tab:hover{background:#334155;color:#CBD5E1}
+.tab.active{background:linear-gradient(135deg,#3B82F6,#8B5CF6);color:#fff;box-shadow:0 4px 15px rgba(99,102,241,.3)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:#1E293B;border-radius:16px;padding:20px;cursor:pointer;border:1px solid #334155;transition:all .2s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3);border-color:#475569}
+.card .accent{position:absolute;top:0;left:0;right:0;height:3px}
+.card .top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.card .emoji{font-size:32px}
+.card .rank-badge{font-size:11px;font-weight:800;padding:4px 10px;border-radius:8px;background:#334155;color:#94A3B8}
+.card .rank-badge.top3{background:linear-gradient(135deg,#F59E0B,#EF4444);color:#fff}
+.card h3{font-size:18px;font-weight:800;color:#F1F5F9;margin-bottom:4px}
+.card .meta{font-size:12px;color:#64748B;margin-bottom:10px}
+.card .tagline{font-size:13px;color:#94A3B8;font-style:italic;margin-bottom:14px;line-height:1.5}
+.card .score-row{display:flex;justify-content:space-between;align-items:center}
+.card .score-total{font-size:20px;font-weight:900}
+.card .score-label{font-size:11px;color:#64748B}
+.mini-bar{width:100%;height:6px;background:#334155;border-radius:3px;overflow:hidden;margin-top:8px}
+.mini-bar-fill{height:100%;border-radius:3px;transition:width .3s}
+
+.detail{max-width:800px;margin:0 auto}
+.back-btn{background:none;border:none;color:#60A5FA;cursor:pointer;font-size:14px;font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.back-btn:hover{color:#93C5FD}
+.detail-card{background:#1E293B;border-radius:20px;padding:32px;border:1px solid #334155}
+.detail-header{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.detail-header .emoji{font-size:48px}
+.detail-header h2{font-size:28px;font-weight:900;color:#F1F5F9}
+.detail-header .meta{font-size:13px;color:#64748B;margin-top:4px}
+.detail-tagline{font-size:16px;color:#94A3B8;font-style:italic;border-left:3px solid;padding-left:16px;margin-bottom:28px;line-height:1.6}
+.section{margin-bottom:20px}
+.section-title{font-size:12px;font-weight:800;color:#64748B;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.section p{font-size:14px;line-height:1.7;color:#CBD5E1}
+
+.scores-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+@media(max-width:600px){.scores-grid{grid-template-columns:1fr}}
+.score-item{background:#0F172A;border-radius:12px;padding:14px}
+.score-item .label{font-size:12px;color:#94A3B8;margin-bottom:6px}
+.bar-wrap{display:flex;align-items:center;gap:8px}
+.bar-bg{flex:1;height:8px;background:#334155;border-radius:4px;overflow:hidden}
+.bar-fg{height:100%;border-radius:4px}
+.val{font-size:14px;font-weight:800;min-width:35px;text-align:right}
+
+.review-box{background:#0F172A;border-radius:14px;padding:20px;margin-top:20px;border-left:3px solid}
+.review-box h4{font-size:13px;font-weight:800;margin-bottom:8px}
+.review-box p{font-size:14px;line-height:1.7;color:#CBD5E1}
+.improve-box{background:#0F172A;border-radius:14px;padding:20px;margin-top:12px;border-left:3px solid #34D399}
+.improve-box h4{font-size:13px;font-weight:800;color:#34D399;margin-bottom:8px}
+.improve-box p{font-size:14px;line-height:1.7;color:#CBD5E1}
+
+.rank-list{max-width:800px;margin:0 auto}
+.rank-item{display:flex;align-items:center;gap:16px;background:#1E293B;border-radius:14px;padding:16px 20px;margin-bottom:10px;border:1px solid #334155;transition:all .2s;cursor:pointer}
+.rank-item:hover{border-color:#475569;background:#253348}
+.rank-item.gold{border:2px solid #F59E0B;background:linear-gradient(135deg,#1E293B,#2D2006)}
+.rank-item.silver{border:2px solid #94A3B8;background:linear-gradient(135deg,#1E293B,#1E2530)}
+.rank-item.bronze{border:2px solid #CD7F32;background:linear-gradient(135deg,#1E293B,#2B1F0F)}
+.rank-num{font-size:24px;font-weight:900;width:44px;text-align:center}
+.rank-info{flex:1}
+.rank-info .name{font-size:16px;font-weight:700;color:#F1F5F9}
+.rank-info .desc{font-size:12px;color:#64748B;margin-top:2px}
+.rank-score{font-size:28px;font-weight:900;text-align:right}
+.rank-score span{font-size:14px;color:#64748B;font-weight:400}
+
+.rec{max-width:800px;margin:0 auto}
+.rec-intro{text-align:center;margin-bottom:28px}
+.rec-intro h2{font-size:24px;font-weight:900;color:#F1F5F9;margin-bottom:8px}
+.rec-intro p{font-size:14px;color:#94A3B8}
+.rec-card{background:#1E293B;border-radius:16px;padding:24px;margin-bottom:16px}
+.priority{font-size:12px;font-weight:800;padding:4px 14px;border-radius:8px;color:#fff;display:inline-block;margin-bottom:12px}
+.name-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.name-row h3{font-size:22px;font-weight:900;color:#F1F5F9}
+.field{margin-bottom:12px}
+.field-label{font-size:11px;font-weight:700;color:#64748B;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.field-val{font-size:14px;line-height:1.6;color:#CBD5E1}
+.bottom-cta{background:linear-gradient(135deg,#1E3A5F,#2D1B4E);border-radius:16px;padding:32px;margin-top:28px;text-align:center;border:1px solid #334155}
+.bottom-cta h3{font-size:20px;font-weight:900;color:#F5C542;margin-bottom:12px}
+.bottom-cta p{font-size:15px;line-height:1.7;color:#94A3B8}
+
+@media(max-width:640px){
+  .header h1{font-size:24px}
+  .grid{grid-template-columns:1fr}
+  .detail-card{padding:20px}
+  .header .stats{gap:12px}
+}
 </style>
 </head>
 <body>
 <div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
 <script type="text/babel">
 const {useState}=React;
 
-const ideas=[
-{id:1,name:"ScamShield AI",type:"Blue Ocean",market:"Thai → ASEAN",emoji:"\u{1F6E1}\uFE0F",color:"#F96167",bgLight:"#FEF2F2",marketSize:"$244B",affected:"60M+ คนไทย",tagline:"Forward มาก่อน โอนเงินทีหลัง",problem:"คนไทยเสียหายจาก scam 115,000 ล้านบาท/ปี (เพิ่ม 45% YoY) Whoscall ตรวจได้แค่เบอร์โทร แต่ LINE (43% ของ scam) ยังไม่มีใครป้องกัน",solution:"LINE Bot ที่ forward ข้อความ/ลิงก์มาตรวจ scam ใน 3 วินาที + Family Dashboard แจ้งเตือนลูกหลาน + Community scam database",moat:"Network effect จาก crowdsourced scam DB, First-mover บน LINE ecosystem",revenue:"B2C Freemium 99บ/เดือน + B2B API ธนาคาร/Telco + B2G ภาครัฐ",mvp:"LINE Bot + Claude API + rule-based scam detection",risk:"CPSTC ภาครัฐใช้ AI block scam แล้ว + Whoscall 25M users อาจขยายมา + ธนาคารสร้างเอง",scores:{survivability:2,monetization:2,mvpEase:4,viral:3,founderFit:4},verdict:"PASS",review:"ตลาดถูก solve บางส่วนแล้วจาก CPSTC + Whoscall + bank native tools แต่ถ้า pivot เป็น B2B white-label สำหรับ tier-2/3 banks ยังน่าสนใจ",improvement:"Pivot เป็น white-label fraud detection API สำหรับธนาคารขนาดกลาง-เล็ก"},
-{id:2,name:"SellerOS AI",type:"Red Ocean",market:"Thai → SEA",emoji:"\u{1F3EA}",color:"#4A90D9",bgLight:"#EFF6FF",marketSize:"$5.2B → $8.5B",affected:"2M+ คนขายออนไลน์",tagline:"ขายของไม่ต้องไม่นอน",problem:"คนขายของออนไลน์ 2M+ คน จัดการ 4-5 แพลตฟอร์ม (Shopee 75%, Lazada 67%, TikTok 51%) ใช้เวลา 10-14 ชม./วัน tools ที่มี (Zetpy, Ginee) ไม่ใช่ AI-first",solution:"AI ตอบแชทลูกค้าทุกแพลตฟอร์ม + ปรับราคาอัตโนมัติ + สร้าง content จากรูป 1 รูป + auto e-Tax Invoice ตามกฎหมายใหม่",moat:"Multi-platform data lock-in (ยิ่งใช้นาน AI ยิ่งรู้จักธุรกิจ), Thai-specific integrations",revenue:"SaaS 499-2,999 บาท/เดือน + commission AI upsell + e-invoicing add-on",mvp:"Dashboard ดึง orders จาก Shopee + Lazada API + AI pricing suggestions",risk:"Shopee/Lazada อาจ build native AI tools + Platform API เปลี่ยนได้",scores:{survivability:3,monetization:3,mvpEase:4,viral:4,founderFit:5},verdict:"GO",review:"Founder fit ดีที่สุดใน 10 ไอเดีย + market ใหญ่ + recurring revenue ชัด ต้อง pivot เป็น distribution network",improvement:"Pivot เป็น SellerOS Collective + Focus เฉพาะ 1 category ก่อน (Fashion/Beauty)"},
-{id:3,name:"DebtFree AI",type:"Blue Ocean",market:"Thai → ASEAN",emoji:"\u{1F4B0}",color:"#34D399",bgLight:"#F0FDF4",marketSize:"$25.8B",affected:"20M+ คนไทยเป็นหนี้",tagline:"ปลดหนี้ได้ ไม่ต้องรวย",problem:"หนี้ครัวเรือนไทย 90.8% ต่อ GDP, 20M+ คนเป็นหนี้, ที่ปรึกษาการเงินคิด 5,000-20,000 บาท/ครั้ง",solution:"LINE Bot กรอกหนี้ → AI สร้างแผนปลดหนี้ + แนะนำสิทธิ์เจรจาหนี้ + budget tracker",moat:"Trust lock-in (ข้อมูลหนี้ส่วนตัวที่สุด), Thai financial ecosystem knowledge",revenue:"Freemium B2C 149บ/เดือน + B2B ธนาคาร white-label + Referral refinance commission",mvp:"LINE Bot กรอกหนี้ + AI แผนปลดหนี้ 2 แบบ + timeline ประหยัดดอกเบี้ย",risk:"Monetizing คนจน = ยาก + Regulatory risk",scores:{survivability:2,monetization:1,mvpEase:5,viral:1,founderFit:2},verdict:"PASS",review:"ปัญหาจริง แต่ target ที่จน + ธนาคารไม่อยากให้คนปลดหนี้เร็ว",improvement:"Pivot เป็น B2B2C ขายธนาคารเป็น debt wellness toolkit ลด NPL"},
-{id:4,name:"HireHonest AI",type:"Red Ocean",market:"Global",emoji:"\u{1F91D}",color:"#F5C542",bgLight:"#FFFBEB",marketSize:"$30B+",affected:"100M+ คนหางาน",tagline:"Every applicant deserves an answer",problem:"สมัคร 100 ใบ ได้ตอบ 3, ผ่าน 5-7 รอบแล้วถูก ghost, Time-to-hire เฉลี่ย 44 วัน",solution:"AI วิเคราะห์ตำแหน่งจาก team dynamics + match candidates + Zero-Ghost: ทุกคนได้ feedback 48 ชม.",moat:"Proprietary ghosting prediction model, Two-sided network",revenue:"SaaS $99-999/mo + per-hire fee $500-2,000 + Candidate premium $9.99/mo",mvp:"Web app: HR paste JD → AI match + rank candidates → auto-feedback",risk:"LinkedIn/Indeed ลงทุน billions + OpenAI เตรียมเปิด jobs platform",scores:{survivability:1,monetization:2,mvpEase:4,viral:2,founderFit:2},verdict:"PASS",review:"OpenAI กำลังเข้าตลาดนี้ + LinkedIn/Indeed มี budget มหาศาล",improvement:"ถ้าทำต้อง vertical เฉพาะ (Tech hiring ในไทย) + Flip marketplace"},
-{id:5,name:"BunchEats",type:"Red Ocean",market:"Thai → SEA",emoji:"\u{1F35C}",color:"#22D3EE",bgLight:"#ECFEFF",marketSize:"$340B",affected:"40M+ คนสั่ง delivery",tagline:"สั่งรวม ส่งถูก ร้านได้เยอะ",problem:"สั่ง delivery แพงกว่าซื้อเอง 30-50%, ร้านถูกหัก 30-35%, Model เดิมไม่ efficient",solution:"AI จัดกลุ่มคนย่านเดียวกัน สั่งร้านเดียว → ค่าส่ง 5-15 บาท + ร้านเสีย commission แค่ 10-15%",moat:"Hyperlocal network effect (ยิ่งคนในตึกใช้เยอะ ค่าส่งยิ่งถูก)",revenue:"Commission ร้าน 10-15% + Delivery fee share + Office subscription",mvp:"LINE Group Bot → สมาชิกบอกอยากกินอะไร → AI แนะนำร้าน + group order",risk:"Grab/LINE MAN ทำตามได้ทันที + Coordination friction สูง",scores:{survivability:1,monetization:2,mvpEase:5,viral:3,founderFit:2},verdict:"PASS",review:"User เองก็บอกว่า Grab ทำตามก็จบ — zero defensibility",improvement:"Pivot เป็น B2B consolidated last-mile delivery สำหรับร้านอาหาร"},
-{id:6,name:"AgentFlow",type:"Blue Ocean",market:"Global",emoji:"\u{1F916}",color:"#A855F7",bgLight:"#FAF5FF",marketSize:"$5B → $105B",affected:"40M+ SME + 1M+ devs",tagline:"Your AI. Your Rules. Your Revenue.",problem:"95% ของ SME ใช้ AI ไม่เป็น ต้องจ้าง developer 50K-500K บาท/ชิ้น, Dev ไม่มีช่องทางขาย agent",solution:"Marketplace ที่ Creator สร้าง/ขาย AI Agent + SME 1-click deploy ผ่าน LINE + Rating system",moat:"Two-sided marketplace network effect, Community templates, Integration ecosystem",revenue:"Commission 15-20% + Creator SaaS $29-99/mo + Enterprise API + White-label",mvp:"Web marketplace + 10 agent templates + 1-click deploy ผ่าน LINE Bot",risk:"ตลาดยังเร็วเกินไป (2026) + OpenAI/Google อาจ build เอง",scores:{survivability:3,monetization:2,mvpEase:4,viral:2,founderFit:4},verdict:"GO",review:"TAM มหาศาล ($105B by 2034) แต่ timing ยังเร็ว → start เป็น vertical marketplace",improvement:"Start เฉพาะ AI agents for Thai SME + สร้าง agents เองก่อน 5-10 ตัว"},
-{id:7,name:"SkillRise AI",type:"Red Ocean",market:"Thai → Global",emoji:"\u{1F4DA}",color:"#3B82F6",bgLight:"#EFF6FF",marketSize:"$1.76B → $4.89B",affected:"15M+ คนไทย at risk",tagline:"AI Tutor ภาษาไทย สำหรับคนที่ AI กำลังแย่งงาน",problem:"70% ของงานต้องการ skills ใหม่, ไทยมีแค่ 30K คนเขียนโค้ดได้ ต้องการ 100K+, Coursera ไม่มีภาษาไทย",solution:"AI adaptive learning ภาษาไทย + micro-credentials 2-4 สัปดาห์ + Claude API tutoring + JobsDB gap analysis",moat:"Proprietary adaptive learning + Thai university partnerships + Thai job market data",revenue:"B2C $5-15/mo + B2B Corporate $5K-20K/mo + Micro-credential fees + Job placement",mvp:"5-10 courses ภาษาไทย + Claude API Q&A bot + JobsDB skill gap matcher",risk:"Duolingo + Microsoft + SkillLane แข่ง + Content creation แพง + B2C churn 70-80%",scores:{survivability:2,monetization:3,mvpEase:4,viral:2,founderFit:2},verdict:"PASS",review:"ตลาดมีคู่แข่ง funded billions + ไม่มี moat ที่ defensible + Easy to build = easy to copy",improvement:"Pivot เป็น vertical เฉพาะ เช่น AI skills for Thai factory workers + Partner กับ Grab/banks"},
-{id:8,name:"PropertyMatch AI",type:"Blue Ocean",market:"Thai",emoji:"\u{1F3E0}",color:"#10B981",bgLight:"#F0FDF4",marketSize:"$1.2B PropTech",affected:"3M+ ผู้หาอสังหา/ปี",tagline:"หาบ้านในไม่กี่นาที ไม่ใช่หลายเดือน",problem:"หาที่อยู่ต้องดูหลายสิบเว็บ, Agent ใช้รูป/description เดิมๆ, ไม่มี intelligent matching",solution:"AI buyer-property matcher + Landlord LINE Bot ตอบคำถามผู้เช่า + Virtual tour + Market analysis",moat:"Proprietary matching algorithm + LINE landlord bot + Agent relationships",revenue:"Buyer premium $15-30/mo + Landlord tools $50-200/mo + Rental commission",mvp:"Web scraper DDproperty/Facebook + preference questionnaire + LINE Bot for landlords",risk:"DDproperty (PropertyGuru) ครองตลาด + Scraping อาจผิด ToS",scores:{survivability:2,monetization:2,mvpEase:4,viral:1,founderFit:2},verdict:"PASS",review:"DDproperty + Hipflat ครองตลาดแล้ว — LINE Bot เป็นแค่ feature ไม่ใช่ business",improvement:"เปลี่ยนเป็น white-label solution ขาย DDproperty เป็น backend matching tool"},
-{id:9,name:"GigGuard Insurance",type:"Blue Ocean",market:"Thai → Global",emoji:"\u{1F6F5}",color:"#F97316",bgLight:"#FFF7ED",marketSize:"$8.5B → $33B",affected:"5M+ gig workers ไทย",tagline:"ประกันต่อกะ สำหรับคนทำงาน gig",problem:"Gig workers 5M+ คนไม่มี insurance เลย, ประกันปกติแพงเกินไป (monthly commitment)",solution:"Per-shift insurance $2-5/กะ ผ่าน LINE Bot + Auto-deduct + AI risk assessment + Instant claims",moat:"Platform integrations + Claims database + Thai insurer partnerships",revenue:"25% margin on premiums + Employer bulk plans + Premium add-ons",mvp:"LINE Bot ซื้อประกันต่อกะ + PromptPay instant payout + Claims form",risk:"Grab + Sunday ทำแล้ว + ต้อง license จาก OIA (12-24 เดือน) + Unit economics ติดลบ",scores:{survivability:1,monetization:2,mvpEase:1,viral:2,founderFit:1},verdict:"PASS",review:"Grab + Sunday partnership ทำแล้ว + Insurance license ข้ามไม่ได้",improvement:"Partner กับ licensed insurer แล้วเป็น distribution layer + Pitch Grab white-label"},
-{id:10,name:"CreatorVault AI",type:"Red Ocean",market:"Thai → APAC",emoji:"\u{1F3A8}",color:"#EC4899",bgLight:"#FDF2F8",marketSize:"$41.6B → $390.7B",affected:"500K+ Thai creators",tagline:"Where Thai Creators Actually Keep Their Money",problem:"Thai creators รายได้ไม่แน่นอน ($0.01-0.10 ต่อ 1K views), Patreon/YouTube ถือ 10-30%",solution:"Thailand-first creator monetization + PromptPay/LINE integration + AI content recommendations + Lower fees 10%",moat:"Thai platform integrations (LINE, TikTok TH) + Creator community + Print-on-demand",revenue:"10% commission memberships + 5% tips + 20% merch + Premium analytics",mvp:"Dashboard aggregate TikTok/YouTube/IG + membership signup + PromptPay integration",risk:"Patreon + YouTube built-in ทำอยู่แล้ว + Trakteer at 0% fee ยังไม่ win",scores:{survivability:2,monetization:3,mvpEase:3,viral:3,founderFit:3},verdict:"GO",review:"ตลาดจริง ($390B by 2034) ต้องมี creators ก่อนสร้างเทค → เซ็น 50+ influencers ก่อน launch",improvement:"เซ็น 50+ Thai creators ก่อน build + Focus vertical (gaming/cosplay) + ใช้ 2C2P payment"}
+const IDEAS=[
+{id:1,name:"SellerOS AI",type:"Red Ocean",market:"Thai \u2192 SEA",emoji:"\u{1F3EA}",color:"#3B82F6",marketSize:"$5.2B \u2192 $8.5B",affected:"2M+ \u0E04\u0E19\u0E02\u0E32\u0E22\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C\u0E44\u0E17\u0E22",tagline:"\u0E02\u0E32\u0E22\u0E02\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E44\u0E21\u0E48\u0E19\u0E2D\u0E19 \u2014 AI \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E17\u0E38\u0E01\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21\u0E43\u0E2B\u0E49",
+problem:"\u0E04\u0E19\u0E02\u0E32\u0E22\u0E02\u0E2D\u0E07\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C 2M+ \u0E04\u0E19 \u0E15\u0E49\u0E2D\u0E07\u0E08\u0E31\u0E14\u0E01\u0E32\u0E23 4-5 \u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21\u0E1E\u0E23\u0E49\u0E2D\u0E21\u0E01\u0E31\u0E19 (Shopee 75%, Lazada 67%, TikTok 51%) \u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32 10-14 \u0E0A\u0E21./\u0E27\u0E31\u0E19 \u0E17\u0E33\u0E07\u0E32\u0E19\u0E0B\u0E49\u0E33\u0E46 \u0E40\u0E0A\u0E48\u0E19 \u0E15\u0E2D\u0E1A\u0E41\u0E0A\u0E17, \u0E2D\u0E31\u0E1B\u0E40\u0E14\u0E15\u0E2A\u0E15\u0E47\u0E2D\u0E01, \u0E1B\u0E23\u0E31\u0E1A\u0E23\u0E32\u0E04\u0E32 \u2014 tools \u0E17\u0E35\u0E48\u0E21\u0E35 (Zetpy, Ginee) \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48 AI-first \u0E41\u0E25\u0E30\u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",
+solution:"AI \u0E15\u0E2D\u0E1A\u0E41\u0E0A\u0E17\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32\u0E17\u0E38\u0E01\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21\u0E40\u0E1B\u0E47\u0E19\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 + \u0E1B\u0E23\u0E31\u0E1A\u0E23\u0E32\u0E04\u0E32\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34\u0E15\u0E32\u0E21 demand + \u0E2A\u0E23\u0E49\u0E32\u0E07 content \u0E08\u0E32\u0E01\u0E23\u0E39\u0E1B 1 \u0E23\u0E39\u0E1B + \u0E2D\u0E2D\u0E01 e-Tax Invoice \u0E15\u0E32\u0E21\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34",
+moat:"Multi-platform data lock-in (\u0E22\u0E34\u0E48\u0E07\u0E43\u0E0A\u0E49\u0E19\u0E32\u0E19 AI \u0E22\u0E34\u0E48\u0E07\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01\u0E18\u0E38\u0E23\u0E01\u0E34\u0E08) + Thai-specific integrations \u0E17\u0E35\u0E48 global tools \u0E44\u0E21\u0E48\u0E21\u0E35",
+revenue:"SaaS 499-2,999 \u0E1A\u0E32\u0E17/\u0E40\u0E14\u0E37\u0E2D\u0E19 + commission \u0E08\u0E32\u0E01 AI upsell + e-invoicing add-on",
+mvp:"Dashboard \u0E14\u0E36\u0E07 orders \u0E08\u0E32\u0E01 Shopee + Lazada API + AI pricing suggestions + Thai chatbot",
+risk:"Shopee/Lazada \u0E2D\u0E32\u0E08 build native AI tools + Platform API \u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E44\u0E14\u0E49 \u0E41\u0E15\u0E48 multi-platform lock-in \u0E0A\u0E48\u0E27\u0E22\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:4,founderFit:5},verdict:"GO",
+review:"Founder fit \u0E14\u0E35\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14\u0E43\u0E19 10 \u0E44\u0E2D\u0E40\u0E14\u0E35\u0E22 \u0E15\u0E25\u0E32\u0E14\u0E43\u0E2B\u0E0D\u0E48 recurring revenue \u0E0A\u0E31\u0E14 \u0E15\u0E49\u0E2D\u0E07 pivot \u0E40\u0E1B\u0E47\u0E19 distribution network \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E41\u0E04\u0E48 tool",
+improvement:"\u0E40\u0E23\u0E34\u0E48\u0E21\u0E08\u0E32\u0E01 1 category (Fashion/Beauty) \u0E41\u0E25\u0E49\u0E27\u0E02\u0E22\u0E32\u0E22 \u2192 \u0E2A\u0E23\u0E49\u0E32\u0E07 SellerOS Collective \u0E40\u0E1B\u0E47\u0E19 network \u0E02\u0E2D\u0E07\u0E04\u0E19\u0E02\u0E32\u0E22"},
+
+{id:2,name:"SME AutoAPI",type:"Blue Ocean",market:"ASEAN",emoji:"\u{1F50C}",color:"#8B5CF6",marketSize:"$900M",affected:"3M+ SMEs \u0E43\u0E19 ASEAN",tagline:"\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E15\u0E48\u0E2D\u0E17\u0E38\u0E01\u0E0B\u0E2D\u0E1F\u0E15\u0E4C\u0E41\u0E27\u0E23\u0E4C 1 \u0E04\u0E25\u0E34\u0E01 \u2014 \u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E40\u0E02\u0E35\u0E22\u0E19\u0E42\u0E04\u0E49\u0E14",
+problem:"97% \u0E02\u0E2D\u0E07 SME \u0E43\u0E19 ASEAN \u0E43\u0E0A\u0E49 3-5 \u0E0B\u0E2D\u0E1F\u0E15\u0E4C\u0E41\u0E27\u0E23\u0E4C\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E01\u0E31\u0E19 (\u0E1A\u0E31\u0E0D\u0E0A\u0E35, \u0E04\u0E25\u0E31\u0E07, \u0E02\u0E32\u0E22\u0E02\u0E2D\u0E07, HR) \u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19 5 \u0E17\u0E35\u0E48 \u0E15\u0E49\u0E2D\u0E07 copy-paste \u0E02\u0E49\u0E32\u0E21\u0E01\u0E31\u0E19\u0E17\u0E38\u0E01\u0E27\u0E31\u0E19 Zapier/Make.com \u0E23\u0E32\u0E04\u0E32 $99+ \u0E41\u0E25\u0E30\u0E40\u0E1B\u0E47\u0E19\u0E20\u0E32\u0E29\u0E32\u0E2D\u0E31\u0E07\u0E01\u0E24\u0E29 \u0E43\u0E0A\u0E49\u0E22\u0E32\u0E01\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME \u0E44\u0E17\u0E22",
+solution:"\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21 no-code \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 \u0E25\u0E32\u0E01-\u0E27\u0E32\u0E07 workflow + connectors \u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E23\u0E39\u0E1B 20+ \u0E15\u0E31\u0E27 (\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E44\u0E17\u0E22, ShopSpot, LINE OA, Wave) + AI \u0E41\u0E19\u0E30\u0E19\u0E33 automation \u0E43\u0E2B\u0E49\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 \u0E23\u0E32\u0E04\u0E32\u0E40\u0E23\u0E34\u0E48\u0E21 \u0E3F500/\u0E40\u0E14\u0E37\u0E2D\u0E19",
+moat:"Thai-language UI + local software integrations \u0E17\u0E35\u0E48 Zapier \u0E44\u0E21\u0E48\u0E21\u0E35 + community recipe library = network effect",
+revenue:"Freemium \u2192 \u0E3F500/\u0E40\u0E14\u0E37\u0E2D\u0E19 unlimited + Enterprise \u0E3F6,000/\u0E40\u0E14\u0E37\u0E2D\u0E19 | 7,500 users = \u0E3F3.75M MRR",
+mvp:"API connectors 5 \u0E15\u0E31\u0E27\u0E22\u0E2D\u0E14\u0E19\u0E34\u0E22\u0E21 + flow editor (N8N-like) + recipe suggestions + Thai UI",
+risk:"Zapier/Make \u0E2D\u0E32\u0E08\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 \u0E41\u0E15\u0E48 local integrations \u0E40\u0E1B\u0E47\u0E19 moat \u0E17\u0E35\u0E48 copy \u0E22\u0E32\u0E01",
+scores:{survivability:4,monetization:5,mvpEase:5,viral:4,founderFit:4},verdict:"GO",
+review:"TAM \u0E43\u0E2B\u0E0D\u0E48\u0E21\u0E32\u0E01 SME \u0E22\u0E34\u0E19\u0E14\u0E35\u0E08\u0E48\u0E32\u0E22\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E25\u0E14\u0E07\u0E32\u0E19 manual \u0E44\u0E14\u0E49\u0E17\u0E31\u0E19\u0E17\u0E35 \u0E23\u0E32\u0E04\u0E32 1/6 \u0E02\u0E2D\u0E07 Zapier = \u0E41\u0E02\u0E48\u0E07\u0E44\u0E14\u0E49 + local integrations = defensible",
+improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07 DE \u0E40\u0E1E\u0E37\u0E48\u0E2D subsidy + revenue share \u0E01\u0E31\u0E1A local software vendors \u0E40\u0E23\u0E48\u0E07 integration"},
+
+{id:3,name:"TaxMate AI",type:"Blue Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F4B8}",color:"#06B6D4",marketSize:"$500M",affected:"3M+ SME \u0E44\u0E17\u0E22 + \u0E1F\u0E23\u0E35\u0E41\u0E25\u0E19\u0E0B\u0E4C",tagline:"\u0E1A\u0E31\u0E0D\u0E0A\u0E35+\u0E20\u0E32\u0E29\u0E35 \u0E17\u0E33\u0E40\u0E2D\u0E07\u0E44\u0E14\u0E49 \u2014 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E44\u0E17\u0E22",
+problem:"SME \u0E44\u0E17\u0E22 3M+ \u0E23\u0E32\u0E22 \u0E15\u0E49\u0E2D\u0E07\u0E17\u0E33\u0E1A\u0E31\u0E0D\u0E0A\u0E35+\u0E20\u0E32\u0E29\u0E35\u0E15\u0E32\u0E21\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48 (e-Tax Invoice 2024, e-Withholding Tax) \u0E41\u0E15\u0E48 80% \u0E22\u0E31\u0E07\u0E43\u0E0A\u0E49 Excel \u0E2B\u0E23\u0E37\u0E2D\u0E01\u0E23\u0E30\u0E14\u0E32\u0E29 \u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E04\u0E34\u0E14 \u0E3F5K-30K/\u0E40\u0E14\u0E37\u0E2D\u0E19 Peak \u0E44\u0E21\u0E48\u0E23\u0E31\u0E1A\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32\u0E43\u0E2B\u0E21\u0E48 + tools \u0E17\u0E35\u0E48\u0E21\u0E35 (PEAK, FlowAccount) \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48 AI-first",
+solution:"AI \u0E2D\u0E48\u0E32\u0E19\u0E43\u0E1A\u0E40\u0E2A\u0E23\u0E47\u0E08/\u0E2A\u0E25\u0E34\u0E1B \u0E41\u0E25\u0E49\u0E27\u0E25\u0E07\u0E1A\u0E31\u0E0D\u0E0A\u0E35\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 + \u0E2D\u0E2D\u0E01 e-Tax Invoice \u0E15\u0E32\u0E21 format \u0E01\u0E23\u0E21\u0E2A\u0E23\u0E23\u0E1E\u0E32\u0E01\u0E23 + AI \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19 deadline \u0E20\u0E32\u0E29\u0E35 + \u0E2A\u0E23\u0E38\u0E1B\u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E01\u0E33\u0E44\u0E23\u0E02\u0E32\u0E14\u0E17\u0E38\u0E19\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",
+moat:"\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E20\u0E32\u0E29\u0E35\u0E44\u0E17\u0E22\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E1A\u0E48\u0E2D\u0E22 = \u0E15\u0E49\u0E2D\u0E07 update \u0E15\u0E25\u0E2D\u0E14 (competitive moat) + data lock-in (\u0E22\u0E34\u0E48\u0E07\u0E43\u0E0A\u0E49\u0E19\u0E32\u0E19 \u0E22\u0E34\u0E48\u0E07\u0E22\u0E49\u0E32\u0E22\u0E22\u0E32\u0E01) + Thai-specific tax rules \u0E17\u0E35\u0E48 global tools \u0E44\u0E21\u0E48\u0E21\u0E35",
+revenue:"SaaS \u0E3F299-1,999/\u0E40\u0E14\u0E37\u0E2D\u0E19 + e-Tax Invoice add-on \u0E3F500/\u0E40\u0E14\u0E37\u0E2D\u0E19 + \u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35 referral commission 10% | 10K users = \u0E3F5M MRR",
+mvp:"OCR \u0E2D\u0E48\u0E32\u0E19\u0E43\u0E1A\u0E40\u0E2A\u0E23\u0E47\u0E08 + auto-categorize \u0E23\u0E32\u0E22\u0E08\u0E48\u0E32\u0E22 + \u0E2A\u0E23\u0E49\u0E32\u0E07 e-Tax Invoice + tax calendar \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19 LINE",
+risk:"PEAK/FlowAccount \u0E2D\u0E32\u0E08\u0E40\u0E1E\u0E34\u0E48\u0E21 AI features + \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E23\u0E47\u0E27 \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 AI-first approach + \u0E23\u0E32\u0E04\u0E32\u0E16\u0E39\u0E01\u0E01\u0E27\u0E48\u0E32 + compliance update \u0E40\u0E23\u0E47\u0E27\u0E01\u0E27\u0E48\u0E32",
+scores:{survivability:4,monetization:5,mvpEase:5,viral:3,founderFit:3},verdict:"GO",
+review:"\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E20\u0E32\u0E29\u0E35\u0E43\u0E2B\u0E21\u0E48\u0E1A\u0E31\u0E07\u0E04\u0E31\u0E1A SME \u0E17\u0E33 e-Tax = regulatory-driven demand \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19 + SME \u0E22\u0E34\u0E19\u0E14\u0E35\u0E08\u0E48\u0E32\u0E22\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E1B\u0E23\u0E31\u0E1A 5K-30K/\u0E40\u0E14\u0E37\u0E2D\u0E19 + Thai tax rules = \u0E01\u0E33\u0E41\u0E1E\u0E07\u0E01\u0E31\u0E49\u0E19 global tools",
+improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E1A\u0E31\u0E0D\u0E0A\u0E35 100 \u0E23\u0E32\u0E22 \u0E40\u0E1B\u0E47\u0E19 distribution channel + \u0E40\u0E1E\u0E34\u0E48\u0E21 payroll module \u0E40\u0E1B\u0E47\u0E19 upsell"},
+
+{id:4,name:"LegalBot AI",type:"Blue Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F4DC}",color:"#A855F7",marketSize:"$300M",affected:"3M+ SME + 500K+ \u0E1F\u0E23\u0E35\u0E41\u0E25\u0E19\u0E0B\u0E4C\u0E44\u0E17\u0E22",tagline:"\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 5 \u0E19\u0E32\u0E17\u0E35 \u2014 \u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E08\u0E49\u0E32\u0E07\u0E17\u0E19\u0E32\u0E22",
+problem:"SME \u0E44\u0E17\u0E22 95% \u0E44\u0E21\u0E48\u0E21\u0E35\u0E17\u0E19\u0E32\u0E22\u0E04\u0E27\u0E32\u0E21 \u0E43\u0E0A\u0E49\u0E2A\u0E31\u0E0D\u0E0D\u0E32 template \u0E08\u0E32\u0E01 Google \u0E17\u0E35\u0E48\u0E44\u0E21\u0E48 update \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48 (\u0E1E.\u0E23.\u0E1A.\u0E04\u0E38\u0E49\u0E21\u0E04\u0E23\u0E2D\u0E07\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E2A\u0E48\u0E27\u0E19\u0E1A\u0E38\u0E04\u0E04\u0E25 2562, \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19\u0E43\u0E2B\u0E21\u0E48) \u0E17\u0E19\u0E32\u0E22\u0E04\u0E34\u0E14\u0E40\u0E23\u0E34\u0E48\u0E21\u0E15\u0E49\u0E19 \u0E3F5K-50K/\u0E09\u0E1A\u0E31\u0E1A \u0E41\u0E15\u0E48 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E44\u0E17\u0E22\u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E21\u0E35",
+solution:"AI \u0E2A\u0E23\u0E49\u0E32\u0E07\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22\u0E43\u0E19 5 \u0E19\u0E32\u0E17\u0E35 (\u0E08\u0E49\u0E32\u0E07\u0E07\u0E32\u0E19, \u0E40\u0E0A\u0E48\u0E32, NDA, \u0E2B\u0E38\u0E49\u0E19\u0E2A\u0E48\u0E27\u0E19, MOU) + AI review \u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E40\u0E14\u0E34\u0E21\u0E2B\u0E32\u0E0A\u0E48\u0E2D\u0E07\u0E42\u0E2B\u0E27\u0E48 + compliance checker \u0E15\u0E32\u0E21\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E25\u0E48\u0E32\u0E2A\u0E38\u0E14 + \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19 deadline \u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E2B\u0E21\u0E14\u0E2D\u0E32\u0E22\u0E38",
+moat:"Thai legal corpus (\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E44\u0E17\u0E22\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E1A\u0E48\u0E2D\u0E22 = competitive moat) + \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 = global tools \u0E17\u0E33\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49 + data lock-in \u0E08\u0E32\u0E01\u0E2A\u0E31\u0E0D\u0E0D\u0E32\u0E17\u0E35\u0E48\u0E2A\u0E30\u0E2A\u0E21",
+revenue:"Freemium \u2192 \u0E3F499/\u0E40\u0E14\u0E37\u0E2D\u0E19 unlimited + contract review \u0E3F99/\u0E09\u0E1A\u0E31\u0E1A + Enterprise \u0E3F5K/\u0E40\u0E14\u0E37\u0E2D\u0E19 | 5K users = \u0E3F2.5M MRR",
+mvp:"Template engine \u0E2A\u0E31\u0E0D\u0E0D\u0E32 10 \u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E22\u0E2D\u0E14\u0E19\u0E34\u0E22\u0E21 + Claude API review + Thai legal DB + LINE Bot \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19",
+risk:"LawXpert/LegalTech \u0E44\u0E17\u0E22\u0E40\u0E23\u0E34\u0E48\u0E21\u0E21\u0E35\u0E1A\u0E49\u0E32\u0E07 + \u0E17\u0E19\u0E32\u0E22\u0E2D\u0E32\u0E08\u0E44\u0E21\u0E48\u0E22\u0E2D\u0E21\u0E23\u0E31\u0E1A AI \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 position \u0E40\u0E1B\u0E47\u0E19 AI assistant \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48\u0E17\u0E14\u0E41\u0E17\u0E19\u0E17\u0E19\u0E32\u0E22 + partner \u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22",
+scores:{survivability:4,monetization:4,mvpEase:5,viral:3,founderFit:3},verdict:"GO",
+review:"Thai legal \u0E40\u0E1B\u0E47\u0E19 niche \u0E17\u0E35\u0E48 global LegalTech (Ironclad, DocuSign) \u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32 + \u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E43\u0E2B\u0E21\u0E48 = regulatory-driven demand + SME \u0E22\u0E34\u0E19\u0E14\u0E35\u0E08\u0E48\u0E32\u0E22\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E16\u0E39\u0E01\u0E01\u0E27\u0E48\u0E32\u0E08\u0E49\u0E32\u0E07\u0E17\u0E19\u0E32\u0E22 10\u0E40\u0E17\u0E48\u0E32",
+improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D\u0E2A\u0E33\u0E19\u0E31\u0E01\u0E07\u0E32\u0E19\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22 50 \u0E23\u0E32\u0E22 \u0E40\u0E1B\u0E47\u0E19 channel + \u0E40\u0E1E\u0E34\u0E48\u0E21 e-Signature integration + bundle \u0E01\u0E31\u0E1A TaxMate AI"},
+
+{id:5,name:"LogiFlow AI",type:"Blue Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F69A}",color:"#EC4899",marketSize:"$8B",affected:"50K+ SME logistics, 200K+ \u0E23\u0E49\u0E32\u0E19\u0E04\u0E49\u0E32",tagline:"Last-mile \u0E16\u0E39\u0E01\u0E25\u0E07 40% \u2014 AI \u0E08\u0E31\u0E14\u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07+\u0E1A\u0E23\u0E34\u0E2B\u0E32\u0E23\u0E1F\u0E25\u0E35\u0E17\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME",
+problem:"SME \u0E44\u0E17\u0E22\u0E17\u0E35\u0E48\u0E2A\u0E48\u0E07\u0E02\u0E2D\u0E07\u0E40\u0E2D\u0E07 50K+ \u0E23\u0E32\u0E22 \u0E40\u0E2A\u0E35\u0E22\u0E04\u0E48\u0E32\u0E02\u0E19\u0E2A\u0E48\u0E07 30-40% \u0E02\u0E2D\u0E07\u0E23\u0E32\u0E04\u0E32\u0E2A\u0E34\u0E19\u0E04\u0E49\u0E32 \u0E40\u0E1E\u0E23\u0E32\u0E30\u0E43\u0E0A\u0E49 Kerry/Flash/J&T \u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48 optimize \u0E40\u0E2A\u0E49\u0E19\u0E17\u0E32\u0E07 tools \u0E17\u0E35\u0E48\u0E21\u0E35 (Bringg, Onfleet) \u0E23\u0E32\u0E04\u0E32 $500+/\u0E40\u0E14\u0E37\u0E2D\u0E19 \u0E41\u0E1E\u0E07\u0E40\u0E01\u0E34\u0E19 SME",
+solution:"AI route optimization \u0E25\u0E14\u0E23\u0E30\u0E22\u0E30\u0E17\u0E32\u0E07 30-40% + fleet management dashboard \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 + real-time tracking \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32 + auto-assign driver \u0E15\u0E32\u0E21 zone/\u0E1B\u0E23\u0E34\u0E21\u0E32\u0E13\u0E2A\u0E34\u0E19\u0E04\u0E49\u0E32 + \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 LINE OA \u0E41\u0E08\u0E49\u0E07\u0E25\u0E39\u0E01\u0E04\u0E49\u0E32",
+moat:"Thai address parsing AI (\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E44\u0E17\u0E22\u0E44\u0E21\u0E48\u0E40\u0E1B\u0E47\u0E19\u0E23\u0E30\u0E1A\u0E1A = hard to copy) + SME pricing gap + route data \u0E22\u0E34\u0E48\u0E07\u0E43\u0E0A\u0E49 \u0E22\u0E34\u0E48\u0E07\u0E41\u0E21\u0E48\u0E19",
+revenue:"SaaS \u0E3F999-4,999/\u0E40\u0E14\u0E37\u0E2D\u0E19 + \u0E3F5/delivery \u0E17\u0E35\u0E48 optimize | 5K SME = \u0E3F10M MRR + partner Kerry/Flash \u0E40\u0E1B\u0E47\u0E19 white-label",
+mvp:"Google Maps API + AI route optimization + driver app (React Native) + LINE OA tracking + pilot 10 \u0E23\u0E49\u0E32\u0E19\u0E04\u0E49\u0E32",
+risk:"Kerry/Flash \u0E2D\u0E32\u0E08 build \u0E40\u0E2D\u0E07 + Google Maps \u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19 pricing \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 Thai address AI \u0E40\u0E1B\u0E47\u0E19 moat + white-label \u0E43\u0E2B\u0E49 Kerry/Flash \u0E41\u0E17\u0E19\u0E41\u0E02\u0E48\u0E07",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:3,founderFit:4},verdict:"GO",
+review:"Thai logistics $8B TAM \u0E43\u0E2B\u0E0D\u0E48\u0E21\u0E32\u0E01 SME pricing gap \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19 + Thai address parsing \u0E40\u0E1B\u0E47\u0E19 unique moat \u0E17\u0E35\u0E48 global tools \u0E17\u0E33\u0E44\u0E21\u0E48\u0E44\u0E14\u0E49 + clear ROI (\u0E25\u0E14\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E07 30-40%)",
+improvement:"Partner Kerry/Flash Express \u0E40\u0E1B\u0E47\u0E19 white-label solution + \u0E40\u0E1E\u0E34\u0E48\u0E21 COD collection module \u0E40\u0E1B\u0E47\u0E19 upsell"},
+
+{id:6,name:"PropManager AI",type:"Blue Ocean",market:"Thai",emoji:"\u{1F3E2}",color:"#22C55E",marketSize:"$1.2B",affected:"50K+ \u0E19\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E19\u0E42\u0E14, 8M+ \u0E2B\u0E49\u0E2D\u0E07\u0E0A\u0E38\u0E14\u0E17\u0E31\u0E48\u0E27\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28",tagline:"\u0E19\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E19\u0E42\u0E14 AI \u2014 \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E17\u0E38\u0E01\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34",
+problem:"\u0E19\u0E34\u0E15\u0E34\u0E04\u0E2D\u0E19\u0E42\u0E14/\u0E2B\u0E21\u0E39\u0E48\u0E1A\u0E49\u0E32\u0E19 50K+ \u0E41\u0E2B\u0E48\u0E07\u0E43\u0E19\u0E44\u0E17\u0E22 80% \u0E22\u0E31\u0E07\u0E43\u0E0A\u0E49 Excel + LINE group \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23 \u0E40\u0E01\u0E47\u0E1A\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E27\u0E19\u0E01\u0E25\u0E32\u0E07\u0E0A\u0E49\u0E32 \u0E41\u0E08\u0E49\u0E07\u0E0B\u0E48\u0E2D\u0E21 \u0E08\u0E2D\u0E07\u0E2B\u0E49\u0E2D\u0E07 \u0E08\u0E31\u0E14\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21 \u0E2A\u0E37\u0E48\u0E2D\u0E2A\u0E32\u0E23\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19 tools \u0E17\u0E35\u0E48\u0E21\u0E35 (Baania, FazWaz) \u0E40\u0E19\u0E49\u0E19\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22 \u0E44\u0E21\u0E48\u0E43\u0E0A\u0E48 property management",
+solution:"AI \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E27\u0E19\u0E01\u0E25\u0E32\u0E07\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 (\u0E2D\u0E2D\u0E01\u0E1A\u0E34\u0E25, \u0E15\u0E32\u0E21\u0E2B\u0E19\u0E35\u0E49, \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19) + AI chatbot \u0E15\u0E2D\u0E1A\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19 24/7 \u0E1C\u0E48\u0E32\u0E19 LINE OA + \u0E08\u0E31\u0E14\u0E04\u0E34\u0E27\u0E0B\u0E48\u0E2D\u0E21\u0E1A\u0E33\u0E23\u0E38\u0E07\u0E2D\u0E31\u0E15\u0E42\u0E19\u0E21\u0E31\u0E15\u0E34 + \u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E01\u0E32\u0E23\u0E40\u0E07\u0E34\u0E19\u0E43\u0E2B\u0E49\u0E01\u0E23\u0E23\u0E21\u0E01\u0E32\u0E23 + \u0E23\u0E30\u0E1A\u0E1A\u0E42\u0E2B\u0E27\u0E15/\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21\u0E2D\u0E2D\u0E19\u0E44\u0E25\u0E19\u0E4C",
+moat:"\u0E01\u0E0E\u0E2B\u0E21\u0E32\u0E22\u0E2D\u0E32\u0E04\u0E32\u0E23\u0E0A\u0E38\u0E14\u0E44\u0E17\u0E22 = localized rules \u0E17\u0E35\u0E48 global tools \u0E44\u0E21\u0E48\u0E21\u0E35 + data lock-in (\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19+\u0E01\u0E32\u0E23\u0E40\u0E07\u0E34\u0E19\u0E22\u0E49\u0E32\u0E22\u0E22\u0E32\u0E01) + LINE integration \u0E17\u0E35\u0E48\u0E25\u0E39\u0E01\u0E1A\u0E49\u0E32\u0E19\u0E43\u0E0A\u0E49\u0E2D\u0E22\u0E39\u0E48\u0E41\u0E25\u0E49\u0E27",
+revenue:"SaaS \u0E3F1,500-5,000/\u0E40\u0E14\u0E37\u0E2D\u0E19/\u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 + add-on voting/\u0E1B\u0E23\u0E30\u0E0A\u0E38\u0E21 \u0E3F500 | 3K \u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 = \u0E3F7.5M MRR",
+mvp:"\u0E23\u0E30\u0E1A\u0E1A\u0E40\u0E01\u0E47\u0E1A\u0E04\u0E48\u0E32\u0E2A\u0E48\u0E27\u0E19\u0E01\u0E25\u0E32\u0E07 + LINE OA chatbot + \u0E41\u0E08\u0E49\u0E07\u0E0B\u0E48\u0E2D\u0E21/\u0E04\u0E48\u0E32\u0E43\u0E0A\u0E49\u0E08\u0E48\u0E32\u0E22 + dashboard \u0E01\u0E23\u0E23\u0E21\u0E01\u0E32\u0E23 + pilot 5 \u0E04\u0E2D\u0E19\u0E42\u0E14",
+risk:"Baania/Estopolis \u0E2D\u0E32\u0E08\u0E02\u0E22\u0E32\u0E22\u0E21\u0E32 management + \u0E19\u0E34\u0E15\u0E34\u0E40\u0E01\u0E48\u0E32\u0E44\u0E21\u0E48\u0E22\u0E2D\u0E21\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19 \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 AI chatbot \u0E40\u0E1B\u0E47\u0E19 killer feature + \u0E23\u0E32\u0E04\u0E32\u0E16\u0E39\u0E01\u0E01\u0E27\u0E48\u0E32\u0E08\u0E49\u0E32\u0E07 manager",
+scores:{survivability:4,monetization:4,mvpEase:4,viral:3,founderFit:3},verdict:"GO",
+review:"PropTech \u0E44\u0E17\u0E22\u0E40\u0E19\u0E49\u0E19\u0E0B\u0E37\u0E49\u0E2D\u0E02\u0E32\u0E22 \u0E44\u0E21\u0E48\u0E21\u0E35\u0E43\u0E04\u0E23\u0E17\u0E33 management \u0E14\u0E35\u0E46 AI chatbot + auto-billing = killer features \u0E17\u0E35\u0E48\u0E19\u0E34\u0E15\u0E34\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23 + 50K \u0E42\u0E04\u0E23\u0E07\u0E01\u0E32\u0E23 = TAM \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19",
+improvement:"\u0E08\u0E31\u0E1A\u0E21\u0E37\u0E2D\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17\u0E1A\u0E23\u0E34\u0E2B\u0E32\u0E23\u0E2D\u0E32\u0E04\u0E32\u0E23 5 \u0E23\u0E32\u0E22 \u0E40\u0E1B\u0E47\u0E19 pilot + \u0E40\u0E1E\u0E34\u0E48\u0E21 marketplace \u0E2B\u0E32\u0E0A\u0E48\u0E32\u0E07\u0E0B\u0E48\u0E2D\u0E21\u0E1A\u0E33\u0E23\u0E38\u0E07 + \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 PromptPay auto-payment"},
+
+{id:7,name:"AgentFlow",type:"Blue Ocean",market:"Global",emoji:"\u{1F916}",color:"#F59E0B",marketSize:"$5B \u2192 $105B",affected:"40M+ SMEs + 1M+ devs",tagline:"Your AI. Your Rules. Your Revenue.",
+problem:"95% \u0E02\u0E2D\u0E07 SME \u0E43\u0E0A\u0E49 AI \u0E44\u0E21\u0E48\u0E40\u0E1B\u0E47\u0E19 \u0E15\u0E49\u0E2D\u0E07\u0E08\u0E49\u0E32\u0E07 developer \u0E3F50K-500K/\u0E0A\u0E34\u0E49\u0E19 \u0E43\u0E19\u0E02\u0E13\u0E30\u0E17\u0E35\u0E48 developer \u0E17\u0E35\u0E48\u0E2A\u0E23\u0E49\u0E32\u0E07 AI agent \u0E44\u0E21\u0E48\u0E21\u0E35\u0E0A\u0E48\u0E2D\u0E07\u0E17\u0E32\u0E07\u0E02\u0E32\u0E22 \u0E44\u0E21\u0E48\u0E21\u0E35 marketplace \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A AI agents \u0E17\u0E35\u0E48 SME \u0E44\u0E17\u0E22 deploy \u0E44\u0E14\u0E49\u0E17\u0E31\u0E19\u0E17\u0E35",
+solution:"Marketplace \u0E43\u0E2B\u0E49 Creator \u0E2A\u0E23\u0E49\u0E32\u0E07/\u0E02\u0E32\u0E22 AI Agent + SME \u0E01\u0E14 1-click deploy \u0E1C\u0E48\u0E32\u0E19 LINE + Rating & review system + Revenue sharing model",
+moat:"Two-sided marketplace network effect + community templates \u0E22\u0E34\u0E48\u0E07\u0E40\u0E22\u0E2D\u0E30\u0E22\u0E34\u0E48\u0E07\u0E21\u0E35\u0E04\u0E48\u0E32 + integration ecosystem \u0E01\u0E31\u0E1A LINE/Shopee/Lazada",
+revenue:"Commission 15-20% \u0E17\u0E38\u0E01 transaction + Creator SaaS $29-99/mo + Enterprise API + White-label licensing",
+mvp:"Web marketplace + 10 agent templates \u0E2A\u0E33\u0E40\u0E23\u0E47\u0E08\u0E23\u0E39\u0E1B + 1-click deploy \u0E1C\u0E48\u0E32\u0E19 LINE Bot + payment integration",
+risk:"\u0E15\u0E25\u0E32\u0E14 AI agent \u0E22\u0E31\u0E07\u0E40\u0E23\u0E47\u0E27\u0E40\u0E01\u0E34\u0E19\u0E44\u0E1B (2026) + OpenAI/Google \u0E2D\u0E32\u0E08 build marketplace \u0E40\u0E2D\u0E07 \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 start vertical \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A Thai SME \u0E01\u0E48\u0E2D\u0E19",
+scores:{survivability:3,monetization:3,mvpEase:4,viral:3,founderFit:4},verdict:"GO",
+review:"TAM \u0E21\u0E2B\u0E32\u0E28\u0E32\u0E25 ($105B by 2034) timing \u0E2D\u0E32\u0E08\u0E40\u0E23\u0E47\u0E27\u0E44\u0E1B\u0E19\u0E34\u0E14 \u0E41\u0E15\u0E48 first-mover advantage \u0E2A\u0E33\u0E04\u0E31\u0E0D start \u0E40\u0E1B\u0E47\u0E19 vertical Thai SME marketplace \u0E01\u0E48\u0E2D\u0E19\u0E02\u0E22\u0E32\u0E22",
+improvement:"\u0E2A\u0E23\u0E49\u0E32\u0E07 agents \u0E40\u0E2D\u0E07 5-10 \u0E15\u0E31\u0E27\u0E01\u0E48\u0E2D\u0E19 (\u0E15\u0E2D\u0E1A\u0E41\u0E0A\u0E17, \u0E08\u0E2D\u0E07\u0E04\u0E34\u0E27, \u0E2D\u0E2D\u0E01 invoice) \u0E43\u0E2B\u0E49 SME \u0E43\u0E0A\u0E49\u0E1F\u0E23\u0E35 \u2192 \u0E1E\u0E34\u0E2A\u0E39\u0E08\u0E19\u0E4C value \u2192 \u0E40\u0E1B\u0E34\u0E14 marketplace"},
+
+{id:8,name:"RecruiterAI",type:"Blue Ocean",market:"Thai",emoji:"\u{1F4BC}",color:"#EF4444",marketSize:"$200M",affected:"50K+ HR managers, 5M+ \u0E1C\u0E39\u0E49\u0E2B\u0E32\u0E07\u0E32\u0E19",tagline:"\u0E04\u0E31\u0E14\u0E04\u0E19 500 \u0E40\u0E2B\u0E25\u0E37\u0E2D 5 \u0E43\u0E19 10 \u0E19\u0E32\u0E17\u0E35 \u2014 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 Resume \u0E44\u0E17\u0E22",
+problem:"HR \u0E44\u0E17\u0E22\u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32 60 \u0E0A\u0E21./\u0E40\u0E14\u0E37\u0E2D\u0E19 \u0E04\u0E31\u0E14 CV 500 \u0E43\u0E1A 95% \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07 \u0E2A\u0E31\u0E21\u0E20\u0E32\u0E29\u0E13\u0E4C\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E21\u0E35\u0E42\u0E04\u0E23\u0E07\u0E2A\u0E23\u0E49\u0E32\u0E07 (face-to-face bias) 30% \u0E02\u0E2D\u0E07\u0E04\u0E19\u0E17\u0E35\u0E48\u0E08\u0E49\u0E32\u0E07\u0E44\u0E21\u0E48\u0E1C\u0E48\u0E32\u0E19 probation \u2014 \u0E44\u0E21\u0E48\u0E21\u0E35 AI \u0E17\u0E35\u0E48\u0E40\u0E02\u0E49\u0E32\u0E43\u0E08 resume/JD \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22",
+solution:"AI CV parser \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 + skill matcher rank \u0E1C\u0E39\u0E49\u0E2A\u0E21\u0E31\u0E04\u0E23\u0E15\u0E32\u0E21 fit score + AI phone screen 10 \u0E19\u0E32\u0E17\u0E35 (softphone + transcript) + \u0E2A\u0E23\u0E38\u0E1B scorecard 1 \u0E2B\u0E19\u0E49\u0E32/\u0E04\u0E19 (communication, technical, culture fit)",
+moat:"Thai-language CV parsing (LinkedIn \u0E44\u0E21\u0E48\u0E21\u0E35\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22) + structured interview AI train \u0E08\u0E32\u0E01 Thai hiring patterns + HRIS integration = sticky",
+revenue:"B2B SaaS \u0E3F6,000/\u0E40\u0E14\u0E37\u0E2D\u0E19 + \u0E3F1,500/hire | 500 hires/\u0E1B\u0E35/\u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17 = \u0E3F750K/\u0E1B\u0E35 | 100 \u0E25\u0E39\u0E01\u0E04\u0E49\u0E32 = \u0E3F75M ARR",
+mvp:"Thai BERT CV parser + skill tag extraction + Twilio softphone + OpenAI Whisper transcript + scorecard generator",
+risk:"LinkedIn/Jobsdb \u0E2D\u0E32\u0E08\u0E40\u0E1E\u0E34\u0E48\u0E21 matching + AI interview bias \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 focus Thai SME (\u0E08\u0E38\u0E14\u0E2D\u0E48\u0E2D\u0E19 LinkedIn) + bias audit + human review loop",
+scores:{survivability:3,monetization:5,mvpEase:4,viral:3,founderFit:3},verdict:"GO",
+review:"HR tech \u0E41\u0E02\u0E48\u0E07\u0E40\u0E22\u0E2D\u0E30 \u0E41\u0E15\u0E48 Thai-language CV + interview synthesis = niche \u0E17\u0E35\u0E48 big tech \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48\u0E40\u0E02\u0E49\u0E32 \u0E25\u0E14 recruiter workload 50% = clear ROI",
+improvement:"Partner Thai HR platform (HR-X, Dayforce) \u0E40\u0E1E\u0E37\u0E48\u0E2D distribution + \u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19 per-hire pricing \u0E41\u0E17\u0E19 monthly = align incentives"},
+
+{id:9,name:"SafeWork AI",type:"Red Ocean",market:"Thai \u2192 ASEAN",emoji:"\u{1F477}",color:"#F97316",marketSize:"$650M",affected:"150K+ \u0E42\u0E23\u0E07\u0E07\u0E32\u0E19, 5M+ \u0E04\u0E19\u0E07\u0E32\u0E19",tagline:"\u0E2D\u0E38\u0E1A\u0E31\u0E15\u0E34\u0E40\u0E2B\u0E15\u0E38 0 \u0E15\u0E23\u0E27\u0E08\u0E08\u0E31\u0E1A 5 \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35 \u2014 AI vision \u0E1A\u0E19 CCTV \u0E40\u0E14\u0E34\u0E21",
+problem:"\u0E44\u0E17\u0E22\u0E21\u0E35\u0E2D\u0E38\u0E1A\u0E31\u0E15\u0E34\u0E40\u0E2B\u0E15\u0E38\u0E43\u0E19\u0E17\u0E35\u0E48\u0E17\u0E33\u0E07\u0E32\u0E19 8-12K \u0E04\u0E23\u0E31\u0E49\u0E07/\u0E1B\u0E35 40% \u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19\u0E44\u0E14\u0E49 solutions \u0E17\u0E35\u0E48\u0E21\u0E35 (Intenseye, Visionify) \u0E23\u0E32\u0E04\u0E32 $50-200K/\u0E1B\u0E35 \u0E41\u0E1E\u0E07\u0E40\u0E01\u0E34\u0E19\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME \u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 60% \u0E44\u0E21\u0E48\u0E21\u0E35\u0E23\u0E30\u0E1A\u0E1A CCTV \u0E41\u0E1A\u0E1A integrated",
+solution:"Edge AI model \u0E23\u0E31\u0E19\u0E1A\u0E19 CCTV \u0E40\u0E14\u0E34\u0E21 (\u0E44\u0E21\u0E48\u0E15\u0E49\u0E2D\u0E07 upgrade) + real-time \u0E15\u0E23\u0E27\u0E08\u0E08\u0E31\u0E1A PPE/near-miss/unsafe postures + \u0E41\u0E08\u0E49\u0E07\u0E40\u0E15\u0E37\u0E2D\u0E19\u0E17\u0E31\u0E19\u0E17\u0E35 + \u0E2D\u0E2D\u0E01\u0E23\u0E32\u0E22\u0E07\u0E32\u0E19\u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19 + \u0E17\u0E33\u0E07\u0E32\u0E19 offline \u0E44\u0E14\u0E49",
+moat:"Edge AI \u0E23\u0E32\u0E04\u0E32\u0E16\u0E39\u0E01 (accessible \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A SME) + offline-first = \u0E43\u0E0A\u0E49\u0E44\u0E14\u0E49\u0E43\u0E19\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19\u0E0A\u0E19\u0E1A\u0E17 + Thai compliance rules localized + 90% SME gap \u0E17\u0E35\u0E48\u0E04\u0E39\u0E48\u0E41\u0E02\u0E48\u0E07\u0E44\u0E21\u0E48\u0E40\u0E25\u0E48\u0E19",
+revenue:"SaaS \u0E3F1,500/\u0E40\u0E14\u0E37\u0E2D\u0E19/\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 + \u0E3F0.30/alert | 5K \u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 = \u0E3F7.5M MRR + subsidy \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19",
+mvp:"YOLOv8 PPE detection (adapt \u0E08\u0E32\u0E01 public dataset + 500 \u0E20\u0E32\u0E1E\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19\u0E44\u0E17\u0E22) + TFLite edge + alert system + Thai compliance template",
+risk:"Intenseye \u0E2D\u0E32\u0E08\u0E25\u0E07\u0E21\u0E32\u0E40\u0E25\u0E48\u0E19 downmarket + edge AI accuracy 85-90% \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 human-in-the-loop + open-source model \u0E2A\u0E23\u0E49\u0E32\u0E07 community moat",
+scores:{survivability:3,monetization:4,mvpEase:4,viral:2,founderFit:4},verdict:"GO",
+review:"Red Ocean \u0E41\u0E15\u0E48 SME pricing gap = \u0E0A\u0E48\u0E2D\u0E07\u0E27\u0E48\u0E32\u0E07\u0E08\u0E23\u0E34\u0E07 compliance \u0E20\u0E32\u0E29\u0E32\u0E44\u0E17\u0E22 = edge + \u0E01\u0E23\u0E30\u0E17\u0E23\u0E27\u0E07\u0E41\u0E23\u0E07\u0E07\u0E32\u0E19\u0E21\u0E35 subsidy \u0E3F150K/\u0E42\u0E23\u0E07\u0E07\u0E32\u0E19 = TAM lever \u0E17\u0E35\u0E48\u0E14\u0E35\u0E21\u0E32\u0E01",
+improvement:"Pivot \u0E40\u0E1B\u0E47\u0E19 B2B2C: partner \u0E1A\u0E23\u0E34\u0E29\u0E31\u0E17\u0E1B\u0E23\u0E30\u0E01\u0E31\u0E19\u0E2D\u0E38\u0E15\u0E2A\u0E32\u0E2B\u0E01\u0E23\u0E23\u0E21 (\u0E08\u0E48\u0E32\u0E22\u0E04\u0E48\u0E32 safety tech \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E25\u0E14 claims) = customer acquisition cost \u0E15\u0E48\u0E33"},
+
+{id:10,name:"CreatorVault AI",type:"Red Ocean",market:"Thai \u2192 APAC",emoji:"\u{1F3A8}",color:"#D946EF",marketSize:"$41.6B \u2192 $390.7B",affected:"500K+ Thai creators",tagline:"Where Thai Creators Actually Keep Their Money",
+problem:"Thai creators \u0E23\u0E32\u0E22\u0E44\u0E14\u0E49\u0E44\u0E21\u0E48\u0E41\u0E19\u0E48\u0E19\u0E2D\u0E19 ($0.01-0.10 \u0E15\u0E48\u0E2D 1K views) Patreon/YouTube \u0E16\u0E37\u0E2D 10-30% \u0E44\u0E21\u0E48\u0E21\u0E35 platform \u0E44\u0E2B\u0E19\u0E23\u0E2D\u0E07\u0E23\u0E31\u0E1A PromptPay/LINE \u0E2D\u0E22\u0E48\u0E32\u0E07\u0E40\u0E15\u0E47\u0E21\u0E17\u0E35\u0E48 creators \u0E44\u0E17\u0E22\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49 5-6 tools \u0E08\u0E31\u0E14\u0E01\u0E32\u0E23 membership, merch, analytics",
+solution:"Thailand-first creator monetization: membership + tipping \u0E1C\u0E48\u0E32\u0E19 PromptPay/LINE Pay (fee \u0E41\u0E04\u0E48 10% vs Patreon 30%) + AI content recommendations + merch print-on-demand + analytics dashboard \u0E23\u0E27\u0E21\u0E17\u0E38\u0E01\u0E41\u0E1E\u0E25\u0E15\u0E1F\u0E2D\u0E23\u0E4C\u0E21",
+moat:"Thai payment integrations (PromptPay, 2C2P, LINE Pay) + creator community lock-in + lower fee = \u0E22\u0E49\u0E32\u0E22\u0E2D\u0E2D\u0E01\u0E22\u0E32\u0E01",
+revenue:"Commission 10% memberships + 5% tips + 20% merch + Premium analytics \u0E3F300/\u0E40\u0E14\u0E37\u0E2D\u0E19",
+mvp:"Dashboard aggregate TikTok/YouTube/IG + membership signup page + PromptPay integration + basic analytics",
+risk:"Patreon + YouTube built-in \u0E17\u0E33\u0E2D\u0E22\u0E39\u0E48\u0E41\u0E25\u0E49\u0E27 + Trakteer at 0% fee \u0E22\u0E31\u0E07\u0E44\u0E21\u0E48 win market \u2014 \u0E41\u0E01\u0E49\u0E14\u0E49\u0E27\u0E22 focus vertical (gaming/cosplay) + \u0E40\u0E0B\u0E47\u0E19 creators \u0E01\u0E48\u0E2D\u0E19 build tech",
+scores:{survivability:3,monetization:3,mvpEase:3,viral:3,founderFit:3},verdict:"GO",
+review:"\u0E15\u0E25\u0E32\u0E14 $390B by 2034 \u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19 \u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35 creators \u0E01\u0E48\u0E2D\u0E19\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E40\u0E17\u0E04 \u0E40\u0E0B\u0E47\u0E19 50+ influencers \u0E01\u0E48\u0E2D\u0E19 launch \u2014 \u0E16\u0E49\u0E32\u0E21\u0E35 creators = \u0E21\u0E35 platform",
+improvement:"\u0E40\u0E0B\u0E47\u0E19 MOU 50+ Thai creators \u0E01\u0E48\u0E2D\u0E19 build + focus vertical (gaming/cosplay) + \u0E43\u0E0A\u0E49 2C2P payment + partner TikTok TH"}
 ];
 
 const totalScore=(s)=>Object.values(s).reduce((a,b)=>a+b,0);
-const sorted=[...ideas].sort((a,b)=>totalScore(b.scores)-totalScore(a.scores));
+const sorted=[...IDEAS].sort((a,b)=>totalScore(b.scores)-totalScore(a.scores));
+const avgScore=Math.round(IDEAS.reduce((a,i)=>a+totalScore(i.scores),0)/IDEAS.length*10)/10;
+const maxScore=Math.max(...IDEAS.map(i=>totalScore(i.scores)));
 
 function ScoreBar({score,max=5,color}){
-  return React.createElement("div",{style:{display:"flex",alignItems:"center",gap:6}},
-    React.createElement("div",{className:"score-bar-bg"},
-      React.createElement("div",{className:"score-bar-fill",style:{width:(score/max*100)+"%",background:color}})
+  const pct=score/max*100;
+  const c=score>=4?"#22C55E":score>=3?"#F59E0B":"#EF4444";
+  return React.createElement("div",{className:"bar-wrap"},
+    React.createElement("div",{className:"bar-bg"},
+      React.createElement("div",{className:"bar-fg",style:{width:pct+"%",background:color||c}})
     ),
-    React.createElement("span",{style:{fontSize:13,fontWeight:600,color}},score+"/"+max)
-  );
-}
-
-function Badge({verdict}){
-  return React.createElement("span",{className:verdict==="GO"?"badge badge-go":"badge badge-pass"},
-    verdict==="GO"?"\u{1F7E1} CONDITIONAL GO":"\u{1F534} PASS"
+    React.createElement("span",{className:"val",style:{color:color||c}},score)
   );
 }
 
 function App(){
-  const [selected,setSelected]=useState(null);
   const [view,setView]=useState("overview");
+  const [selected,setSelected]=useState(null);
 
   const tabs=[
-    {key:"overview",label:"\u{1F4CB} All Ideas"},
-    {key:"rankings",label:"\u{1F3C6} Rankings"},
-    {key:"recommendations",label:"\u{1F3AF} Recommendations"}
+    {key:"overview",label:"\u0E44\u0E2D\u0E40\u0E14\u0E35\u0E22\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14"},
+    {key:"rankings",label:"\u0E08\u0E31\u0E14\u0E2D\u0E31\u0E19\u0E14\u0E31\u0E1A"},
+    {key:"recommendations",label:"\u0E04\u0E33\u0E41\u0E19\u0E30\u0E19\u0E33"}
   ];
 
-  return React.createElement("div",{className:"container"},
-    React.createElement("div",{className:"header"},
-      React.createElement("h1",null,"TOP 10 MARKET OPPORTUNITIES 2026"),
-      React.createElement("p",null,"Research Agent + Review Agent Analysis | Prepared for North (Thanaphat)"),
-      React.createElement("div",{className:"tabs"},
-        tabs.map(t=>React.createElement("button",{key:t.key,className:"tab "+(view===t.key?"tab-active":"tab-inactive"),onClick:()=>{setView(t.key);setSelected(null)}},t.label))
-      )
-    ),
-
-    // Overview Grid
-    view==="overview"&&!selected&&React.createElement("div",{className:"grid"},
-      ideas.map(idea=>React.createElement("div",{key:idea.id,className:"card",style:{borderColor:idea.bgLight},onClick:()=>setSelected(idea.id)},
-        React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:12}},
-          React.createElement("div",null,
-            React.createElement("span",{style:{fontSize:28}},idea.emoji),
-            React.createElement("span",{style:{fontSize:12,color:"#94A3B8",marginLeft:8}},"#"+idea.id)
-          ),
-          React.createElement(Badge,{verdict:idea.verdict})
-        ),
-        React.createElement("h3",{style:{fontSize:18,fontWeight:700,marginBottom:4}},idea.name),
-        React.createElement("p",{style:{fontSize:12,color:idea.color,fontWeight:600,marginBottom:8}},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize),
-        React.createElement("p",{style:{fontSize:13,color:"#64748B",fontStyle:"italic",marginBottom:12}},'"'+idea.tagline+'"'),
-        React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center"}},
-          React.createElement("span",{style:{fontSize:12,color:"#94A3B8"}},"Total Score"),
-          React.createElement("span",{style:{fontSize:18,fontWeight:800,color:totalScore(idea.scores)>=17?"#16A34A":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444"}},totalScore(idea.scores)+"/25")
-        )
-      ))
-    ),
-
-    // Detail
-    view==="overview"&&selected&&(()=>{
-      const idea=ideas.find(i=>i.id===selected);
+  function renderOverview(){
+    if(selected){
+      const idea=IDEAS.find(i=>i.id===selected);
       const scoreLabels=[
-        {key:"survivability",label:"Survivability (\u0E16\u0E49\u0E32\u0E22\u0E31\u0E01\u0E29\u0E4C\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E02\u0E49\u0E32\u0E21\u0E32)"},
-        {key:"monetization",label:"Monetization Clarity (\u0E43\u0E04\u0E23\u0E08\u0E48\u0E32\u0E22\u0E40\u0E07\u0E34\u0E19?)"},
-        {key:"mvpEase",label:"MVP Feasibility (\u0E2A\u0E23\u0E49\u0E32\u0E07\u0E44\u0E14\u0E49\u0E43\u0E19 1 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C?)"},
-        {key:"viral",label:"Viral Potential (\u0E04\u0E19\u0E1A\u0E2D\u0E01\u0E15\u0E48\u0E2D?)"},
-        {key:"founderFit",label:"Founder Fit (North \u0E21\u0E35 edge?)"}
+        {key:"survivability",label:"\u0E17\u0E19\u0E17\u0E32\u0E19\u0E15\u0E48\u0E2D\u0E04\u0E39\u0E48\u0E41\u0E02\u0E48\u0E07",desc:"\u0E16\u0E49\u0E32\u0E22\u0E31\u0E01\u0E29\u0E4C\u0E43\u0E2B\u0E0D\u0E48\u0E40\u0E02\u0E49\u0E32\u0E21\u0E32 \u2014 \u0E23\u0E2D\u0E14\u0E44\u0E2B\u0E21?"},
+        {key:"monetization",label:"\u0E23\u0E32\u0E22\u0E44\u0E14\u0E49\u0E0A\u0E31\u0E14\u0E40\u0E08\u0E19",desc:"\u0E43\u0E04\u0E23\u0E08\u0E48\u0E32\u0E22\u0E40\u0E07\u0E34\u0E19? \u0E40\u0E17\u0E48\u0E32\u0E44\u0E2B\u0E23\u0E48? \u0E1E\u0E34\u0E2A\u0E39\u0E08\u0E19\u0E4C\u0E41\u0E25\u0E49\u0E27?"},
+        {key:"mvpEase",label:"\u0E2A\u0E23\u0E49\u0E32\u0E07 MVP \u0E44\u0E14\u0E49\u0E40\u0E23\u0E47\u0E27",desc:"1-2 \u0E04\u0E19 \u0E2A\u0E23\u0E49\u0E32\u0E07\u0E44\u0E14\u0E49\u0E43\u0E19 1-4 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C?"},
+        {key:"viral",label:"\u0E41\u0E1E\u0E23\u0E48\u0E01\u0E23\u0E30\u0E08\u0E32\u0E22\u0E40\u0E2D\u0E07",desc:"\u0E04\u0E19\u0E1A\u0E2D\u0E01\u0E15\u0E48\u0E2D\u0E40\u0E2D\u0E07\u0E44\u0E2B\u0E21?"},
+        {key:"founderFit",label:"\u0E40\u0E2B\u0E21\u0E32\u0E30\u0E01\u0E31\u0E1A North",desc:"\u0E21\u0E35 edge \u0E08\u0E32\u0E01 tech + AI/ML?"}
       ];
       const sections=[
-        {label:"\u{1F525} \u0E1B\u0E31\u0E0D\u0E2B\u0E32",text:idea.problem},
-        {label:"\u{1F4A1} Solution",text:idea.solution},
-        {label:"\u{1F6E1}\uFE0F Moat",text:idea.moat},
-        {label:"\u{1F4B0} Revenue Model",text:idea.revenue},
-        {label:"\u{1F680} MVP 1 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C",text:idea.mvp},
-        {label:"\u26A0\uFE0F \u0E04\u0E27\u0E32\u0E21\u0E40\u0E2A\u0E35\u0E48\u0E22\u0E07",text:idea.risk}
+        {icon:"\u{1F525}",label:"\u0E1B\u0E31\u0E0D\u0E2B\u0E32",text:idea.problem},
+        {icon:"\u{1F4A1}",label:"Solution",text:idea.solution},
+        {icon:"\u{1F6E1}\uFE0F",label:"\u0E1B\u0E23\u0E32\u0E01\u0E32\u0E23\u0E1B\u0E49\u0E2D\u0E07\u0E01\u0E31\u0E19 (Moat)",text:idea.moat},
+        {icon:"\u{1F4B0}",label:"\u0E23\u0E32\u0E22\u0E44\u0E14\u0E49",text:idea.revenue},
+        {icon:"\u{1F680}",label:"MVP \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C\u0E41\u0E23\u0E01",text:idea.mvp},
+        {icon:"\u26A0\uFE0F",label:"\u0E04\u0E27\u0E32\u0E21\u0E40\u0E2A\u0E35\u0E48\u0E22\u0E07 + \u0E27\u0E34\u0E18\u0E35\u0E41\u0E01\u0E49",text:idea.risk}
       ];
-      return React.createElement("div",{className:"detail-panel"},
-        React.createElement("button",{className:"back-btn",onClick:()=>setSelected(null)},"\u2190 Back to all ideas"),
-        React.createElement("div",{className:"detail-card",style:{borderColor:idea.color+"20",border:"3px solid "+idea.color+"20"}},
-          React.createElement("div",{style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20,flexWrap:"wrap",gap:12}},
+      return React.createElement("div",{className:"detail"},
+        React.createElement("button",{className:"back-btn",onClick:()=>setSelected(null)},"\u2190 \u0E01\u0E25\u0E31\u0E1A"),
+        React.createElement("div",{className:"detail-card"},
+          React.createElement("div",{className:"detail-header"},
+            React.createElement("span",{className:"emoji"},idea.emoji),
             React.createElement("div",null,
-              React.createElement("span",{style:{fontSize:40}},idea.emoji),
-              React.createElement("h2",{style:{fontSize:26,fontWeight:800,margin:"8px 0 0"}},idea.name),
-              React.createElement("p",{style:{color:idea.color,fontWeight:600,fontSize:14}},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize)
-            ),
-            React.createElement(Badge,{verdict:idea.verdict})
-          ),
-          React.createElement("p",{style:{fontSize:15,color:"#475569",fontStyle:"italic",borderLeft:"3px solid "+idea.color,paddingLeft:12,margin:"0 0 24px"}},'"'+idea.tagline+'"'),
-          sections.map(s=>React.createElement("div",{key:s.label,className:"detail-section"},
-            React.createElement("h4",null,s.label),
-            React.createElement("p",null,s.text)
-          )),
-          React.createElement("div",{className:"scores-panel"},
-            React.createElement("h4",{style:{fontSize:14,fontWeight:700,marginBottom:12}},"\u{1F4CA} Kill Test Scores"),
-            scoreLabels.map(sl=>React.createElement("div",{key:sl.key,style:{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}},
-              React.createElement("span",{style:{fontSize:13,color:"#475569"}},sl.label),
-              React.createElement(ScoreBar,{score:idea.scores[sl.key],color:idea.color})
-            )),
-            React.createElement("div",{style:{display:"flex",justifyContent:"flex-end",marginTop:8,borderTop:"1px solid #E2E8F0",paddingTop:8}},
-              React.createElement("span",{style:{fontSize:15,fontWeight:800,color:totalScore(idea.scores)>=17?"#16A34A":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444"}},"Total: "+totalScore(idea.scores)+"/25")
+              React.createElement("h2",null,idea.name),
+              React.createElement("div",{className:"meta"},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize+" \u2022 "+idea.affected)
             )
           ),
-          React.createElement("div",{className:"review-panel",style:{background:idea.verdict==="GO"?"#FFFBEB":"#FEF2F2"}},
-            React.createElement("h4",{style:{fontSize:14,fontWeight:700,marginBottom:8}},"\u{1F50D} Review Agent's Verdict"),
-            React.createElement("p",{style:{fontSize:14,color:"#475569",marginBottom:12,lineHeight:1.6}},idea.review),
-            React.createElement("h4",{style:{fontSize:13,fontWeight:700,marginBottom:6}},"\u2705 Improvement"),
-            React.createElement("p",{style:{fontSize:14,color:"#475569",lineHeight:1.6}},idea.improvement)
+          React.createElement("div",{className:"detail-tagline",style:{borderColor:idea.color}},'"'+idea.tagline+'"'),
+          sections.map(s=>React.createElement("div",{key:s.label,className:"section"},
+            React.createElement("div",{className:"section-title"},React.createElement("span",null,s.icon),s.label),
+            React.createElement("p",null,s.text)
+          )),
+          React.createElement("div",{style:{marginTop:24}},
+            React.createElement("div",{className:"section-title",style:{marginBottom:16}},"\u{1F4CA} \u0E04\u0E30\u0E41\u0E19\u0E19 Kill Test (\u0E22\u0E34\u0E48\u0E07\u0E2A\u0E39\u0E07\u0E22\u0E34\u0E48\u0E07\u0E14\u0E35)"),
+            React.createElement("div",{className:"scores-grid"},
+              scoreLabels.map(sl=>React.createElement("div",{key:sl.key,className:"score-item"},
+                React.createElement("div",{className:"label"},sl.label),
+                React.createElement("div",{style:{fontSize:11,color:"#64748B",marginBottom:6}},sl.desc),
+                React.createElement(ScoreBar,{score:idea.scores[sl.key],color:idea.color})
+              )),
+              React.createElement("div",{className:"score-item",style:{background:"linear-gradient(135deg,#0F172A,#1A1040)"}},
+                React.createElement("div",{className:"label"},"\u0E23\u0E27\u0E21\u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14"),
+                React.createElement("div",{style:{fontSize:28,fontWeight:900,color:totalScore(idea.scores)>=19?"#22C55E":totalScore(idea.scores)>=15?"#F59E0B":"#EF4444",marginTop:4}},totalScore(idea.scores)+"/25")
+              )
+            )
+          ),
+          React.createElement("div",{className:"review-box",style:{borderColor:idea.color}},
+            React.createElement("h4",{style:{color:idea.color}},"\u{1F50D} Review Agent \u0E27\u0E34\u0E40\u0E04\u0E23\u0E32\u0E30\u0E2B\u0E4C"),
+            React.createElement("p",null,idea.review)
+          ),
+          React.createElement("div",{className:"improve-box"},
+            React.createElement("h4",null,"\u2705 \u0E41\u0E19\u0E30\u0E19\u0E33\u0E1B\u0E23\u0E31\u0E1A\u0E1B\u0E23\u0E38\u0E07"),
+            React.createElement("p",null,idea.improvement)
           )
         )
       );
-    })(),
-
-    // Rankings
-    view==="rankings"&&React.createElement("div",{style:{maxWidth:800,margin:"0 auto"}},
-      React.createElement("h2",{style:{fontSize:22,fontWeight:800,color:"#1A1F3D",marginBottom:20,textAlign:"center"}},"\u{1F3C6} Power Rankings"),
-      sorted.map((idea,i)=>React.createElement("div",{key:idea.id,className:"rank-row"+(i===0?" rank-row-top":i<3?" rank-row-top3":"")},
-        React.createElement("span",{style:{fontSize:22,fontWeight:900,width:40,textAlign:"center",color:i===0?"#F5C542":i===1?"#94A3B8":i===2?"#CD7F32":"#CBD5E1"}},i===0?"\u{1F947}":i===1?"\u{1F948}":i===2?"\u{1F949}":"#"+(i+1)),
-        React.createElement("span",{style:{fontSize:24}},idea.emoji),
-        React.createElement("div",{style:{flex:1}},
-          React.createElement("div",{style:{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap"}},
-            React.createElement("span",{style:{fontSize:16,fontWeight:700}},idea.name),
-            React.createElement(Badge,{verdict:idea.verdict})
+    }
+    return React.createElement("div",{className:"grid"},
+      IDEAS.map((idea,i)=>{
+        const score=totalScore(idea.scores);
+        const rank=sorted.findIndex(s=>s.id===idea.id)+1;
+        return React.createElement("div",{key:idea.id,className:"card",onClick:()=>setSelected(idea.id)},
+          React.createElement("div",{className:"accent",style:{background:"linear-gradient(90deg,"+idea.color+",transparent)"}}),
+          React.createElement("div",{className:"top-row"},
+            React.createElement("span",{className:"emoji"},idea.emoji),
+            React.createElement("span",{className:"rank-badge"+(rank<=3?" top3":"")},rank<=3?"\u{1F3C6} #"+rank:"#"+rank)
           ),
-          React.createElement("p",{style:{fontSize:12,color:"#64748B",marginTop:2}},idea.type+" \u2022 "+idea.marketSize)
-        ),
-        React.createElement("div",{style:{textAlign:"right"}},
-          React.createElement("span",{style:{fontSize:22,fontWeight:900,color:totalScore(idea.scores)>=17?"#16A34A":totalScore(idea.scores)>=12?"#F59E0B":"#EF4444"}},totalScore(idea.scores)),
-          React.createElement("span",{style:{fontSize:12,color:"#94A3B8"}},"/25")
-        )
-      ))
-    ),
+          React.createElement("h3",null,idea.name),
+          React.createElement("div",{className:"meta"},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize),
+          React.createElement("div",{className:"tagline"},idea.tagline),
+          React.createElement("div",{className:"mini-bar"},
+            React.createElement("div",{className:"mini-bar-fill",style:{width:(score/25*100)+"%",background:score>=19?"#22C55E":score>=15?"#F59E0B":"#EF4444"}})
+          ),
+          React.createElement("div",{className:"score-row",style:{marginTop:8}},
+            React.createElement("span",{className:"score-label"},"Kill Test Score"),
+            React.createElement("span",{className:"score-total",style:{color:score>=19?"#22C55E":score>=15?"#F59E0B":"#EF4444"}},score+"/25")
+          )
+        );
+      })
+    );
+  }
 
-    // Recommendations
-    view==="recommendations"&&React.createElement("div",{style:{maxWidth:800,margin:"0 auto"}},
-      React.createElement("h2",{style:{fontSize:22,fontWeight:800,color:"#1A1F3D",marginBottom:8,textAlign:"center"}},"\u{1F3AF} \u0E04\u0E33\u0E41\u0E19\u0E30\u0E19\u0E33\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A North"),
-      React.createElement("p",{style:{textAlign:"center",color:"#64748B",fontSize:14,marginBottom:24}},"\u0E08\u0E32\u0E01 10 ideas \u0E21\u0E35\u0E40\u0E1E\u0E35\u0E22\u0E07 3 \u0E17\u0E35\u0E48\u0E1C\u0E48\u0E32\u0E19 Review Agent"),
-      [{rank:"1st Priority",name:"SellerOS AI",emoji:"\u{1F3EA}",color:"#4A90D9",when:"\u0E40\u0E23\u0E34\u0E48\u0E21\u0E40\u0E25\u0E22 (Month 1-6)",why:"Founder fit \u0E14\u0E35\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14 + Thai-specific + recurring revenue + \u0E44\u0E21\u0E48\u0E41\u0E02\u0E48\u0E07 global giants",action:"Month 1-2: Validate \u0E01\u0E31\u0E1A 20+ sellers \u2192 Month 2-3: MVP LINE bot \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 Shopee+Lazada \u2192 Month 3-6: \u0E2B\u0E32 3 paying customers \u2192 Raise seed",pivot:"Pivot \u0E08\u0E32\u0E01 AI tool \u2192 SellerOS Collective (distribution network)"},
-      {rank:"2nd Priority",name:"CreatorVault AI",emoji:"\u{1F3A8}",color:"#EC4899",when:"\u0E17\u0E33\u0E04\u0E39\u0E48\u0E01\u0E31\u0E19 (Month 3-6)",why:"\u0E15\u0E25\u0E32\u0E14 $390B by 2034 + Thai creators \u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23 monetization tools",action:"Month 3-4: \u0E40\u0E0B\u0E47\u0E19 MOU 20-30 creators \u2192 Month 4-5: \u0E43\u0E0A\u0E49 2C2P + Shopify merch \u2192 Month 5-6: Launch",pivot:"Focus \u0E40\u0E09\u0E1E\u0E32\u0E30 1 vertical (gaming/cosplay) + creators market \u0E41\u0E17\u0E19\u0E04\u0E38\u0E13"},
-      {rank:"Long-term",name:"AgentFlow",emoji:"\u{1F916}",color:"#A855F7",when:"Research \u0E40\u0E17\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19 (Month 9-12)",why:"TAM $105B by 2034 \u0E41\u0E15\u0E48\u0E1B\u0E35 2026 \u0E22\u0E31\u0E07\u0E40\u0E23\u0E47\u0E27\u0E40\u0E01\u0E34\u0E19\u0E44\u0E1B",action:"\u0E43\u0E0A\u0E49 10-20 \u0E0A\u0E21./\u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C research vertical AI agent use cases \u2192 \u0E04\u0E38\u0E22 50+ SME \u2192 \u0E40\u0E01\u0E47\u0E1A notebook",pivot:"General marketplace \u2192 Thailand SME AI Agent vertical"}
-      ].map((rec,i)=>React.createElement("div",{key:i,className:"rec-card",style:{border:"2px solid "+rec.color+"20"}},
-        React.createElement("div",{style:{display:"flex",alignItems:"center",gap:12,marginBottom:16}},
-          React.createElement("span",{className:"rec-tag",style:{background:rec.color}},rec.rank),
-          React.createElement("span",{style:{fontSize:28}},rec.emoji),
-          React.createElement("h3",{style:{fontSize:20,fontWeight:800}},rec.name)
+  function renderRankings(){
+    return React.createElement("div",{className:"rank-list"},
+      React.createElement("h2",{style:{textAlign:"center",fontSize:24,fontWeight:900,marginBottom:24,color:"#F1F5F9"}},"\u{1F3C6} Power Rankings"),
+      sorted.map((idea,i)=>{
+        const score=totalScore(idea.scores);
+        const cls=i===0?"gold":i===1?"silver":i===2?"bronze":"";
+        const numColor=i===0?"#F5C542":i===1?"#94A3B8":i===2?"#CD7F32":"#475569";
+        return React.createElement("div",{key:idea.id,className:"rank-item "+cls,onClick:()=>{setSelected(idea.id);setView("overview")},style:{cursor:"pointer"}},
+          React.createElement("span",{className:"rank-num",style:{color:numColor}},i<3?["\u{1F947}","\u{1F948}","\u{1F949}"][i]:"#"+(i+1)),
+          React.createElement("span",{style:{fontSize:28}},idea.emoji),
+          React.createElement("div",{className:"rank-info"},
+            React.createElement("div",{className:"name"},idea.name),
+            React.createElement("div",{className:"desc"},idea.type+" \u2022 "+idea.market+" \u2022 "+idea.marketSize)
+          ),
+          React.createElement("div",{className:"rank-score",style:{color:score>=19?"#22C55E":score>=15?"#F59E0B":"#EF4444"}},
+            score,React.createElement("span",null,"/25")
+          )
+        );
+      })
+    );
+  }
+
+  function renderRecommendations(){
+    const recs=[
+      {rank:"\u0E40\u0E23\u0E34\u0E48\u0E21\u0E40\u0E25\u0E22",name:"SellerOS AI",emoji:"\u{1F3EA}",color:"#3B82F6",
+        when:"Month 1-6 \u2014 \u0E40\u0E23\u0E34\u0E48\u0E21\u0E17\u0E31\u0E19\u0E17\u0E35",
+        why:"Founder fit \u0E14\u0E35\u0E17\u0E35\u0E48\u0E2A\u0E38\u0E14 + Thai-specific + recurring revenue + \u0E44\u0E21\u0E48\u0E41\u0E02\u0E48\u0E07 global giants \u0E42\u0E14\u0E22\u0E15\u0E23\u0E07",
+        action:"Month 1-2: Validate \u0E01\u0E31\u0E1A 20+ sellers \u2192 Month 2-3: MVP LINE bot \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 Shopee+Lazada \u2192 Month 3-6: \u0E2B\u0E32 3 paying customers \u2192 Raise seed",
+        pivot:"\u0E08\u0E32\u0E01 AI tool \u2192 SellerOS Collective (distribution network \u0E02\u0E2D\u0E07\u0E04\u0E19\u0E02\u0E32\u0E22)"},
+      {rank:"SME Ecosystem",name:"SME AutoAPI + TaxMate + LegalBot",emoji:"\u{1F50C}\u{1F4B8}\u{1F4DC}",color:"#06B6D4",
+        when:"Month 3-9 \u2014 \u0E2A\u0E23\u0E49\u0E32\u0E07 SME ecosystem",
+        why:"\u0E17\u0E31\u0E49\u0E07 3 \u0E15\u0E31\u0E27\u0E40\u0E2A\u0E23\u0E34\u0E21\u0E01\u0E31\u0E19 : AutoAPI \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21\u0E0B\u0E2D\u0E1F\u0E15\u0E4C\u0E41\u0E27\u0E23\u0E4C, TaxMate \u0E17\u0E33\u0E1A\u0E31\u0E0D\u0E0A\u0E35/\u0E20\u0E32\u0E29\u0E35, LegalBot \u0E17\u0E33\u0E2A\u0E31\u0E0D\u0E0D\u0E32 \u2014 cross-sell \u0E44\u0E14\u0E49\u0E17\u0E31\u0E49\u0E07 3 \u0E15\u0E31\u0E27",
+        action:"Month 3-4: Launch SME AutoAPI MVP \u0E40\u0E0A\u0E37\u0E48\u0E2D\u0E21 5 tools \u2192 Month 5-6: \u0E40\u0E1E\u0E34\u0E48\u0E21 TaxMate module \u2192 Month 7-9: LegalBot \u0E40\u0E1B\u0E47\u0E19 add-on",
+        pivot:"SME AutoAPI \u0E40\u0E1B\u0E47\u0E19 platform \u2192 TaxMate, LegalBot \u0E40\u0E1B\u0E47\u0E19 modules \u0E1A\u0E19 platform \u0E40\u0E14\u0E35\u0E22\u0E27\u0E01\u0E31\u0E19"},
+      {rank:"Long-term",name:"AgentFlow",emoji:"\u{1F916}",color:"#F59E0B",
+        when:"Month 9-12 \u2014 Research phase",
+        why:"TAM $105B by 2034 \u0E41\u0E15\u0E48\u0E1B\u0E35 2026 \u0E22\u0E31\u0E07\u0E40\u0E23\u0E47\u0E27\u0E44\u0E1B \u2014 \u0E43\u0E0A\u0E49\u0E40\u0E27\u0E25\u0E32 research + \u0E2A\u0E23\u0E49\u0E32\u0E07 agents \u0E40\u0E2D\u0E07\u0E01\u0E48\u0E2D\u0E19",
+        action:"\u0E2A\u0E23\u0E49\u0E32\u0E07 5-10 AI agents \u0E43\u0E2B\u0E49 SME \u0E44\u0E17\u0E22\u0E43\u0E0A\u0E49\u0E1F\u0E23\u0E35 \u2192 \u0E40\u0E01\u0E47\u0E1A feedback \u2192 \u0E40\u0E1B\u0E34\u0E14 marketplace \u0E40\u0E21\u0E37\u0E48\u0E2D timing \u0E1E\u0E23\u0E49\u0E2D\u0E21",
+        pivot:"General marketplace \u2192 Thailand SME AI Agent vertical"}
+    ];
+
+    return React.createElement("div",{className:"rec"},
+      React.createElement("div",{className:"rec-intro"},
+        React.createElement("h2",null,"\u{1F3AF} Roadmap \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A North"),
+        React.createElement("p",null,"\u0E08\u0E32\u0E01 10 ideas \u0E17\u0E31\u0E49\u0E07\u0E2B\u0E21\u0E14\u0E1C\u0E48\u0E32\u0E19 Kill Test \u2014 \u0E19\u0E35\u0E48\u0E04\u0E37\u0E2D\u0E25\u0E33\u0E14\u0E31\u0E1A\u0E17\u0E35\u0E48\u0E41\u0E19\u0E30\u0E19\u0E33")
+      ),
+      recs.map((rec,i)=>React.createElement("div",{key:i,className:"rec-card",style:{borderColor:rec.color+"40",borderWidth:2,borderStyle:"solid"}},
+        React.createElement("span",{className:"priority",style:{background:rec.color}},rec.rank),
+        React.createElement("div",{className:"name-row"},
+          React.createElement("span",{style:{fontSize:32}},rec.emoji),
+          React.createElement("h3",null,rec.name)
         ),
-        [{l:"\u23F0 \u0E40\u0E21\u0E37\u0E48\u0E2D\u0E44\u0E2B\u0E23\u0E48?",t:rec.when,bold:true},{l:"\u{1F4A1} \u0E17\u0E33\u0E44\u0E21?",t:rec.why},{l:"\u{1F4CB} Action Plan",t:rec.action},{l:"\u{1F504} Pivot",t:rec.pivot,colored:true}].map((s,j)=>
-          React.createElement("div",{key:j,style:{marginBottom:12,...(j===0?{background:"#F8FAFC",borderRadius:10,padding:12}:{})}},
-            React.createElement("p",{style:{fontSize:12,fontWeight:700,color:"#64748B",marginBottom:4}},s.l),
-            React.createElement("p",{style:{fontSize:14,lineHeight:1.6,...(s.bold?{fontWeight:600}:{}),...(s.colored?{color:rec.color,fontWeight:600}:{})}},s.t)
+        [{l:"\u23F0 \u0E40\u0E21\u0E37\u0E48\u0E2D\u0E44\u0E2B\u0E23\u0E48?",v:rec.when},{l:"\u{1F4A1} \u0E17\u0E33\u0E44\u0E21?",v:rec.why},{l:"\u{1F4CB} Action Plan",v:rec.action},{l:"\u{1F504} Pivot Strategy",v:rec.pivot}].map((f,j)=>
+          React.createElement("div",{key:j,className:"field"},
+            React.createElement("div",{className:"field-label"},f.l),
+            React.createElement("div",{className:"field-val"},f.v)
           )
         )
       )),
-      React.createElement("div",{className:"bottom-line"},
-        React.createElement("h3",null,"\u26A1 Bottom Line"),
+      React.createElement("div",{className:"bottom-cta"},
+        React.createElement("h3",null,"\u26A1 \u0E2A\u0E23\u0E38\u0E1B"),
         React.createElement("p",null,
-          "\u0E08\u0E32\u0E01 10 ideas \u0E21\u0E35\u0E40\u0E1E\u0E35\u0E22\u0E07 ",
-          React.createElement("strong",{style:{color:"#F5C542"}},"3 \u0E15\u0E31\u0E27"),
-          " \u0E17\u0E35\u0E48\u0E1C\u0E48\u0E32\u0E19: ",
-          React.createElement("strong",{style:{color:"#4A90D9"}},"SellerOS"),
-          " (\u0E17\u0E33\u0E40\u0E25\u0E22), ",
-          React.createElement("strong",{style:{color:"#EC4899"}},"CreatorVault"),
-          " (\u0E17\u0E33\u0E04\u0E39\u0E48\u0E01\u0E31\u0E19), ",
-          React.createElement("strong",{style:{color:"#A855F7"}},"AgentFlow"),
-          " (research \u0E01\u0E48\u0E2D\u0E19)"
+          "\u0E17\u0E31\u0E49\u0E07 10 \u0E44\u0E2D\u0E40\u0E14\u0E35\u0E22\u0E1C\u0E48\u0E32\u0E19 Kill Test \u0E41\u0E25\u0E49\u0E27 \u2014 \u0E40\u0E23\u0E34\u0E48\u0E21\u0E08\u0E32\u0E01 ",
+          React.createElement("strong",{style:{color:"#3B82F6"}},"SellerOS AI"),
+          " (fit \u0E2A\u0E39\u0E07\u0E2A\u0E38\u0E14) \u0E04\u0E39\u0E48\u0E01\u0E31\u0E1A ",
+          React.createElement("strong",{style:{color:"#06B6D4"}},"SME AutoAPI"),
+          " (SME ecosystem) \u0E41\u0E25\u0E49\u0E27\u0E04\u0E48\u0E2D\u0E22\u0E02\u0E22\u0E32\u0E22\u0E44\u0E1B ",
+          React.createElement("strong",{style:{color:"#F59E0B"}},"AgentFlow"),
+          " \u0E40\u0E21\u0E37\u0E48\u0E2D\u0E15\u0E25\u0E32\u0E14\u0E1E\u0E23\u0E49\u0E2D\u0E21"
         )
       )
-    )
+    );
+  }
+
+  return React.createElement("div",{className:"container"},
+    React.createElement("div",{className:"header"},
+      React.createElement("h1",null,"TOP 10 STARTUP IDEAS 2026"),
+      React.createElement("div",{className:"sub"},"AI-Validated Playbook \u2014 Prepared for North (Thanaphat)"),
+      React.createElement("div",{className:"stats"},
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},"10"),React.createElement("div",{className:"label"},"IDEAS")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},"10/10"),React.createElement("div",{className:"label"},"PASSED")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},avgScore),React.createElement("div",{className:"label"},"AVG SCORE")),
+        React.createElement("div",{className:"stat"},React.createElement("div",{className:"num"},maxScore),React.createElement("div",{className:"label"},"TOP SCORE"))
+      )
+    ),
+    React.createElement("div",{className:"tabs"},
+      tabs.map(t=>React.createElement("button",{key:t.key,className:"tab"+(view===t.key?" active":""),onClick:()=>{setView(t.key);setSelected(null)}},t.label))
+    ),
+    view==="overview"&&renderOverview(),
+    view==="rankings"&&renderRankings(),
+    view==="recommendations"&&renderRecommendations()
   );
 }
 
